@@ -39,8 +39,7 @@ Wiki
 
 ```markdown
 Main 主分支
-├─ dev 开发分支
-└─ phone 移动分支
+└─ dev 开发分支
 ```
 
 ## CI&CD

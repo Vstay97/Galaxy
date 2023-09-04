@@ -6,9 +6,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "7Wate",
-  tagline: "For Freedom",
-  url: "https://wiki.7wate.com",
+  title: "Vstay",
+  tagline: "Coding and Thinking",
+  url: "https://wiki.vstay.dev",
   baseUrl: "/",
   onBrokenLinks: "log",
   onBrokenMarkdownLinks: "log",
@@ -16,7 +16,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  // organizationName: '7wate', // Usually your GitHub org/user name.
+  // organizationName: 'vstay', // Usually your GitHub org/user name.
   // projectName: 'wiki', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -34,23 +34,21 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           breadcrumbs: false,
         },
         blog: {
-          blogTitle: "7Wate`s Blog",
-          blogDescription: "7Wate 的个人生活和工作记录",
+          blogTitle: "Vstay's Blog",
+          blogDescription: "Vstay 的个人生活和工作记录",
           blogSidebarCount: 7,
           blogSidebarTitle: "近期文章",
           showReadingTime: true,
-          editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
           feedOptions: {
-            title: "7Wate`s Blog",
-            description: "7Wate 的个人生活和工作记录",
+            title: "Vstay's Blog",
+            description: "Vstay 的个人生活和工作记录",
             type: 'all',
-            copyright: `Copyright © ${new Date().getFullYear()} 7Wate, Inc.`,
+            copyright: `Copyright © ${new Date().getFullYear()} Vstay, Inc.`,
           },
         },
         theme: {
@@ -80,7 +78,6 @@ const config = {
         path: "wiki/getting-started",
         routeBasePath: "getting-started",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
@@ -93,7 +90,6 @@ const config = {
         path: "wiki/programming-language",
         routeBasePath: "programming-language",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
@@ -106,7 +102,6 @@ const config = {
         path: "wiki/structures-algorithms",
         routeBasePath: "structures-algorithms",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
@@ -119,7 +114,6 @@ const config = {
         path: "wiki/computer-composition",
         routeBasePath: "computer-composition",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
@@ -132,7 +126,6 @@ const config = {
         path: "wiki/computer-network",
         routeBasePath: "computer-network",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
@@ -145,7 +138,6 @@ const config = {
         path: "wiki/operating-system",
         routeBasePath: "operating-system",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
@@ -158,7 +150,6 @@ const config = {
         path: "wiki/database-system",
         routeBasePath: "database-system",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
@@ -171,7 +162,6 @@ const config = {
         path: "wiki/computer-security",
         routeBasePath: "computer-security",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
@@ -184,7 +174,6 @@ const config = {
         path: "wiki/software-engineering",
         routeBasePath: "software-engineering",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
@@ -197,13 +186,11 @@ const config = {
         path: "wiki/compilation-principle",
         routeBasePath: "compilation-principle",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
       },
     ],
-// -----------------------------------------------------------------------------------
     [
       "@docusaurus/plugin-content-docs",
       {
@@ -211,7 +198,6 @@ const config = {
         path: "group/organization",
         routeBasePath: "org",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
@@ -224,7 +210,6 @@ const config = {
         path: "group/company",
         routeBasePath: "com",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
@@ -237,13 +222,11 @@ const config = {
         path: "group/government",
         routeBasePath: "gov",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
       },
     ],
-// -----------------------------------------------------------------------------------
     [
       "@docusaurus/plugin-content-docs",
       {
@@ -251,7 +234,6 @@ const config = {
         path: "work/roadmap",
         routeBasePath: "roadmap",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
@@ -264,7 +246,6 @@ const config = {
         path: "work/data-engineer",
         routeBasePath: "data-engineer",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
@@ -277,13 +258,11 @@ const config = {
         path: "work/sre-engineer",
         routeBasePath: "sre-engineer",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
       },
     ],
-// -----------------------------------------------------------------------------------
     [
       "@docusaurus/plugin-content-docs",
       {
@@ -291,13 +270,11 @@ const config = {
         path: "life",
         routeBasePath: "life",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
       },
     ],
-// -----------------------------------------------------------------------------------
     [
       "@docusaurus/plugin-content-docs",
       {
@@ -305,44 +282,26 @@ const config = {
         path: "journal",
         routeBasePath: "journal",
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://git.7wate.org/zhouzhongping/wiki/src/branch/master",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
       },
     ],
-
-    "docusaurus-plugin-umami",
+    // TODO: 这里搜索功能和统计功能需要换成自己的
+    // "docusaurus-plugin-umami",
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // announcementBar: {
-      //   id: 'support_us',
-      //   content:
-      //     'Always For Freedom. The site by 7Wate.',
-      //   backgroundColor: '#fafbfc',
-      //   textColor: '#091E42',
-      //   isCloseable: false,
-      // },
       metadata: [
         {
           name: "keywords",
-          content: "7wate, wiki, blog, python, linux",
+          content: "vstay, wiki, blog, python, linux",
         },
       ],
       navbar: {
-        title: "📚 7Wate's Wiki",
+        title: "📚 Vstay's Wiki",
         hideOnScroll: true,
-        // logo: {
-        //   alt: 'Site Logo',
-        //   src: 'img/logo.svg',
-        //   srcDark: 'img/logo_dark.svg',
-        //   href: 'https://docusaurus.io/',
-        //   target: '_self',
-        //   width: 32,
-        //   height: 32,
-        // },
         items: [
           { to: "/blog", label: "👨🏻‍🌾 博客", position: "right" },
           {
@@ -384,7 +343,7 @@ const config = {
               {
                 label: "软件工程",
                 to: "/software-engineering",
-              },       
+              },
               {
                 label: "编译原理",
                 to: "/compilation-principle",
@@ -431,6 +390,9 @@ const config = {
           { to: "/journal", label: "📽️ 日志", position: "right" },
         ],
       },
+      /* 
+      TODO: 这里搜索功能和统计功能需要换成自己的
+
       algolia: {
         apiKey: "5d5a02bdf02df700355c8ccd84b78d13",
         appId: "8W3YJXJGF2",
@@ -440,24 +402,26 @@ const config = {
         websiteid: "7efcd733-c232-43db-9f17-10a00c53b152",
         src: "https://umami.7wate.org/script.js",
       },
+      
+      */
       footer: {
         style: "dark",
-        copyright: `Copyright © ${new Date().getFullYear()} 7Wate, Inc. Built with <a href="https://www.docusaurus.cn/" target="_blank" rel="noopener noreferrer">Docusaurus</a>.<br>Powered by <a href="https://webify.cloudbase.net/" target="_blank" rel="noopener noreferrer">CloudBase Webify</a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} Vstay, Inc. Built with <a href="https://www.docusaurus.cn/" target="_blank" rel="noopener noreferrer">Docusaurus</a>.<br>Powered by <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer">Cloudflare</a>`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         defaultLanguage: "markdown",
-        additionalLanguages: ["java", "git","nginx","http"],
+        additionalLanguages: ["java", "git", "nginx", "http"],
       },
       mermaid: {
-        theme: {light: 'neutral', dark: 'forest'},
+        theme: { light: 'neutral', dark: 'forest' },
       },
     }),
-    markdown: {
-      mermaid: true,
-    },
-    themes: ['@docusaurus/theme-mermaid'],
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 };
 
 module.exports = config;

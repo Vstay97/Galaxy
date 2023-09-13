@@ -300,7 +300,7 @@ const config = {
         },
       ],
       navbar: {
-        title: "📚 Vstay's Wiki",
+        title: "📚 Galaxy",
         hideOnScroll: true,
         items: [
           { to: "/blog", label: "👨🏻‍🌾 博客", position: "right" },

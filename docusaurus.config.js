@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Vstay",
+  title: "Galaxy",
   tagline: "Coding and Thinking",
   url: "https://wiki.vstay.dev",
   baseUrl: "/",
@@ -39,7 +39,7 @@ const config = {
           breadcrumbs: false,
         },
         blog: {
-          blogTitle: "Vstay's Blog",
+          blogTitle: "Galaxy",
           blogDescription: "Vstay 的个人生活和工作记录",
           blogSidebarCount: 7,
           blogSidebarTitle: "近期文章",
@@ -300,7 +300,7 @@ const config = {
         },
       ],
       navbar: {
-        title: "📚 Vstay's Wiki",
+        title: "📚 Galaxy",
         hideOnScroll: true,
         items: [
           { to: "/blog", label: "👨🏻‍🌾 博客", position: "right" },

@@ -39,9 +39,9 @@ const config = {
           breadcrumbs: false,
         },
         blog: {
-          blogTitle: "Galaxy",
+          blogTitle: "Blog",
           blogDescription: "Vstay 的个人生活和工作记录",
-          blogSidebarCount: 7,
+          blogSidebarCount: "ALL",
           blogSidebarTitle: "近期文章",
           showReadingTime: true,
           feedOptions: {
@@ -191,12 +191,60 @@ const config = {
         breadcrumbs: false,
       },
     ],
+    // [
+    //   "@docusaurus/plugin-content-docs",
+    //   {
+    //     id: "org",
+    //     path: "group/organization",
+    //     routeBasePath: "org",
+    //     sidebarPath: require.resolve("./sidebars.js"),
+    //     showLastUpdateAuthor: true,
+    //     showLastUpdateTime: true,
+    //     breadcrumbs: false,
+    //   },
+    // ],
+    // [
+    //   "@docusaurus/plugin-content-docs",
+    //   {
+    //     id: "com",
+    //     path: "group/company",
+    //     routeBasePath: "com",
+    //     sidebarPath: require.resolve("./sidebars.js"),
+    //     showLastUpdateAuthor: true,
+    //     showLastUpdateTime: true,
+    //     breadcrumbs: false,
+    //   },
+    // ],
+    // [
+    //   "@docusaurus/plugin-content-docs",
+    //   {
+    //     id: "gov",
+    //     path: "group/government",
+    //     routeBasePath: "gov",
+    //     sidebarPath: require.resolve("./sidebars.js"),
+    //     showLastUpdateAuthor: true,
+    //     showLastUpdateTime: true,
+    //     breadcrumbs: false,
+    //   },
+    // ],
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "org",
-        path: "group/organization",
-        routeBasePath: "org",
+        id: "practice",
+        path: "engineering/practice",
+        routeBasePath: "practice",
+        sidebarPath: require.resolve("./sidebars.js"),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+        [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "theories",
+        path: "engineering/theories",
+        routeBasePath: "theories",
         sidebarPath: require.resolve("./sidebars.js"),
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
@@ -206,21 +254,9 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "com",
-        path: "group/company",
-        routeBasePath: "com",
-        sidebarPath: require.resolve("./sidebars.js"),
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "gov",
-        path: "group/government",
-        routeBasePath: "gov",
+        id: "architecture",
+        path: "engineering/architecture",
+        routeBasePath: "architecture",
         sidebarPath: require.resolve("./sidebars.js"),
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
@@ -370,19 +406,19 @@ const config = {
           },
           {
             position: "right",
-            label: "💼 组织",
+            label: "💼 工程",
             items: [
               {
-                label: "自由社区",
-                to: "/org",
+                label: "实践踩坑",
+                to: "/practice",
               },
               {
-                label: "现代企业",
-                to: "/com",
+                label: "开发理论",
+                to: "/theories",
               },
               {
-                label: "国家政府",
-                to: "/gov",
+                label: "架构设计",
+                to: "/architecture",
               },
             ]
           },

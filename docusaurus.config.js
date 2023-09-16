@@ -39,7 +39,7 @@ const config = {
           breadcrumbs: false,
         },
         blog: {
-          blogTitle: "Galaxy",
+          blogTitle: "Blog",
           blogDescription: "Vstay 的个人生活和工作记录",
           blogSidebarCount: "ALL",
           blogSidebarTitle: "近期文章",

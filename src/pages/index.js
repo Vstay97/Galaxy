@@ -10,22 +10,22 @@ import HeroImg from '../../static/img/Hero.jpg'
 
 const svgList = [
   {
-    title: 'github',
+    title: 'Github',
     Svg: require('../../static/img/github.svg').default,
     color: 'black',
-    link: 'https://github.com/7Wate/wiki',
+    link: 'https://github.com/Vstay97',
   },
   {
-    title: 'bilibili',
-    Svg: require('../../static/img/bilibili.svg').default,
-    link: 'https://space.bilibili.com/223211771',
+    title: 'E-mail',
+    Svg: require('../../static/img/email.svg').default,
+    link: 'http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=bxkcGw4WLx4eQQwAAg',
   },
-  {
-    title: 'wechat',
-    Svg: require('../../static/img/wechat.svg').default,
-    color: '#2979ff',
-    link: 'https://static.7wate.com/img/2022/06/16/d6dfd36f35293.jpg',
-  },
+  // {
+  //   title: 'wechat',
+  //   Svg: require('../../static/img/wechat.svg').default,
+  //   color: '#2979ff',
+  //   link: 'https://static.7wate.com/img/2022/06/16/d6dfd36f35293.jpg',
+  // },
 ]
 const Svg = ({ Svg, color, title, link }) => {
   return (
@@ -57,12 +57,12 @@ function MyHero() {
     <div className={styles.myHeroContainer}>
       <div className={styles.leftContainer}>
         <h1 className={styles.leftContainer_h1}>
-          Always <br /> For Freedom.
+          Nothing <br /> For Nothing.
         </h1>
         <p className={styles.leftContainer_p}>
-          一个喜欢异想天开的家伙 💨
+          Sometimes coding,Sometimes thinking 💨
           <br />
-          在这里记录知识，希望对你也有帮助。
+          /** 在这里记录知识 **/
         </p>
         <div className={styles.buttonContainer}>
           {/* <button className={styles.button}>

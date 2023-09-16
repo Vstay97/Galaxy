@@ -191,12 +191,24 @@ const config = {
         breadcrumbs: false,
       },
     ],
+    // [
+    //   "@docusaurus/plugin-content-docs",
+    //   {
+    //     id: "org",
+    //     path: "group/organization",
+    //     routeBasePath: "org",
+    //     sidebarPath: require.resolve("./sidebars.js"),
+    //     showLastUpdateAuthor: true,
+    //     showLastUpdateTime: true,
+    //     breadcrumbs: false,
+    //   },
+    // ],
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "org",
-        path: "group/organization",
-        routeBasePath: "org",
+        id: "practice",
+        path: "engineering/practice",
+        routeBasePath: "practice",
         sidebarPath: require.resolve("./sidebars.js"),
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
@@ -370,18 +382,18 @@ const config = {
           },
           {
             position: "right",
-            label: "💼 组织",
+            label: "💼 工程",
             items: [
               {
-                label: "自由社区",
-                to: "/org",
+                label: "实践踩坑",
+                to: "/practice",
               },
               {
-                label: "现代企业",
+                label: "开发理论",
                 to: "/com",
               },
               {
-                label: "国家政府",
+                label: "架构设计",
                 to: "/gov",
               },
             ]

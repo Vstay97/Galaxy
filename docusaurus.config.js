@@ -203,6 +203,30 @@ const config = {
     //     breadcrumbs: false,
     //   },
     // ],
+    // [
+    //   "@docusaurus/plugin-content-docs",
+    //   {
+    //     id: "com",
+    //     path: "group/company",
+    //     routeBasePath: "com",
+    //     sidebarPath: require.resolve("./sidebars.js"),
+    //     showLastUpdateAuthor: true,
+    //     showLastUpdateTime: true,
+    //     breadcrumbs: false,
+    //   },
+    // ],
+    // [
+    //   "@docusaurus/plugin-content-docs",
+    //   {
+    //     id: "gov",
+    //     path: "group/government",
+    //     routeBasePath: "gov",
+    //     sidebarPath: require.resolve("./sidebars.js"),
+    //     showLastUpdateAuthor: true,
+    //     showLastUpdateTime: true,
+    //     breadcrumbs: false,
+    //   },
+    // ],
     [
       "@docusaurus/plugin-content-docs",
       {
@@ -215,12 +239,12 @@ const config = {
         breadcrumbs: false,
       },
     ],
-    [
+        [
       "@docusaurus/plugin-content-docs",
       {
-        id: "com",
-        path: "group/company",
-        routeBasePath: "com",
+        id: "theories",
+        path: "engineering/theories",
+        routeBasePath: "theories",
         sidebarPath: require.resolve("./sidebars.js"),
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
@@ -230,9 +254,9 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "gov",
-        path: "group/government",
-        routeBasePath: "gov",
+        id: "architecture",
+        path: "engineering/architecture",
+        routeBasePath: "architecture",
         sidebarPath: require.resolve("./sidebars.js"),
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
@@ -390,11 +414,11 @@ const config = {
               },
               {
                 label: "开发理论",
-                to: "/com",
+                to: "/theories",
               },
               {
                 label: "架构设计",
-                to: "/gov",
+                to: "/architecture",
               },
             ]
           },

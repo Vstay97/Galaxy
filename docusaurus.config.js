@@ -41,7 +41,7 @@ const config = {
         blog: {
           blogTitle: "Galaxy",
           blogDescription: "Vstay 的个人生活和工作记录",
-          blogSidebarCount: 7,
+          blogSidebarCount: "ALL",
           blogSidebarTitle: "近期文章",
           showReadingTime: true,
           feedOptions: {

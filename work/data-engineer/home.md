@@ -17,9 +17,9 @@ sidebar_position: 1
 
 **必备技能与知识：**
 
-1.  **数据技术栈**：熟悉数据库技术（如MySQL、PostgreSQL）、Hadoop 生态系统（如HDFS、MapReduce、Hive）和 Spark。
+1.  **数据技术栈**：熟悉数据库技术（如MySQL、PostgreSQL）、Hadoop 生态系统（如HDFS、MapReduce、Hive）和 Spark、Flink。
 2.  **分布式系统**：理解分布式系统的原理和挑战，如数据一致性、分区容错等。
-3.  **编程与脚本**：如 Java、Scala、Python 等，用于数据处理和自动化任务。
+3.  **编程与脚本**：如 Java、Scala、Python 等，对JVM运行机制有深入了解。
 4.  **数据建模与设计**：能够设计高效、可扩展的数据模型和架构。
 5.  **系统监控与维护**：使用工具如 Grafana、Prometheus 进行系统监控和告警。
 6.  **沟通与团队合作**：与各团队沟通协作，理解业务需求，为其提供所需的数据支持。

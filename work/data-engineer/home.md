@@ -2,7 +2,7 @@
 slug: /
 sidebar_position: 1
 ---
-## 数据工程师（data-engineer）
+## 数据开发工程师（Data development engineer）
 
 数据工程师（data-engineer）是现代数据驱动的企业中的核心角色，他们专注于设计、构建和维护能够处理各种规模数据集的系统，从 GB 级别到 PB 级别。这些系统通常用于数据存储、查询和分析，支持企业的决策制定、产品创新和运营优化。
 

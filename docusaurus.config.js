@@ -275,6 +275,18 @@ const config = {
         breadcrumbs: false,
       },
     ],
+        [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "backend-engineer",
+        path: "work/backend-engineer",
+        routeBasePath: "backend-engineer",
+        sidebarPath: require.resolve("./sidebars.js"),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
     [
       "@docusaurus/plugin-content-docs",
       {
@@ -395,11 +407,11 @@ const config = {
                 to: "/roadmap",
               },
               {
-                label: "SRE 工程师",
-                to: "/sre-engineer",
+                label: "后端开发工程师",
+                to: "/backend-engineer",
               },
               {
-                label: "Data 工程师",
+                label: "数据开发工程师",
                 to: "/data-engineer",
               },
             ]

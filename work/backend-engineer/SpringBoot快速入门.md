@@ -1,11 +1,15 @@
 ---
-title: Spring5快速入门
-tags:
-  - Spring
-categories:
-  - 框架
+author: Vstay
 date: 2022-04-21 15:28:40
-updated: 2022-05-01 22:39:40
+description: Spring5快速入门
+last_update:
+  author: Vstay
+  date: 2022-05-01 22:39:40
+sidebar_position: 2
+tags:
+- SpringBoot
+- Spring
+title: Spring5快速入门
 ---
 
 - 框架简述

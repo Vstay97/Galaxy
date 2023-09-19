@@ -8,7 +8,6 @@ categories:
 date: 2022-05-14 14:14:37
 updated: 2022-06-03 04:27:37
 
-
 ---
 
 ## 简介
@@ -70,7 +69,7 @@ updated: 2022-06-03 04:27:37
 
 **步骤①**：创建新模块，选择Spring Initializr，并配置模块相关基础信息
 
-![image-20211116125259385](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211116125259385-1654198339801273.png)
+![image-20211116125259385](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211116125259385-1654198339801273.png)
 
 <font color="#ff0000"><b>特别关注</b></font>：第3步点击Next时，Idea需要联网状态才可以进入到后面那一页，如果不能正常联网，就无法正确到达右面那个设置页了，会一直<font color="#ff0000"><b>联网</b></font>转转转。
 
@@ -78,7 +77,7 @@ updated: 2022-06-03 04:27:37
 
 **步骤②**：选择当前模块需要使用的技术集
 
-![image-20211116125615728](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211116125615728-1654198339801274.png)
+![image-20211116125615728](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211116125615728-1654198339801274.png)
 
 按照要求，左侧选择web，然后在中间选择Spring Web即可，选完右侧就出现了新的内容项，这就表示勾选成功了。
 
@@ -105,7 +104,7 @@ public class BookController {
 
 **步骤④**：运行自动生成的Application类
 
-![image-20211116130152452](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211116130152452-1654198339801275.png)
+![image-20211116130152452](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211116130152452-1654198339801275.png)
 
 使用带main方法的java程序的运行形式来运行程序，运行完毕后，控制台输出上述信息。
 
@@ -201,23 +200,23 @@ public class BookController {
 
 SpringBoot官网和Spring的官网是在一起的，都是  spring.io  。你可以通过项目一级一级的找到SpringBoot技术的介绍页，然后在页面中间部位找到如下内容
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211122150444816-1654198339803276.png" alt="image-20211122150444816" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211122150444816-1654198339803276.png" alt="image-20211122150444816" style={{zoom: ' 67%'}} />
 
 **步骤①**：点击**Spring Initializr**后进入到创建SpringBoot程序界面，接下来就是输入信息的过程，和在Idea中制作是一样的，只是界面发生了变化，根据自己的要求，在左侧选择对应信息和输入对应的信息。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211122150608039-1654198339803277.png" alt="image-20211122150608039"  />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211122150608039-1654198339803277.png" alt="image-20211122150608039"  />
 
 **步骤②**：右侧的**ADD DEPENDENCIES**用于选择使用何种技术，和之前勾选的Spring WEB是在做同一件事，仅仅是界面不同而已，点击后打开网页版的技术选择界面。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211122161257361-1654198339803278.png" alt="image-20211122161257361" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211122161257361-1654198339803278.png" alt="image-20211122161257361" style={{zoom: '50%'}} />
 
 **步骤③**：所有信息设置完毕后，点击下面左侧**GENERATE**按钮，生成一个文件包。
 
-![image-20211122161548022](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-202111221615480212-1654198339803279.png)
+![image-20211122161548022](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-202111221615480212-1654198339803279.png)
 
 **步骤④**：保存后得到一个压缩文件，这个文件就是创建的SpringBoot工程
 
-![image-20211122161709478](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211122161709478-1654198339803280.png)
+![image-20211122161709478](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211122161709478-1654198339803280.png)
 
 **步骤⑤**：解压缩此文件得到工程目录，在Idea中导入即可直接使用，和之前在Idea环境下根据向导创建的工程完全一样，你可以创建一个Controller测试一下当前工程是否可用。
 
@@ -227,27 +226,27 @@ SpringBoot官网和Spring的官网是在一起的，都是  spring.io  。你可
 
 **Idea中创建工程时默认选项**
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211122162443035-1654198339803281.png" alt="image-20211122162443035" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211122162443035-1654198339803281.png" alt="image-20211122162443035" style={{zoom: ' 67%'}} />
 
 **SpringBoot官网创建工程时对应的地址**
 
 看看SpringBoot官网创建工程的URL地址，是不是和Idea中使用的URL地址是一样的？
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211122162820719-1654198339803282.png" alt="image-20211122162820719"  />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211122162820719-1654198339803282.png" alt="image-20211122162820719"  />
 
 **总结**
 
 1. 打开SpringBoot官网，选择**Quickstart Your Project**中的Spring Initializr。
 
-   <img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211122150444816-1654198339803276.png" alt="image-20211122150444816" style={{zoom: "zoom:67%"}} />
+   <img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211122150444816-1654198339803276.png" alt="image-20211122150444816" style={{zoom: ' 67%'}} />
 
 2. 创建工程。
 
-   <img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211122150608039-1654198339803277.png" alt="image-20211122150608039"  />
+   <img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211122150608039-1654198339803277.png" alt="image-20211122150608039"  />
 
 3. 保存项目文件。
 
-   ![image-20211122161548022](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211122161548022-1654198339803284.png)
+   ![image-20211122161548022](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211122161548022-1654198339803284.png)
 
 4. 解压项目，通过IDE导入项目后进行编辑使用。
 
@@ -263,11 +262,11 @@ SpringBoot官网和Spring的官网是在一起的，都是  spring.io  。你可
 
 创建工程时，切换选择starter服务路径，然后手工输入阿里云地址即可，地址：http://start.aliyun.com或https://start.aliyun.com
 
-![image-20211122163605950](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211122163605950-1654198339803283.png)
+![image-20211122163605950](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211122163605950-1654198339803283.png)
 
 阿里为了便于自己公司开发使用，特此在依赖坐标中添加了一些阿里自主的技术，也是为了推广自己的技术吧，所以在依赖选择列表中，你有了更多的选择。此外，阿里提供的地址更符合国内开发者的使用习惯，里面有一些SpringBoot官网上没有给出的坐标，大家可以好好看一看。
 
-![image-20211122163937408](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211122163937408-1654198339803285.png)
+![image-20211122163937408](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211122163937408-1654198339803285.png)
 
 不过有一点需要说清楚，阿里云地址默认创建的SpringBoot工程版本是<font color="#ff0000"><b>2.4.1</b></font>，所以如果你想更换其他的版本，创建项目后在pom文件中手工修改即可，别忘了刷新一下，加载新版本信息。
 
@@ -295,7 +294,7 @@ SpringBoot官网和Spring的官网是在一起的，都是  spring.io  。你可
 
 **步骤①**：创建工程时，选择创建普通Maven工程。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211122165341684-1654198339803287.png" alt="image-20211122165341684" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211122165341684-1654198339803287.png" alt="image-20211122165341684" style={{zoom: '50%'}} />
 
 **步骤②**：参照标准SpringBoot工程的pom文件，书写自己的pom文件即可。
 
@@ -377,11 +376,11 @@ public class Application {
 
 **步骤①**：打开设置，【Files】→【Settings】。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211122173835517-1654198339803286.png" alt="image-20211122173835517" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211122173835517-1654198339803286.png" alt="image-20211122173835517" style={{zoom: '80%'}} />
 
 **步骤②**：打开文件类型设置界面后，【Editor】→【File Types】→【Ignored Files and Folders】，忽略文件或文件夹显示。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211122174020028-1654198339803288.png" alt="image-20211122174020028" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211122174020028-1654198339803288.png" alt="image-20211122174020028" style={{zoom: ' 67%'}} />
 
 **步骤③**：添加你要隐藏的文件名称或文件夹名称，可以使用*号通配符，表示任意，设置完毕即可。
 
@@ -967,7 +966,7 @@ Tomcat服务器是一款软件，而且是一款使用java语言开发的软件�
 
 SpringBoot通过配置文件application.properties就可以修改默认的配置，那咱们就先找个简单的配置下手，当前访问tomcat的默认端口是8080，好熟悉的味道，但是不便于书写，我们先改成80，通过这个操作来熟悉一下SpringBoot的配置格式是什么样的。
 
-![image-20211123165428245](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211123165428245-1654198760083305.png)
+![image-20211123165428245](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211123165428245-1654198760083305.png)
 
 那该如何写呢？properties格式的文件书写规范是key=value
 
@@ -977,7 +976,7 @@ name=itheima
 
 这个格式肯定是不能颠覆的，那就尝试性的写就行了，改端口，写port。当你输入port后，神奇的事情就发生了，这玩意儿带提示，太好了。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211123165719091-1654198760083306.png" alt="image-20211123165719091" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211123165719091-1654198760083306.png" alt="image-20211123165719091" style={{zoom: '80%'}} />
 
 根据提示敲回车，输入80端口，搞定。
 
@@ -1170,23 +1169,23 @@ server:
 
 **步骤①**：打开设置，【Files】→【Project Structure...】
 
-![image-20211126160548690](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211126160548690-1654198760083307.png)
+![image-20211126160548690](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126160548690-1654198760083307.png)
 
 **步骤②**：在弹出窗口中左侧选择【Facets】，右侧选中Spring路径下对应的模块名称，也就是你自动提示功能消失的那个模块
 
-<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126160726589-1654198760083308.png" alt="image-20211126160726589" style={{zoom: "zoom:67%"}} />![image-20211126160844372](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211126160844372-1654198760083309.png)
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126160726589-1654198760083308.png" alt="image-20211126160726589" style={{zoom: '67%'}} />![image-20211126160844372](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126160844372-1654198760083309.png)
 
 **步骤③**：点击Customize Spring Boot按钮，此时可以看到当前模块对应的配置文件是哪些了。如果没有你想要称为配置文件的文件格式，就有可能无法弹出提示
 
-![image-20211126160946448](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211126160946448-1654198760083310.png)<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126160954338-1654198760083311.png" alt="image-20211126160954338" style={{zoom: "zoom:80%"}} />
+![image-20211126160946448](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126160946448-1654198760083310.png)<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126160954338-1654198760083311.png" alt="image-20211126160954338" style={{zoom: '80%'}} />
 
 **步骤④**：选择添加配置文件，然后选中要作为配置文件的具体文件就OK了
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211126161145082.png" alt="image-20211126161145082" style={{zoom: "zoom:80%"}} /><img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126161156324-1654198760083313.png" alt="image-20211126161156324" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126161145082.png" alt="image-20211126161145082" style={{zoom: '80%'}} /><img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126161156324-1654198760083313.png" alt="image-20211126161156324" style={{zoom: ' 67%'}} />
 
 到这里就做完了，其实就是Idea的一个小功能
 
-![image-20211126161301699](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211126161301699-1654198760083314.png)
+![image-20211126161301699](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126161301699-1654198760083314.png)
 
 
 
@@ -1288,7 +1287,7 @@ users2: [ { name:Tom , age:4 } , { name:Jerry , age:5 } ]	#对象数组缩略格
 
 yaml中保存的单个数据，可以使用Spring中的注解@Value读取单个数据，属性名引用方式：`${一级属性名.二级属性名...}`
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211126180433356-1654198760083315.png" alt="image-20211126180433356" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126180433356-1654198760083315.png" alt="image-20211126180433356" style={{zoom: '80%'}} />
 
 记得使用@Value注解时，要将该注解写在某一个指定的Spring管控的bean的属性名上方，这样当bean进行初始化时候就可以读取到对应的单一数据了。
 
@@ -1303,7 +1302,7 @@ yaml中保存的单个数据，可以使用Spring中的注解@Value读取单个�
 
 读取单一数据可以解决读取数据的问题，但是如果定义的数据量过大，这么一个一个书写肯定会累死人的，SpringBoot提供了一个对象，能够把所有的数据都封装到这一个对象中，这个对象叫做Environment，使用自动装配注解可以将所有的yaml数据封装到这个对象中
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211126180738569-1654198760083316.png" alt="image-20211126180738569" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126180738569-1654198760083316.png" alt="image-20211126180738569" style={{zoom: '80%'}} />
 
 数据封装到了Environment对象中，获取属性时，通过Environment的接口操作进行，具体方法是getProperties（String），参数填写属性名即可
 
@@ -1320,11 +1319,11 @@ yaml中保存的单个数据，可以使用Spring中的注解@Value读取单个�
 
 首先定义一个对象，并将该对象纳入Spring管控的范围，也就是定义成一个bean，然后使用注解@ConfigurationProperties指定该对象加载哪一组yaml中配置的信息。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211126181126382-1654198760083317.png" alt="image-20211126181126382" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126181126382-1654198760083317.png" alt="image-20211126181126382" style={{zoom: '80%'}} />
 
 这个@ConfigurationProperties必须告诉他加载的数据前缀是什么，这样指定前缀下的所有属性就封装到这个对象中。记得数据属性名要与对象的变量名一一对应啊，不然没法封装。其实以后如果你要定义一组数据自己使用，就可以先写一个对象，然后定义好属性，下面到配置中根据这个格式书写即可。
 
-​	<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211126181423432-1654198760083318.png" alt="image-20211126181423432" style={{zoom: "zoom:80%"}} />
+​	<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126181423432-1654198760083318.png" alt="image-20211126181423432" style={{zoom: '80%'}} />
 
 <font color="#f0f"><b>温馨提示</b></font>
 
@@ -1606,11 +1605,11 @@ class Springboot04JunitApplicationTests {
 
 **步骤①**：创建模块
 
-![image-20211129092156020](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129092156020-1654199005198333.png)
+![image-20211129092156020](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129092156020-1654199005198333.png)
 
 **步骤②**：勾选要使用的技术，MyBatis，由于要操作数据库，还要勾选对应数据库
 
-![image-20211129092210993](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129092210993-1654199005198334.png)
+![image-20211129092210993](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129092210993-1654199005198334.png)
 
 ​	或者手工导入对应技术的starter，和对应数据库的坐标
 
@@ -1729,7 +1728,7 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 
 5. 驱动类过时，提醒更换为com.mysql.cj.jdbc.Driver
 
-      
+     
 
 #### 整合MyBatis-Plus
 
@@ -1795,7 +1794,7 @@ public interface BookDao extends BaseMapper<Book> {
 
 ​	核心在于Dao接口继承了一个BaseMapper的接口，这个接口中帮助开发者预定了若干个常用的API接口，简化了通用API接口的开发工作。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129100313919-1654199005198335.png" alt="image-20211129100313919" style={{zoom:"zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129100313919-1654199005198335.png" alt="image-20211129100313919" style={{zoom: '80%'}} />
 
 ​	下面就可以写一个测试类进行测试了，此处省略。
 
@@ -1904,7 +1903,7 @@ spring:
 
 注意观察，配置项中，在datasource下面并不是直接配置url这些属性的，而是先配置了一个druid节点，然后再配置的url这些东西。言外之意，url这个属性是druid下面的属性，那你能想到什么？除了这4个常规配置外，还有druid专用的其他配置。通过提示功能可以打开druid相关的配置查阅
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129112610729-1654199005198336.png" alt="image-20211129112610729" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129112610729-1654199005198336.png" alt="image-20211129112610729" style={{zoom: '80%'}} />
 
 ​	与druid相关的配置超过200条以上，这就告诉你，如果想做druid相关的配置，使用这种格式就可以了，这里就不展开描述了，太多了。
 
@@ -1926,27 +1925,27 @@ SpringBoot能够整合的技术太多太多了，对于初学者来说慢慢来�
 
 **主页面**
 
-![image-20211129113447844](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129113447844-1654199286187341.png)
+![image-20211129113447844](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129113447844-1654199286187341.png)
 
 **添加**
 
-![image-20211129113522459](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129113522459-1654199286187343.png)
+![image-20211129113522459](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129113522459-1654199286187343.png)
 
 **删除**
 
-![image-20211129113550829](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129113550829-1654199286187342.png)
+![image-20211129113550829](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129113550829-1654199286187342.png)
 
 **修改**
 
-![image-20211129113610966](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129113610966-1654199286187344.png)
+![image-20211129113610966](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129113610966-1654199286187344.png)
 
 **分页**
 
-![image-20211129113628969](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129113628969-1654199286187345.png)
+![image-20211129113628969](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129113628969-1654199286187345.png)
 
 **条件查询**
 
-![image-20211129113650369](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129113650369-1654199286187346.png)
+![image-20211129113650369](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129113650369-1654199286187346.png)
 
 ​	整体案例中需要采用的技术如下，先了解一下，做到哪一个说哪一个
 
@@ -1971,11 +1970,11 @@ SpringBoot能够整合的技术太多太多了，对于初学者来说慢慢来�
 
 对于这个案例如果按照企业开发的形式进行应该制作后台微服务，前后端分离的开发。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129114306062-1654199286187348.png" alt="image-20211129114306062" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129114306062-1654199286187348.png" alt="image-20211129114306062" style={{zoom: '80%'}} />
 
 我知道这个对初学的小伙伴要求太高了，咱们简化一下。后台做单体服务器，前端不使用前后端分离的制作了。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129114328967-1654199286187347.png" alt="image-20211129114328967" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129114328967-1654199286187347.png" alt="image-20211129114328967" style={{zoom: '80%'}} />
 
 一个服务器即充当后台服务调用，又负责前端页面展示，降低学习的门槛。
 
@@ -2266,7 +2265,7 @@ JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6ca30b8a] will not be managed 
 
 此处设置的是日志的显示形式，当前配置的是控制台输出，当然还可以由更多的选择，根据需求切换即可
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129143207295-1654199286187350.png" alt="image-20211129143207295" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129143207295-1654199286187350.png" alt="image-20211129143207295" style={{zoom: '80%'}} />
 
 
 
@@ -2282,7 +2281,7 @@ JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6ca30b8a] will not be managed 
 
 5. 使用配置方式开启日志，设置日志输出方式为标准输出即可查阅SQL执行日志
 
-      
+     
 
 #### 数据层开发——分页功能制作
 
@@ -2650,15 +2649,15 @@ public class BookController2 {
 
 **普通GET请求**
 
-![image-20211129152237371](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129152237371-1654199286187349.png)
+![image-20211129152237371](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129152237371-1654199286187349.png)
 
 **PUT请求传递json数据，后台实用@RequestBody接收数据**
 
-![image-20211129152300177](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129152300177-1654199286187351.png)
+![image-20211129152300177](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129152300177-1654199286187351.png)
 
 **GET请求传递路径变量，后台实用@PathVariable接收数据**
 
-![image-20211129152320073](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129152320073-1654199286187352.png)
+![image-20211129152320073](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129152320073-1654199286187352.png)
 
 **总结**
 
@@ -2739,11 +2738,11 @@ public class R {
 
 表现层开发格式也需要转换一下
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129153301262-1654199286187353.png" alt="image-20211129153301262" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129153301262-1654199286187353.png" alt="image-20211129153301262" style={{zoom: '80%'}} />
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129153319052-1654199286187354.png" alt="image-20211129153319052" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129153319052-1654199286187354.png" alt="image-20211129153319052" style={{zoom: '80%'}} />
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129153332499-1654199286187355.png" alt="image-20211129153332499" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129153332499-1654199286187355.png" alt="image-20211129153332499" style={{zoom: '80%'}} />
 
 结果这么一折腾，全格式统一，现在后端发送给前端的数据格式就统一了，免去了不少前端解析数据的烦恼。
 
@@ -2755,7 +2754,7 @@ public class R {
 
 3. 返回值结果模型类用于后端与前端进行数据格式统一，也称为前后端数据协议
 
-      
+     
 
 #### 前后端联通性测试
 
@@ -2763,7 +2762,7 @@ public class R {
 
 将前端人员开发的页面保存到lresources目录下的static目录中，建议执行maven的clean生命周期，避免缓存的问题出现。
 
-​	<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211129153831990-1654199286187356.png" alt="image-20211129153831990" style={{zoom: "zoom:67%"}} />
+​	<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211129153831990-1654199286187356.png" alt="image-20211129153831990" style={{zoom: '67%'}} />
 
 在进行具体的功能开发之前，先做联通性的测试，通过页面发送异步提交（axios），这一步调试通过后再进行进一步的功能开发。
 
@@ -3389,17 +3388,17 @@ public R getPage(@PathVariable int currentPage,@PathVariable int pageSize){
 
 刚开始做开发学习的小伙伴可能在有一个知识上面有错误的认知，我们天天写程序是在Idea下写的，运行也是在Idea下运行的。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211201091317258-1654199525800373.png" alt="image-20211201091317258" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211201091317258-1654199525800373.png" alt="image-20211201091317258" style={{zoom: '67%'}} />
 
 
 
 但是实际开发完成后，我们的项目是不可能运行在自己的电脑上的。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211201091341645-1654199525800374.png" alt="image-20211201091341645" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211201091341645-1654199525800374.png" alt="image-20211201091341645" style={{zoom: '67%'}} />
 
 我们以后制作的程序是运行在专用的服务器上的，简单说就是将你做的程序放在一台独立运行的电脑上，这台电脑要比你开发使用的计算机更专业，并且安全等级各个方面要远超过你现在的电脑。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211201091502040-1654199525800375.png" alt="image-20211201091502040" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211201091502040-1654199525800375.png" alt="image-20211201091502040" style={{zoom: '67%'}} />
 
 那我们的程序如何放置在这台专用的电脑上呢，这就要将我们的程序先组织成一个文件，然后将这个文件传输到这台服务器上。这里面就存在两个过程，一个是打包的过程，另一个是运行的过程。
 
@@ -3461,7 +3460,7 @@ java -jar 工程包名.jar
 
 有些小伙伴打包以后执行会出现一些问题，导致程序无法正常执行，例如下面的现象
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211201094223991-1654199525800376.png" alt="image-20211201094223991" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211201094223991-1654199525800376.png" alt="image-20211201094223991" style={{zoom: '67%'}} />
 
 要想搞清楚这个问题就要说说.jar文件的工作机制了，知道了这个东西就知道如何避免此类问题的发生了。
 
@@ -3488,19 +3487,19 @@ java -jar 工程包名.jar
 
 先看第一个现象，文件大小不同。带有配置时打包生成的程序包大小如下：
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211201095610270-1654199525800377.png" alt="image-20211201095610270" style={{zoom: "zoom:150%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211201095610270-1654199525800377.png" alt="image-20211201095610270" style={{zoom: '150%'}} />
 
 不难看出，带有配置的程序包体积比不带配置的大了30倍，那这里面都有什么呢？能差这么多？下面看看里面的内容有什么区别。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211201101541267.png" alt="image-20211201101541267" style={{zoom: "zoom:50%"}} /><img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211201101652868-1654199525800379.png" alt="image-20211201101652868" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211201101541267.png" alt="image-20211201101541267" style={{zoom: '50%'}} /><img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211201101652868-1654199525800379.png" alt="image-20211201101652868" style={{zoom: '50%'}} />
 
 我们发现内容也完全不一样，仅有一个目录是一样的，叫做META-INF。打开容量大的程序包中的BOOT-INF目录下的classes目录，我们发现其中的内容居然和容量小的程序包中的内容完全一样。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211201101805569.png" alt="image-20211201101805569" style={{zoom: "zoom:50%"}} /><img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211201101652868-1654199525800379.png" alt="image-20211201101652868" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211201101805569.png" alt="image-20211201101805569" style={{zoom: '50%'}} /><img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211201101652868-1654199525800379.png" alt="image-20211201101652868" style={{zoom: '50%'}} />
 
 原来大的程序包中除了包含小的程序包中的内容，还有别的东西。都有什么呢？回到BOOT-INF目录下，打开lib目录，里面显示了很多个jar文件。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211201102025791-1654199525800381.png" alt="image-20211201102025791" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211201102025791-1654199525800381.png" alt="image-20211201102025791" style={{zoom: '50%'}} />
 
 仔细翻阅不难发现，这些jar文件都是我们制作这个工程时导入的坐标对应的文件。大概可以想明白了，SpringBoot程序为了让自己打包生成的程序可以独立运行，不仅将项目中自己开发的内容进行了打包，还把当前工程运行需要使用的jar包全部打包进来了。为什么这样做呢？就是为了可以独立运行。不依赖程序包外部的任何资源可以独立运行当前程序。这也是为什么大的程序包容量是小的程序包容量的30倍的主要原因。
 
@@ -3549,7 +3548,7 @@ java -jar 工程包名.jar
 
 再来看之前的报错信息：
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211201094223991-1654199525800376.png" alt="image-20211201094223991" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211201094223991-1654199525800376.png" alt="image-20211201094223991" style={{zoom: '67%'}} />
 
 由于打包时没有使用那段配置，结果打包后形成了一个普通的jar包，在MANIFEST.MF文件中也就没有了Main-Class对应的属性了，所以运行时提示找不到主清单属性，这就是报错的原因。
 
@@ -3590,7 +3589,7 @@ taskkill -f -t -im "进程名称"
 
 目前我们的程序包打好了，可以发布了。但是程序包打好以后，里面的配置都已经是固定的了，比如配置了服务器的端口是8080。如果我要启动项目，发现当前我的服务器上已经有应用启动起来并且占用了8080端口，这个时候就尴尬了。难道要重新把打包好的程序修改一下吗？比如我要把打包好的程序启动端口改成80。
 
-![image-20211206095113771](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211206095113771-1654199800658391.png)             ![image-20211206095524343](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211206095524343-1654199800658392.png)             ![image-20211206095101581](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211206095101581-1654199800658393.png)
+![image-20211206095113771](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211206095113771-1654199800658391.png)             ![image-20211206095524343](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211206095524343-1654199800658392.png)             ![image-20211206095101581](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211206095101581-1654199800658393.png)
 
 SpringBoot提供了灵活的配置方式，如果你发现你的项目中有个别属性需要重新配置，可以使用临时属性的方式快速修改某些配置。方法也特别简单，在启动的时候添加上对应参数就可以了。
 
@@ -3610,7 +3609,7 @@ java –jar springboot.jar –-server.port=80 --logging.level.root=debug
 
 现在我们的程序配置受两个地方控制了，第一配置文件，第二临时属性。并且我们发现临时属性的加载优先级要高于配置文件的。那是否还有其他的配置方式呢？其实是有的，而且还不少，打开官方文档中对应的内容，就可以查看配置读取的优先顺序。地址奉上：[https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html)
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211206100859236-1654199800658395.png" alt="image-20211206100859236" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211206100859236-1654199800658395.png" alt="image-20211206100859236" style={{zoom: '67%'}} />
 
 我们可以看到，居然有14种配置的位置，而我们现在使用的是这里面的2个。第3条Config data说的就是使用配置文件，第11条Command line arguments说的就是使用命令行临时参数。而这14种配置的顺序就是SpringBoot加载配置的顺序，言外之意，命令行临时属性比配置文件的加载优先级高，所以这个列表上面的优先级低，下面的优先级高。其实这个东西不用背的，你就记得一点，你最终要什么效果，你自己是知道的，不管这个顺序是怎么个高低排序，开发时一定要配置成你要的顺序为准。这个顺序只是在你想不明白问题的时候帮助你分析罢了。
 
@@ -3633,7 +3632,7 @@ java –jar springboot.jar –-server.port=80 --logging.level.root=debug
 
 打开SpringBoot引导类的运行界面，在里面找到配置项。其中Program arguments对应的位置就是添加临时属性的，可以加几个试试效果。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211206101947622-1654199800658394.png" alt="image-20211206101947622" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211206101947622-1654199800658394.png" alt="image-20211206101947622" style={{zoom: '80%'}} />
 
 做到这里其实可以产生一个思考了，如果对java编程熟悉的小伙伴应该知道，我们运行main方法的时候，如果想使用main方法的参数，也就是下面的args参数，就是在上面这个位置添加的参数。
 
@@ -3715,7 +3714,7 @@ SpringBoot提供了配置文件和临时属性的方式来对程序进行配置�
 
 2. 多层级配置文件间的属性采用叠加并覆盖的形式作用于程序
 
-   ​    
+  ​    
 
 #### 自定义配置文件
 
@@ -3725,15 +3724,15 @@ SpringBoot提供了配置文件和临时属性的方式来对程序进行配置�
 
 **方式一：使用临时属性设置配置文件名，注意仅仅是名称，不要带扩展名**
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211206105548238-1654199800658396.png" alt="image-20211206105548238" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211206105548238-1654199800658396.png" alt="image-20211206105548238" style={{zoom: '67%'}} />
 
 **方式二：使用临时属性设置配置文件路径，这个是全路径名**
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211206105716450-1654199800658397.png" alt="image-20211206105716450" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211206105716450-1654199800658397.png" alt="image-20211206105716450" style={{zoom: '67%'}} />
 
 也可以设置加载多个配置文件
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211206105750285-1654199800658398.png" alt="image-20211206105750285" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211206105750285-1654199800658398.png" alt="image-20211206105750285" style={{zoom: '67%'}} />
 
 使用的属性一个是spring.config.name，另一个是spring.config.location，这个一定要区别清楚。
 
@@ -3753,7 +3752,7 @@ SpringBoot提供了配置文件和临时属性的方式来对程序进行配置�
 
 什么是多环境？其实就是说你的电脑上写的程序最终要放到别人的服务器上去运行。每个计算机环境不一样，这就是多环境。常见的多环境开发主要兼顾3种环境设置，开发环境——自己用的，测试环境——自己公司用的，生产环境——甲方爸爸用的。因为这是绝对不同的三台电脑，所以环境肯定有所不同，比如连接的数据库不一样，设置的访问端口不一样等等。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211206110958819-16542000120901.png" alt="image-20211206110958819" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211206110958819-16542000120901.png" alt="image-20211206110958819" style={{zoom: '67%'}} />
 
 #### 多环境开发（yaml单一文件版）	
 
@@ -3895,7 +3894,7 @@ server:
 
 2. 独立配置文件便于线上系统维护更新并保障系统安全性
 
-      
+     
 
 #### 多环境开发（properties多文件版）
 
@@ -4157,7 +4156,7 @@ public class BookController extends BaseClass{
 
 日志已经能够记录了，但是目前记录的格式是SpringBoot给我们提供的，如果想自定义控制就需要自己设置了。先分析一下当前日志的记录格式。
 
-![image-20211206123431222](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211206123431222-16542001761723.png)
+![image-20211206123431222](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211206123431222-16542001761723.png)
 
 对于单条日志信息来说，日期，触发位置，记录信息是最核心的信息。级别用于做筛选过滤，PID与线程名用于做精准分析。了解这些信息后就可以DIY日志格式了。本课程不做详细的研究，有兴趣的小伙伴可以学习相关的知识。下面给出课程中模拟的官方日志模板的书写格式，便于大家学习。
 
@@ -4263,7 +4262,7 @@ logging:
 
 **步骤②**：构建项目，可以使用快捷键激活此功能
 
-![image-20220222121257218](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220222121257218-16542005193205.png)
+![image-20220222121257218](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220222121257218-16542005193205.png)
 
 对应的快捷键一定要记得
 
@@ -4301,7 +4300,7 @@ CTRL+F9
 
 打开【File】，选择【settings...】,在面板左侧的菜单中找到【Compile】选项，然后勾选【Build project automatically】，意思是自动构建项目
 
-![image-20220222123543551](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220222123543551-16542005193216.png)
+![image-20220222123543551](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220222123543551-16542005193216.png)
 
 自动构建项目选项勾选后
 
@@ -4309,11 +4308,11 @@ CTRL+F9
 
 使用快捷键【Ctrl】+【Alt】+【Shit】+【/】打开维护面板，选择第1项【Registry...】
 
-![image-20220222124006910](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220222124006910-16542005193217.png)
+![image-20220222124006910](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220222124006910-16542005193217.png)
 
 在选项中搜索comple，然后勾选对应项即可
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220222124240069-16542005193218.png" alt="image-20220222124240069" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220222124240069-16542005193218.png" alt="image-20220222124240069" style={{zoom: '80%'}} />
 
 这样程序在运行的时候就可以进行自动构建了，实现了热部署的效果。
 
@@ -4493,7 +4492,7 @@ public class ServerConfig {
 
 最后再说一个小技巧，使用@ConfigurationProperties注解时，会出现一个提示信息
 
-![image-20220222145535749](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220222145535749-16542005193219.png)
+![image-20220222145535749](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220222145535749-16542005193219.png)
 
 出现这个提示后只需要添加一个坐标此提醒就消失了
 
@@ -4632,11 +4631,11 @@ public class ServerConfig {
 
 Druation常用单位如下：
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220222173911102-165420051932110.png" alt="image-20220222173911102" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220222173911102-165420051932110.png" alt="image-20220222173911102" style={{zoom: '50%'}} />
 
 DataSize常用单位如下：
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220222174130102-165420051932111.png" alt="image-20220222174130102" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220222174130102-165420051932111.png" alt="image-20220222174130102" style={{zoom: '67%'}} />
 
 
 
@@ -4693,7 +4692,7 @@ public class ServerConfig {
 
 1. 开启Bean属性校验功能一共3步：导入JSR303与Hibernate校验框架坐标、使用@Validated注解启用校验功能、使用具体校验规则规范数据校验格式
 
-      
+     
 
 #### 数据类型转换
 
@@ -4720,7 +4719,7 @@ spring:
 
 之前在基础篇讲属性注入时，提到过类型相关的知识，在整数相关知识中有这么一句话，**支持二进制，八进制，十六进制**
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220222225748370-165420051932112.png" alt="image-20220222225748370" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220222225748370-165420051932112.png" alt="image-20220222225748370" style={{zoom: '80%'}} />
 
 这个问题就处在这里了，因为0127在开发者眼中是一个字符串“0127”，但是在springboot看来，这就是一个数字，而且是一个八进制的数字。当后台使用String类型接收数据时，如果配置文件中配置了一个整数值，他是先安装整数进行处理，读取后再转换成字符串。巧了，0127撞上了八进制的格式，所以最终以十进制数字87的结果存在了。
 
@@ -4802,7 +4801,7 @@ public class PropertiesAndArgsTest {
 
 说到这里，好奇宝宝们肯定就有新问题了，如果两者共存呢？其实如果思考一下配置属性与命令行参数的加载优先级，这个结果就不言而喻了。在属性加载的优先级设定中，有明确的优先级设定顺序，还记得下面这个顺序吗？
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20211206100859236-165420051932113.png" alt="image-20211206100859236" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211206100859236-165420051932113.png" alt="image-20211206100859236" style={{zoom: '67%'}} />
 
 在这个属性加载优先级的顺序中，明确规定了命令行参数的优先级排序是11，而配置属性的优先级是3，结果不言而喻了，args属性配置优先于properties属性配置加载。
 
@@ -4883,7 +4882,7 @@ public class WebTest {
 
 测试类中启动web环境时，可以指定启动的Web环境对应的端口，springboot提供了4种设置值，分别如下：
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220223125453317-165420051932114.png" alt="image-20220223125453317" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220223125453317-165420051932114.png" alt="image-20220223125453317" style={{zoom: '80%'}} />
 
 - MOCK：根据当前设置确认是否启动web环境，例如使用了Servlet的API就启动web环境，属于适配性的配置
 - DEFINED_PORT：使用自定义的端口作为web服务器端口
@@ -5123,7 +5122,7 @@ public class BookCase {
 
 对于随机值的产生，还有一些小的限定规则，比如产生的数值性数据可以设置范围等，具体如下：
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220223135454862-165420051932115.png" alt="image-20220223135454862" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220223135454862-165420051932115.png" alt="image-20220223135454862" style={{zoom: '80%'}} />
 
 - ${random.int}表示随机整数
 - ${random.int(10)}表示10以内的随机数
@@ -5434,7 +5433,7 @@ windows版安装包下载地址：https://github.com/tporadowski/redis/releases
 
 安装完毕后会得到如下文件，其中有两个文件对应两个命令，是启动Redis的核心命令，需要再CMD命令行模式执行。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220224091709173-165420051932116.png" alt="image-20220224091709173" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220224091709173-165420051932116.png" alt="image-20220224091709173" style={{zoom: ' 80%'}} />
 
 **启动服务器**
 
@@ -5511,7 +5510,7 @@ hget a a2	#得到aa2
 
 上述坐标可以在创建模块的时候通过勾选的形式进行选择，归属NoSQL分类中
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220224101142220-165420051932117.png" alt="image-20220224101142220" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220224101142220-165420051932117.png" alt="image-20220224101142220" style={{zoom: '50%'}} />
 
 **步骤②**：进行基础配置
 
@@ -5559,7 +5558,7 @@ class Springboot16RedisApplicationTests {
 
 在操作redis时，需要先确认操作何种数据，根据数据种类得到操作接口。例如使用opsForValue()获取string类型的数据操作接口，使用opsForHash()获取hash类型的数据操作接口，剩下的就是调用对应api操作了。各种类型的数据操作接口如下：
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220224103104908-165420051932118.png" alt="image-20220224103104908" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220224103104908-165420051932118.png" alt="image-20220224103104908" style={{zoom: '80%'}} />
 
 **总结**
 
@@ -5676,15 +5675,15 @@ windows版安装包下载地址：https://www.mongodb.com/try/download
 
 解压缩完毕后会得到如下文件，其中bin目录包含了所有mongodb的可执行命令
 
-![image-20220224111306933](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220224111306933-165420051932119.png)
+![image-20220224111306933](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220224111306933-165420051932119.png)
 
 mongodb在运行时需要指定一个数据存储的目录，所以创建一个数据存储目录，通常放置在安装目录中，此处创建data的目录用来存储数据，具体如下
 
-![image-20220224111053408](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220224111053408-165420051932120.png)
+![image-20220224111053408](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220224111053408-165420051932120.png)
 
 如果在安装的过程中出现了如下警告信息，就是告诉你，你当前的操作系统缺少了一些系统文件，这个不用担心。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220224113956882-165420051932121.png" alt="image-20220224113956882" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220224113956882-165420051932121.png" alt="image-20220224113956882" style={{zoom: '50%'}} />
 
 根据下列方案即可解决，在浏览器中搜索提示缺少的名称对应的文件，并下载，将下载的文件拷贝到windows安装目录的system32目录下，然后在命令行中执行regsvr32命令注册此文件。根据下载的文件名不同，执行命令前更改对应名称。
 
@@ -5712,19 +5711,19 @@ MongoDB虽然是一款数据库，但是它的操作并不是使用SQL语句进�
 
 同类型的软件较多，本次安装的软件时Robo3t，Robot3t是一款绿色软件，无需安装，解压缩即可。解压缩完毕后进入安装目录双击robot3t.exe即可使用。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220224114911573-165420051932122.png" alt="image-20220224114911573" style={{zoom: "zoom:33%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220224114911573-165420051932122.png" alt="image-20220224114911573" style={{zoom: ' 33%'}} />
 
 打开软件首先要连接MongoDB服务器，选择【File】菜单，选择【Connect...】
 
-![image-20220224115202422](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220224115202422-165420051932123.png)
+![image-20220224115202422](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220224115202422-165420051932123.png)
 
 进入连接管理界面后，选择左上角的【Create】链接，创建新的连接设置
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220224115254200-165420051932124.png" alt="image-20220224115254200" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220224115254200-165420051932124.png" alt="image-20220224115254200" style={{zoom: '80%'}} />
 
 如果输入设置值即可连接（默认不修改即可连接本机27017端口）
 
-![image-20220224115300266](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220224115300266-165420051932125.png)
+![image-20220224115300266](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220224115300266-165420051932125.png)
 
 连接成功后在命令输入区域输入命令即可操作MongoDB。
 
@@ -5795,7 +5794,7 @@ db.集合名称.update(条件，{操作种类:{文档}})
 
 上述坐标也可以在创建模块的时候通过勾选的形式进行选择，同样归属NoSQL分类中
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220224120721626-165420051932126.png" alt="image-20220224120721626" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220224120721626-165420051932126.png" alt="image-20220224120721626" style={{zoom: ' 67%'}} />
 
 **步骤②**：进行基础配置
 
@@ -5887,7 +5886,7 @@ windows版安装包下载地址：[https://](https://www.elastic.co/cn/downloads
 
 下载的安装包是解压缩就能使用的zip文件，解压缩完毕后会得到如下文件
 
-![image-20220225132756400](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220225132756400-165420051932127.png)
+![image-20220225132756400](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220225132756400-165420051932127.png)
 
 - bin目录：包含所有的可执行命令
 - config目录：包含ES服务器使用的配置文件
@@ -6486,13 +6485,13 @@ springboot能够整合的技术实在是太多了，可以说是万物皆可整�
 
 企业级应用主要作用是信息处理，当需要读取数据时，由于受限于数据库的访问效率，导致整体系统性能偏低。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220226154148303-165420051932128.png" alt="image-20220226154148303" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220226154148303-165420051932128.png" alt="image-20220226154148303" style={{zoom: '67%'}} />
 
 ​	          应用程序直接与数据库打交道，访问效率低
 
 为了改善上述现象，开发者通常会在应用程序与数据库之间建立一种临时的数据存储机制，该区域中的数据在内存中保存，读写速度较快，可以有效解决数据库访问效率低下的问题。这一块临时存储数据的区域就是缓存。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220226154233010-165420051932129.png" alt="image-20220226154233010" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220226154233010-165420051932129.png" alt="image-20220226154233010" style={{zoom: '67%'}} />
 
  	使用缓存后，应用程序与缓存打交道，缓存与数据库打交道，数据访问效率提高
 
@@ -6820,15 +6819,15 @@ windows版安装包下载地址：https://www.runoob.com/memcached/window-instal
 
 下载的安装包是解压缩就能使用的zip文件，解压缩完毕后会得到如下文件
 
-![image-20220226174957040](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220226174957040-165420051932130.png)
+![image-20220226174957040](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220226174957040-165420051932130.png)
 
 可执行文件只有一个memcached.exe，使用该文件可以将memcached作为系统服务启动，执行此文件时会出现报错信息，如下：
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220226175141986-165420051932131.png" alt="image-20220226175141986" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220226175141986-165420051932131.png" alt="image-20220226175141986" style={{zoom: '80%'}} />
 
 此处出现问题的原因是注册系统服务时需要使用管理员权限，当前账号权限不足导致安装服务失败，切换管理员账号权限启动命令行
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220226175302903-165420051932132.png" alt="image-20220226175302903" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220226175302903-165420051932132.png" alt="image-20220226175302903" style={{zoom: '80%'}} />
 
 然后再次执行安装服务的命令即可，如下：
 
@@ -6845,7 +6844,7 @@ memcached.exe -d stop# 停止服务
 
 也可以在任务管理器中进行服务状态的切换
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220226175441675-165420051932133.png" alt="image-20220226175441675" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220226175441675-165420051932133.png" alt="image-20220226175441675" style={{zoom: '67%'}} />
 
 **变更缓存为Memcached**
 
@@ -7767,7 +7766,7 @@ spring:
 
 2. 为定时执行的的任务设置执行周期，描述方式cron表达式
 
-      
+     
 
 #### 邮件
 
@@ -7810,7 +7809,7 @@ host配置的是提供邮件服务的主机协议，当前程序仅用于发送�
 
 password并不是邮箱账号的登录密码，是邮件供应商提供的一个加密后的密码，也是为了保障系统安全性。不然外部人员通过地址访问下载了配置文件，直接获取到了邮件密码就会有极大的安全隐患。有关该密码的获取每个邮件供应商提供的方式都不一样，此处略过。可以到邮件供应商的设置页面找POP3或IMAP这些关键词找到对应的获取位置。下例仅供参考：
 
-![image-20220228111251036](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220228111251036-165420051932134.png)
+![image-20220228111251036](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220228111251036-165420051932134.png)
 
 **步骤③**：使用JavaMailSender接口发送邮件
 
@@ -7928,7 +7927,7 @@ public class SendMailServiceImpl2 implements SendMailService {
 
 1. springboot整合javamail其实就是简化了发送邮件的客户端对象JavaMailSender的初始化过程，通过配置的形式加载信息简化开发过程
 
-      
+     
 
 #### 消息
 
@@ -8162,7 +8161,7 @@ windows版安装包下载地址：[https://activemq.apache.org/components/classi
 
 下载的安装包是解压缩就能使用的zip文件，解压缩完毕后会得到如下文件
 
-![image-20220228160001620](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220228160001620-165420051932135.png)
+![image-20220228160001620](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220228160001620-165420051932135.png)
 
 **启动服务器**
 
@@ -8182,11 +8181,11 @@ http://127.0.0.1:8161/
 
 web管理服务默认端口8161，访问后可以打开ActiveMQ的管理界面，如下：
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220228160844972-165420051932136.png" alt="image-20220228160844972" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220228160844972-165420051932136.png" alt="image-20220228160844972" style={{zoom: '67%'}} />
 
 首先输入访问用户名和密码，初始化用户名和密码相同，均为：admin，成功登录后进入管理后台界面，如下：
 
-![image-20220228161010401](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220228161010401-165420051932137.png)
+![image-20220228161010401](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220228161010401-165420051932137.png)
 
 看到上述界面视为启动ActiveMQ服务成功。
 
@@ -8510,7 +8509,7 @@ windows版安装包下载地址：[https](https://www.erlang.org/downloads)[://w
 
 安装的过程中可能会出现依赖Windows组件的提示，根据提示下载安装即可，都是自动执行的，如下：
 
-![image-20220228164851551](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220228164851551-165420051932138.png)
+![image-20220228164851551](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220228164851551-165420051932138.png)
 
 Erlang安装后需要配置环境变量，否则RabbitMQ将无法找到安装的Erlang。需要配置项如下，作用等同JDK配置环境变量的作用。
 
@@ -8523,7 +8522,7 @@ windows版安装包下载地址：[https://](https://rabbitmq.com/install-window
 
 下载完毕后得到exe安装文件，一键傻瓜式安装，安装完毕后会得到如下文件
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220228165151524-165420051932139.png" alt="image-20220228165151524" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220228165151524-165420051932139.png" alt="image-20220228165151524" style={{zoom: '67%'}} />
 
 **启动服务器**
 
@@ -8541,7 +8540,7 @@ rabbitmqctl status# 查看服务状态
 
 说明：不喜欢命令行的小伙伴可以使用任务管理器中的服务页，找到RabbitMQ服务，使用鼠标右键菜单控制服务的启停。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220228170147193-165420051932240.png" alt="image-20220228170147193" style={{zoom: "zoom:67%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220228170147193-165420051932240.png" alt="image-20220228170147193" style={{zoom: '67%'}} />
 
 **访问web管理服务**
 
@@ -8560,11 +8559,11 @@ http://localhost:15672
 
 web管理服务默认端口15672，访问后可以打开RabbitMQ的管理界面，如下：
 
-![image-20220228170504793](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220228170504793-165420051932241.png)
+![image-20220228170504793](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220228170504793-165420051932241.png)
 
 首先输入访问用户名和密码，初始化用户名和密码相同，均为：guest，成功登录后进入管理后台界面，如下：
 
-![image-20220228170535261](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220228170535261-165420051932242.png)
+![image-20220228170535261](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220228170535261-165420051932242.png)
 
 ###### 整合(direct模型)
 
@@ -8753,7 +8752,7 @@ windows版安装包下载地址：[https://rocketmq.apache.org](https://rocketmq
 
 下载完毕后得到zip压缩文件，解压缩即可使用，解压后得到如下文件
 
-![image-20220228174453471](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220228174453471-165420051932243.png)
+![image-20220228174453471](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220228174453471-165420051932243.png)
 
 RocketMQ安装后需要配置环境变量，具体如下：
 
@@ -8767,7 +8766,7 @@ RocketMQ安装后需要配置环境变量，具体如下：
 
 在RocketMQ中，处理业务的服务器称为broker，生产者与消费者不是直接与broker联系的，而是通过命名服务器进行通信。broker启动后会通知命名服务器自己已经上线，这样命名服务器中就保存有所有的broker信息。当生产者与消费者需要连接broker时，通过命名服务器找到对应的处理业务的broker，因此命名服务器在整套结构中起到一个信息中心的作用。并且broker启动前必须保障命名服务器先启动。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220228175123790-165420051932244.png" alt="image-20220228175123790" style={{zoom: "zoom:80%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220228175123790-165420051932244.png" alt="image-20220228175123790" style={{zoom: '80%'}} />
 
 **启动服务器**
 
@@ -8874,7 +8873,7 @@ windows版安装包下载地址：[https://](https://kafka.apache.org/downloads)
 
 下载完毕后得到tgz压缩文件，使用解压缩软件解压缩即可使用，解压后得到如下文件
 
-![image-20220228181442155](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220228181442155-165420051932245.png)
+![image-20220228181442155](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220228181442155-165420051932245.png)
 
 建议使用windows版2.8.1版本。
 
@@ -8976,7 +8975,7 @@ public class MessageListener {
 
 3. 企业开发时通常使用监听器来处理消息队列中的消息，设置监听器使用注解@KafkaListener。接收消息保存在形参ConsumerRecord对象中
 
-      
+     
 
 #### 监控
 
@@ -8994,19 +8993,19 @@ public class MessageListener {
 
 通过上述描述，可以看出监控很重要。那具体的监控要如何开展呢？还要从实际的程序运行角度出发。比如现在有3个服务支撑着一个程序的运行，每个服务都有自己的运行状态。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301093704396-165420051932246.png" alt="image-20220301093704396" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301093704396-165420051932246.png" alt="image-20220301093704396" style={{zoom: '50%'}} />
 
 此时被监控的信息就要在三个不同的程序中去查询并展示，但是三个服务是服务于一个程序的运行的，如果不能合并到一个平台上展示，监控工作量巨大，而且信息对称性差，要不停的在三个监控端查看数据。如果将业务放大成30个，300个，3000个呢？看来必须有一个单独的平台，将多个被监控的服务对应的监控指标信息汇总在一起，这样更利于监控工作的开展。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301094001896-165420051932247.png" alt="image-20220301094001896" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301094001896-165420051932247.png" alt="image-20220301094001896" style={{zoom: '50%'}} />
 
 新的程序专门用来监控，新的问题就出现了，是被监控程序主动上报信息还是监控程序主动获取信息？如果监控程序不能主动获取信息，这就意味着监控程序有可能看到的是很久之前被监控程序上报的信息，万一被监控程序宕机了，监控程序就无法区分究竟是好久没法信息了，还是已经下线了。所以监控程序必须具有主动发起请求获取被监控服务信息的能力。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301094259844-165420051932248.png" alt="image-20220301094259844" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301094259844-165420051932248.png" alt="image-20220301094259844" style={{zoom: '50%'}} />
 
 如果监控程序要监控服务时，主动获取对方的信息。那监控程序如何知道哪些程序被自己监控呢？不可能在监控程序中设置我监控谁，这样互联网上的所有程序岂不是都可以被监控到，这样的话信息安全将无法得到保障。合理的做法只能是在被监控程序启动时上报监控程序，告诉监控程序你可以监控我了。看来需要在被监控程序端做主动上报的操作，这就要求被监控程序中配置对应的监控程序是谁。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301094547748-165420051932249.png" alt="image-20220301094547748" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301094547748-165420051932249.png" alt="image-20220301094547748" style={{zoom: '50%'}} />
 
 被监控程序可以提供各种各样的指标数据给监控程序看，但是每一个指标都代表着公司的机密信息，并不是所有的指标都可以给任何人看的，乃至运维人员，所以对被监控指标的是否开放出来给监控系统看，也需要做详细的设定。
 
@@ -9051,7 +9050,7 @@ Spring Boot Admin，这是一个开源社区项目，用于管理和监控Spring
 
 上述过程可以通过创建项目时使用勾选的形式完成。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301102432817-165420051932250.png" alt="image-20220301102432817" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301102432817-165420051932250.png" alt="image-20220301102432817" style={{zoom: '50%'}} />
 
 **步骤②**：在引导类上添加注解@EnableAdminServer，声明当前应用启动后作为SpringBootAdmin的服务器使用
 
@@ -9067,7 +9066,7 @@ public class Springboot25AdminServerApplication {
 
 做到这里，这个服务器就开发好了，启动后就可以访问当前程序了，界面如下。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301103028468-165420051932251.png" alt="image-20220301103028468" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301103028468-165420051932251.png" alt="image-20220301103028468" style={{zoom: ' 50%'}} />
 
 由于目前没有启动任何被监控的程序，所以里面什么信息都没有。下面制作一个被监控的客户端程序。
 
@@ -9104,11 +9103,11 @@ spring:
 
 做到这里，这个客户端就可以启动了。启动后再次访问服务端程序，界面如下。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301103838079-165420051932254.png" alt="image-20220301103838079" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301103838079-165420051932254.png" alt="image-20220301103838079" style={{zoom: ' 50%'}} />
 
 可以看到，当前监控了1个程序，点击进去查看详细信息。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301103936386-165420051932252.png" alt="image-20220301103936386" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301103936386-165420051932252.png" alt="image-20220301103936386" style={{zoom: ' 50%'}} />
 
 由于当前没有设置开放哪些信息给监控服务器，所以目前看不到什么有效的信息。下面需要做两组配置就可以看到信息了。
 
@@ -9138,7 +9137,7 @@ management:
 
 上述配置对于初学者来说比较容易混淆。简单解释一下，到下一节再做具体的讲解。springbootadmin的客户端默认开放了13组信息给服务器，但是这些信息除了一个之外，其他的信息都不让通过HTTP请求查看。所以你看到的信息基本上就没什么内容了，只能看到一个内容，就是下面的健康信息。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301104742563-165420051932253.png" alt="image-20220301104742563" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301104742563-165420051932253.png" alt="image-20220301104742563" style={{zoom: ' 50%'}} />
 
 但是即便如此我们看到健康信息中也没什么内容，原因在于健康信息中有一些信息描述了你当前应用使用了什么技术等信息，如果无脑的对外暴露功能会有安全隐患。通过配置就可以开放所有的健康信息明细查看了。
 
@@ -9151,7 +9150,7 @@ management:
 
 健康明细信息如下：
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301105116554-165420051932255.png" alt="image-20220301105116554" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301105116554-165420051932255.png" alt="image-20220301105116554" style={{zoom: ' 50%'}} />
 
 目前除了健康信息，其他信息都查阅不了。原因在于其他12种信息是默认不提供给服务器通过HTTP请求查阅的，所以需要开启查阅的内容项，使用*表示查阅全部。记得带引号。
 
@@ -9164,7 +9163,7 @@ endpoints:
 
 配置后再刷新服务器页面，就可以看到所有的信息了。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301105554494-165420051932257.png" alt="image-20220301105554494" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301105554494-165420051932257.png" alt="image-20220301105554494" style={{zoom: ' 50%'}} />
 
 以上界面中展示的信息量就非常大了，包含了13组信息，有性能指标监控，加载的bean列表，加载的系统属性，日志的显示控制等等。
 
@@ -9172,21 +9171,21 @@ endpoints:
 
 可以通过配置客户端的方式在其他的springboot程序中添加客户端坐标，这样当前服务器就可以监控多个客户端程序了。每个客户端展示不同的监控信息。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301110352170-165420051932256.png" alt="image-20220301110352170" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301110352170-165420051932256.png" alt="image-20220301110352170" style={{zoom: ' 50%'}} />
 
 进入监控面板，如果你加载的应用具有功能，在监控面板中可以看到3组信息展示的与之前加载的空工程不一样。
 
 - 类加载面板中可以查阅到开发者自定义的类，如左图
 
-​                        <img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301161246835-165420051932258.png" alt="image-20220301161246835" style={{zoom: "zoom:33%"}} /><img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301161949431.png" alt="image-20220301161949431" style={{zoom: "zoom:33%"}} />
+​                        <img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301161246835-165420051932258.png" alt="image-20220301161246835" style={{zoom: '33%'}} /><img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301161949431.png" alt="image-20220301161949431" style={{zoom: '33%'}} />
 
 - 映射中可以查阅到当前应用配置的所有请求
 
-​                        <img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301161418791.png" alt="image-20220301161418791" style={{zoom: "zoom:33%"}} /><img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301162008737-165420051932261.png" alt="image-20220301162008737" style={{zoom: "zoom:33%"}} />
+​                        <img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301161418791.png" alt="image-20220301161418791" style={{zoom: ' 33%'}} /><img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301162008737-165420051932261.png" alt="image-20220301162008737" style={{zoom: '33%'}} />
 
 - 性能指标中可以查阅当前应用独有的请求路径统计数据
 
-​                        <img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301161906949-165420051932262.png" alt="image-20220301161906949" style={{zoom: "zoom:33%"}} /><img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301162040670.png" alt="image-20220301162040670" style={{zoom: "zoom:33%"}} />
+​                        <img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301161906949-165420051932262.png" alt="image-20220301161906949" style={{zoom: ' 33%'}} /><img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301162040670.png" alt="image-20220301162040670" style={{zoom: ' 33%'}} />
 
 **总结**
 
@@ -9204,11 +9203,11 @@ endpoints:
 
 通过查阅监控中的映射指标，可以看到当前系统中可以运行的所有请求路径，其中大部分路径以/actuator开头
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301170214076-165420051932264.png" alt="image-20220301170214076" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301170214076-165420051932264.png" alt="image-20220301170214076" style={{zoom: ' 50%'}} />
 
 首先这些请求路径不是开发者自己编写的，其次这个路径代表什么含义呢？既然这个路径可以访问，就可以通过浏览器发送该请求看看究竟可以得到什么信息。
 
-![image-20220301170723057](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301170723057-165420051932265.png)
+![image-20220301170723057](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301170723057-165420051932265.png)
 
 通过发送请求，可以得到一组json信息，如下
 
@@ -9327,13 +9326,13 @@ endpoints:
 
 当前信息与监控面板中的数据存在着对应关系
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301171025615-165420051932266.png" alt="image-20220301171025615" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301171025615-165420051932266.png" alt="image-20220301171025615" style={{zoom: '50%'}} />
 
 原来监控中显示的信息实际上是通过发送请求后得到json数据，然后展示出来。按照上述操作，可以发送更多的以/actuator开头的链接地址，获取更多的数据，这些数据汇总到一起组成了监控平台显示的所有数据。
 
 到这里我们得到了一个核心信息，监控平台中显示的信息实际上是通过对被监控的应用发送请求得到的。那这些请求谁开发的呢？打开被监控应用的pom文件，其中导入了springboot admin的对应的client，在这个资源中导入了一个名称叫做actuator的包。被监控的应用之所以可以对外提供上述请求路径，就是因为添加了这个包。
 
-![image-20220301171437817](C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301171437817-165420051932267.png)
+![image-20220301171437817](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301171437817-165420051932267.png)
 
 这个actuator是什么呢？这就是本节要讲的核心内容，监控的端点。
 
@@ -9418,7 +9417,7 @@ management:
 
 3. web端默认无法获取所有端点信息，通过配置开放端点功能
 
-      
+     
 
 ##### 自定义监控指标
 
@@ -9442,11 +9441,11 @@ info端点描述了当前应用的基本信息，可以通过两种形式快速�
 
   配置完毕后，对应信息显示在监控平台上
 
-  <img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301174133248-165420051932268.png" alt="image-20220301174133248" style={{zoom: "zoom:50%"}} />
+  <img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301174133248-165420051932268.png" alt="image-20220301174133248" style={{zoom: '50%'}} />
 
   也可以通过请求端点信息路径获取对应json信息
 
-  <img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301174241310-165420051932269.png" alt="image-20220301174241310" style={{zoom: "zoom:50%"}} />
+  <img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301174241310-165420051932269.png" alt="image-20220301174241310" style={{zoom: '50%'}} />
 
 - 编程形式
 
@@ -9491,7 +9490,7 @@ public class HealthConfig extends AbstractHealthIndicator {
 
 当任意一个组件状态不为UP时，整体应用对外服务状态为非UP状态。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301174751845-165420051932270.png" alt="image-20220301174751845" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301174751845-165420051932270.png" alt="image-20220301174751845" style={{zoom: '50%'}} />
 
 **Metrics端点**
 
@@ -9520,7 +9519,7 @@ public class BookServiceImpl extends ServiceImpl<BookDao, Book> implements IBook
 
 在性能指标中就出现了自定义的性能指标监控项
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301175101812-165420051932271.png" alt="image-20220301175101812" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301175101812-165420051932271.png" alt="image-20220301175101812" style={{zoom: '50%'}} />
 
 **自定义端点**
 
@@ -9543,7 +9542,7 @@ public class PayEndpoint {
 
 由于此端点数据spirng boot admin无法预知该如何展示，所以通过界面无法看到此数据，通过HTTP请求路径可以获取到当前端点的信息，但是需要先开启当前端点对外功能，或者设置当前端点为默认开发的端点。
 
-<img src="C:\Users\Vstay\Desktop\Code\_posts\new\1.简介\image-20220301175355482-165420051932272.png" alt="image-20220301175355482" style={{zoom: "zoom:50%"}} />
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220301175355482-165420051932272.png" alt="image-20220301175355482" style={{zoom: '50%'}} />
 
 **总结**
 

@@ -1,13 +1,15 @@
 ---
-title: SpringBoot快速入门
-tags:
-  - SpringBoot
-  - Spring
-categories:
-  - 框架
+author: Vstay
 date: 2022-05-14 14:14:37
-updated: 2022-06-03 04:27:37
-
+description: SpringBoot快速入门
+last_update:
+  author: Vstay
+  date: 2022-06-03 04:27:37
+sidebar_position: 3
+tags:
+- SpringBoot
+- Spring
+title: SpringBoot快速入门
 ---
 
 ## 简介

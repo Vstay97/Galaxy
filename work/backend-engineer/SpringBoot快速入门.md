@@ -16,26 +16,26 @@ title: SpringBoot快速入门
 
 ### 内容说明
 
-| 基本单元                                   | 学习目标                                                     |
-| ------------------------------------------ | ------------------------------------------------------------ |
-| <font color="#ff0000"><b>基础篇</b></font> | 能够创建SpringBoot工程<br/>基于SpringBoot实现ssm/ssmp整合    |
+| 基本单元                                   | 学习目标                                                                                                                                                       |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <font color="#ff0000"><b>基础篇</b></font> | 能够创建SpringBoot工程<br/>基于SpringBoot实现ssm/ssmp整合                                                                                                      |
 | <font color="#cc0000"><b>应用篇</b></font> | 能够掌握SpringBoot程序多环境开发<br/>能够基于Linux系统发布SpringBoot工程<br/>能够解决线上灵活配置SpringBoot工程的需求<br/>能够基于SpringBoot整合任意第三方技术 |
 
 
 
 ### 前置知识说明
 
-| 课程单元                                   | 前置知识                   | 要求                                                         |
-| ------------------------------------------ | -------------------------- | ------------------------------------------------------------ |
-| <font color="#ff0000"><b>基础篇</b></font> | Java基础语法               | 面向对象，封装，继承，多态，类与接口，集合，IO，网络编程等   |
-| <font color="#ff0000"><b>基础篇</b></font> | Spring与SpringMVC          | 知道Spring是用来管理bean，能够基于Restful实现页面请求交互功能 |
-| <font color="#ff0000"><b>基础篇</b></font> | Mybatis与Mybatis-Plus      | 基于Mybatis和MybatisPlus能够开发出包含基础CRUD功能的标准Dao模块 |
-| <font color="#ff0000"><b>基础篇</b></font> | 数据库MySQL                | 能够读懂基础CRUD功能的SQL语句                                |
-| <font color="#ff0000"><b>基础篇</b></font> | 服务器                     | 知道服务器与web工程的关系，熟悉web服务器的基础配置           |
+| 课程单元                                   | 前置知识                   | 要求                                                                        |
+| ------------------------------------------ | -------------------------- | --------------------------------------------------------------------------- |
+| <font color="#ff0000"><b>基础篇</b></font> | Java基础语法               | 面向对象，封装，继承，多态，类与接口，集合，IO，网络编程等                  |
+| <font color="#ff0000"><b>基础篇</b></font> | Spring与SpringMVC          | 知道Spring是用来管理bean，能够基于Restful实现页面请求交互功能               |
+| <font color="#ff0000"><b>基础篇</b></font> | Mybatis与Mybatis-Plus      | 基于Mybatis和MybatisPlus能够开发出包含基础CRUD功能的标准Dao模块             |
+| <font color="#ff0000"><b>基础篇</b></font> | 数据库MySQL                | 能够读懂基础CRUD功能的SQL语句                                               |
+| <font color="#ff0000"><b>基础篇</b></font> | 服务器                     | 知道服务器与web工程的关系，熟悉web服务器的基础配置                          |
 | <font color="#ff0000"><b>基础篇</b></font> | maven                      | 知道maven的依赖关系，知道什么是依赖范围，依赖传递，排除依赖，可选依赖，继承 |
-| <font color="#ff0000"><b>基础篇</b></font> | web技术（含vue，ElementUI) | 知道vue如何发送ajax请求，如何获取响应数据，如何进行数据模型双向绑定 |
-| <font color="#cc0000"><b>应用篇</b></font> | Linux（CenterOS7）         | 熟悉常用的Linux基础指令，熟悉Linux系统目录结构               |
-| <font color="#cc0000"><b>应用篇</b></font> | 实用开发技术               | 缓存：Redis、MongoDB、……<br/>消息中间件:RocketMq、RabbitMq、…… |
+| <font color="#ff0000"><b>基础篇</b></font> | web技术（含vue，ElementUI) | 知道vue如何发送ajax请求，如何获取响应数据，如何进行数据模型双向绑定         |
+| <font color="#cc0000"><b>应用篇</b></font> | Linux（CenterOS7）         | 熟悉常用的Linux基础指令，熟悉Linux系统目录结构                              |
+| <font color="#cc0000"><b>应用篇</b></font> | 实用开发技术               | 缓存：Redis、MongoDB、……<br/>消息中间件:RocketMq、RabbitMq、……              |
 
 ## 基础篇
 
@@ -1175,7 +1175,9 @@ server:
 
 **步骤②**：在弹出窗口中左侧选择【Facets】，右侧选中Spring路径下对应的模块名称，也就是你自动提示功能消失的那个模块
 
-<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126160726589-1654198760083308.png" alt="image-20211126160726589" style={{zoom:'67%'}} />![image-20211126160844372](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126160844372-1654198760083309.png)
+<img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126160726589-1654198760083308.png" alt="image-20211126160726589" style={{zoom:'67%'}} />
+
+![image-20211126160844372](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20211126160844372-1654198760083309.png)
 
 **步骤③**：点击Customize Spring Boot按钮，此时可以看到当前模块对应的配置文件是哪些了。如果没有你想要称为配置文件的文件格式，就有可能无法弹出提示
 
@@ -7198,17 +7200,17 @@ public class SMSCodeServiceImpl implements SMSCodeService {
 
 cacheType如果不进行配置，默认值是REMOTE，即仅使用远程缓存方案。关于jetcache的配置，参考以下信息
 
-| 属性                                                      | 默认值 | 说明                                                         |
-| --------------------------------------------------------- | ------ | ------------------------------------------------------------ |
-| jetcache.statIntervalMinutes                              | 0      | 统计间隔，0表示不统计                                        |
-| jetcache.hiddenPackages                                   | 无     | 自动生成name时，隐藏指定的包名前缀                           |
+| 属性                                                      | 默认值 | 说明                                                           |
+| --------------------------------------------------------- | ------ | -------------------------------------------------------------- |
+| jetcache.statIntervalMinutes                              | 0      | 统计间隔，0表示不统计                                          |
+| jetcache.hiddenPackages                                   | 无     | 自动生成name时，隐藏指定的包名前缀                             |
 | jetcache.[local\|remote].${area}.type                     | 无     | 缓存类型，本地支持linkedhashmap、caffeine，远程支持redis、tair |
-| jetcache.[local\|remote].${area}.keyConvertor             | 无     | key转换器，当前仅支持fastjson                                |
-| jetcache.[local\|remote].${area}.valueEncoder             | java   | 仅remote类型的缓存需要指定，可选java和kryo                   |
-| jetcache.[local\|remote].${area}.valueDecoder             | java   | 仅remote类型的缓存需要指定，可选java和kryo                   |
-| jetcache.[local\|remote].${area}.limit                    | 100    | 仅local类型的缓存需要指定，缓存实例最大元素数                |
-| jetcache.[local\|remote].${area}.expireAfterWriteInMillis | 无穷大 | 默认过期时间，毫秒单位                                       |
-| jetcache.local.${area}.expireAfterAccessInMillis          | 0      | 仅local类型的缓存有效，毫秒单位，最大不活动间隔              |
+| jetcache.[local\|remote].${area}.keyConvertor             | 无     | key转换器，当前仅支持fastjson                                  |
+| jetcache.[local\|remote].${area}.valueEncoder             | java   | 仅remote类型的缓存需要指定，可选java和kryo                     |
+| jetcache.[local\|remote].${area}.valueDecoder             | java   | 仅remote类型的缓存需要指定，可选java和kryo                     |
+| jetcache.[local\|remote].${area}.limit                    | 100    | 仅local类型的缓存需要指定，缓存实例最大元素数                  |
+| jetcache.[local\|remote].${area}.expireAfterWriteInMillis | 无穷大 | 默认过期时间，毫秒单位                                         |
+| jetcache.local.${area}.expireAfterAccessInMillis          | 0      | 仅local类型的缓存有效，毫秒单位，最大不活动间隔                |
 
 以上方案仅支持手工控制缓存，但是springcache方案中的方法缓存特别好用，给一个方法添加一个注解，方法就会自动使用缓存。jetcache也提供了对应的功能，即方法缓存。
 
@@ -9340,31 +9342,31 @@ endpoints:
 
 Actuator，可以称为端点，描述了一组监控信息，SpringBootAdmin提供了多个内置端点，通过访问端点就可以获取对应的监控信息，也可以根据需要自定义端点信息。通过发送请求路劲**/actuator**可以访问应用所有端点信息，如果端点中还有明细信息可以发送请求**/actuator/端点名称**来获取详细信息。以下列出了所有端点信息说明：
 
-| ID               | 描述                                                         | 默认启用 |
-| ---------------- | ------------------------------------------------------------ | -------- |
-| auditevents      | 暴露当前应用程序的审计事件信息。                             | 是       |
-| beans            | 显示应用程序中所有 Spring bean 的完整列表。                  | 是       |
-| caches           | 暴露可用的缓存。                                             | 是       |
-| conditions       | 显示在配置和自动配置类上评估的条件以及它们匹配或不匹配的原因。 | 是       |
-| configprops      | 显示所有 @ConfigurationProperties 的校对清单。               | 是       |
-| env              | 暴露 Spring ConfigurableEnvironment 中的属性。               | 是       |
-| flyway           | 显示已应用的 Flyway 数据库迁移。                             | 是       |
-| health           | 显示应用程序健康信息                                         | 是       |
-| httptrace        | 显示 HTTP 追踪信息（默认情况下，最后 100 个  HTTP 请求/响应交换）。 | 是       |
-| info             | 显示应用程序信息。                                           | 是       |
-| integrationgraph | 显示 Spring Integration 图。                                 | 是       |
-| loggers          | 显示和修改应用程序中日志记录器的配置。                       | 是       |
-| liquibase        | 显示已应用的 Liquibase 数据库迁移。                          | 是       |
-| metrics          | 显示当前应用程序的指标度量信息。                             | 是       |
-| mappings         | 显示所有 @RequestMapping 路径的整理清单。                    | 是       |
-| scheduledtasks   | 显示应用程序中的调度任务。                                   | 是       |
-| sessions         | 允许从 Spring Session 支持的会话存储中检索和删除用户会话。当使用 Spring Session 的响应式 Web 应用程序支持时不可用。 | 是       |
-| shutdown         | 正常关闭应用程序。                                           | 否       |
-| threaddump       | 执行线程 dump。                                              | 是       |
-| heapdump         | 返回一个 hprof 堆 dump 文件。                                | 是       |
-| jolokia          | 通过 HTTP 暴露 JMX bean（当  Jolokia 在 classpath 上时，不适用于 WebFlux）。 | 是       |
+| ID               | 描述                                                                                                                 | 默认启用 |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------- | -------- |
+| auditevents      | 暴露当前应用程序的审计事件信息。                                                                                     | 是       |
+| beans            | 显示应用程序中所有 Spring bean 的完整列表。                                                                          | 是       |
+| caches           | 暴露可用的缓存。                                                                                                     | 是       |
+| conditions       | 显示在配置和自动配置类上评估的条件以及它们匹配或不匹配的原因。                                                       | 是       |
+| configprops      | 显示所有 @ConfigurationProperties 的校对清单。                                                                       | 是       |
+| env              | 暴露 Spring ConfigurableEnvironment 中的属性。                                                                       | 是       |
+| flyway           | 显示已应用的 Flyway 数据库迁移。                                                                                     | 是       |
+| health           | 显示应用程序健康信息                                                                                                 | 是       |
+| httptrace        | 显示 HTTP 追踪信息（默认情况下，最后 100 个  HTTP 请求/响应交换）。                                                  | 是       |
+| info             | 显示应用程序信息。                                                                                                   | 是       |
+| integrationgraph | 显示 Spring Integration 图。                                                                                         | 是       |
+| loggers          | 显示和修改应用程序中日志记录器的配置。                                                                               | 是       |
+| liquibase        | 显示已应用的 Liquibase 数据库迁移。                                                                                  | 是       |
+| metrics          | 显示当前应用程序的指标度量信息。                                                                                     | 是       |
+| mappings         | 显示所有 @RequestMapping 路径的整理清单。                                                                            | 是       |
+| scheduledtasks   | 显示应用程序中的调度任务。                                                                                           | 是       |
+| sessions         | 允许从 Spring Session 支持的会话存储中检索和删除用户会话。当使用 Spring Session 的响应式 Web 应用程序支持时不可用。  | 是       |
+| shutdown         | 正常关闭应用程序。                                                                                                   | 否       |
+| threaddump       | 执行线程 dump。                                                                                                      | 是       |
+| heapdump         | 返回一个 hprof 堆 dump 文件。                                                                                        | 是       |
+| jolokia          | 通过 HTTP 暴露 JMX bean（当  Jolokia 在 classpath 上时，不适用于 WebFlux）。                                         | 是       |
 | logfile          | 返回日志文件的内容（如果已设置 logging.file 或 logging.path 属性）。支持使用 HTTP Range 头来检索部分日志文件的内容。 | 是       |
-| prometheus       | 以可以由 Prometheus 服务器抓取的格式暴露指标。               | 是       |
+| prometheus       | 以可以由 Prometheus 服务器抓取的格式暴露指标。                                                                       | 是       |
 
 上述端点每一项代表被监控的指标，如果对外开放则监控平台可以查询到对应的端点信息，如果未开放则无法查询对应的端点信息。通过配置可以设置端点是否对外开放功能。使用enable属性控制端点是否对外开放。其中health端点为默认端点，不能关闭。
 

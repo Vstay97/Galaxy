@@ -299,18 +299,18 @@ const config = {
         breadcrumbs: false,
       },
     ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "sre-engineer",
-        path: "work/sre-engineer",
-        routeBasePath: "sre-engineer",
-        sidebarPath: require.resolve("./sidebars.js"),
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
+    // [
+    //   "@docusaurus/plugin-content-docs",
+    //   {
+    //     id: "sre-engineer",
+    //     path: "work/sre-engineer",
+    //     routeBasePath: "sre-engineer",
+    //     sidebarPath: require.resolve("./sidebars.js"),
+    //     showLastUpdateAuthor: true,
+    //     showLastUpdateTime: true,
+    //     breadcrumbs: false,
+    //   },
+    // ],
     [
       "@docusaurus/plugin-content-docs",
       {

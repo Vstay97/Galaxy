@@ -425,7 +425,7 @@ const config = {
             label: "💼 工程",
             items: [
               {
-                label: "实践踩坑",
+                label: "实践记录",
                 to: "/practice",
               },
               {

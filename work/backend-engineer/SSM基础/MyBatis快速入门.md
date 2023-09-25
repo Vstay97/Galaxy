@@ -1,11 +1,14 @@
 ---
-title: MyBatis快速入门
-tags:
-  - MyBatis
-categories:
-  - 框架
+author: Vstay
 date: 2022-04-18 21:48:15
-updated: 2022-04-25 21:48:15
+description: MyBatis快速入门
+last_update:
+  author: Vstay
+  date: 2022-04-25 21:48:15
+sidebar_position: 1
+tags:
+- MyBatis
+title: MyBatis快速入门
 ---
 
 内容如下：

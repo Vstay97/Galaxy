@@ -1,14 +1,17 @@
 ---
-title: SpringMVC快速入门
-tags:
-  - Spring
-  - SpringMVC
-  - PostMan
-  - RESTful
-categories:
-  - 框架
+author: Vstay
 date: 2022-05-02 03:01:33
-updated: 2022-05-05 15:39:33
+description: SpringMVC快速入门
+last_update:
+  author: Vstay
+  date: 2022-05-05 15:39:33
+sidebar_position: 1
+tags:
+- Spring
+- SpringMVC
+- PostMan
+- RESTful
+title: SpringMVC快速入门
 ---
 
 上篇：

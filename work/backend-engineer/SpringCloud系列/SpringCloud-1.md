@@ -1,7 +1,7 @@
 ---
 author: Vstay
 date: 2022-07-04 19:09:14
-description: SpringCloud-1
+description: 认识微服务、服务拆分及远程调用、Eureka注册中心、Ribbon负载均衡、Nacos注册中心
 last_update:
   author: Vstay
   date: 2022-07-04 19:09:14

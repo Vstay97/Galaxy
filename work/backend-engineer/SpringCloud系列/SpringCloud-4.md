@@ -1,7 +1,7 @@
 ---
 author: Vstay
 date: 2022-07-07 09:09:22
-description: 基于消息队列实现服务异步通讯
+description: 初识MQ、RabbitMQ快速入门、SpringAMQP
 last_update:
   author: Vstay
   date: 2022-07-07 09:09:22

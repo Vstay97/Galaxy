@@ -1,7 +1,7 @@
 ---
 author: Vstay
 date: 2022-07-11 19:52:35
-description: 分布式搜索引擎 ——Elasticsearch (2)
+description: DSL查询文档、搜索结果处理、RestClient查询文档、案例
 last_update:
   author: Vstay
   date: 2022-07-11 19:52:35

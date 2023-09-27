@@ -1,7 +1,7 @@
 ---
 author: Vstay
 date: 2022-07-05 09:28:19
-description: SpringCloud-2
+description: Nacos配置管理、Feign远程调用、Gateway服务网关
 last_update:
   author: Vstay
   date: 2022-07-05 09:28:19

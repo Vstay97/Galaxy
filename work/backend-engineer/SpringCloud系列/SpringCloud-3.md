@@ -1,7 +1,7 @@
 ---
 author: Vstay
 date: 2022-07-06 08:53:13
-description: Docker使用及部署
+description: 初识Docker、基本操作、Dockerfile、Docker-Compose、私有镜像仓库
 last_update:
   author: Vstay
   date: 2022-07-06 08:53:13

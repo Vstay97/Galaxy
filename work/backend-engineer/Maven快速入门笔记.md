@@ -1,12 +1,14 @@
 ---
-title: Maven快速入门笔记
-tags:
-  - Maven
-categories:
-  - 备忘录
+author: Vstay
 date: 2022-04-12 23:47:14
-updated: 2022-04-12 23:47:14
-
+description: Maven快速入门笔记
+last_update:
+  author: Vstay
+  date: 2022-04-12 23:47:14
+sidebar_position: 3
+tags:
+- Maven
+title: Maven快速入门笔记
 ---
 
 

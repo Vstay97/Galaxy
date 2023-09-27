@@ -1,7 +1,7 @@
 ---
 author: Vstay
 date: 2022-07-08 15:55:27
-description: 分布式搜索引擎——Elasticsearch(1)
+description: 初识Elasticsearch、索引库操作、文档操作、RestAPI、RestClient操作文档
 last_update:
   author: Vstay
   date: 2022-07-08 15:55:27

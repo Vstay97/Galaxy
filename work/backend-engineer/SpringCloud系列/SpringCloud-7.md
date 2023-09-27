@@ -1,7 +1,7 @@
 ---
 author: Vstay
 date: 2022-07-12 16:25:25
-description: 分布式搜索引擎 ——Elasticsearch (3)
+description: 数据聚合、自动补全、数据同步、ES集群
 last_update:
   author: Vstay
   date: 2022-07-12 16:25:25

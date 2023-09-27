@@ -5,7 +5,7 @@ description: MyBatisPlus快速使用
 last_update:
   author: Vstay
   date: 2022-05-20 02:15:06
-sidebar_position: 1
+sidebar_position: 4
 tags:
 - MyBatisPlus
 - MyBatis

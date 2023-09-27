@@ -5,7 +5,7 @@ description: MyBatis快速入门
 last_update:
   author: Vstay
   date: 2022-04-25 21:48:15
-sidebar_position: 1
+sidebar_position: 3
 tags:
 - MyBatis
 title: MyBatis快速入门

@@ -5,7 +5,7 @@ description: SpringMVC快速入门
 last_update:
   author: Vstay
   date: 2022-05-05 15:39:33
-sidebar_position: 1
+sidebar_position: 2
 tags:
 - Spring
 - SpringMVC

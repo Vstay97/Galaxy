@@ -266,6 +266,18 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
+        id: "project-development",
+        path: "engineering/project-development",
+        routeBasePath: "project-development",
+        sidebarPath: require.resolve("./sidebars.js"),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
         id: "roadmap",
         path: "work/roadmap",
         routeBasePath: "roadmap",
@@ -435,6 +447,10 @@ const config = {
               {
                 label: "架构设计",
                 to: "/architecture",
+              },
+              {
+                label: "项目开发",
+                to: "/project-development",
               },
             ]
           },

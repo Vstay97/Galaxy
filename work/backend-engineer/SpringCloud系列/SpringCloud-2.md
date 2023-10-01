@@ -1,7 +1,7 @@
 ---
 author: Vstay
 date: 2022-07-05 09:28:19
-description: Nacos配置管理、Feign远程调用、Gateway服务网关
+description: 配置管理、统一网关
 last_update:
   author: Vstay
   date: 2022-07-05 09:28:19
@@ -11,7 +11,7 @@ tags:
 - Feign
 - Gateway
 - 微服务
-title: SpringCloud-2
+title: 微服务治理(2)
 ---
 
 - Nacos配置管理

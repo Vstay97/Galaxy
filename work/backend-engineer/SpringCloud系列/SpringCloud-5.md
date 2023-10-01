@@ -39,13 +39,13 @@ title: 分布式搜索引擎——Elasticsearch(1)
 
 <!-- more-->
 
-# 初识elasticsearch
+## 初识elasticsearch
 
-## 了解ES
+### 了解ES
 
 
 
-### elasticsearch的作用
+#### elasticsearch的作用
 
 elasticsearch是一款非常强大的开源搜索引擎，具备非常多强大功能，可以帮助我们从海量数据中快速找到需要的内容
 
@@ -71,7 +71,7 @@ elasticsearch是一款非常强大的开源搜索引擎，具备非常多强大�
 
 
 
-### ELK技术栈
+#### ELK技术栈
 
 elasticsearch结合kibana、Logstash、Beats，也就是elastic stack（ELK）。被广泛应用在日志数据分析、实时监控等领域：
 
@@ -85,7 +85,7 @@ elasticsearch结合kibana、Logstash、Beats，也就是elastic stack（ELK）�
 
 
 
-### elasticsearch和lucene
+#### elasticsearch和lucene
 
 elasticsearch底层是基于**lucene**来实现的。
 
@@ -106,7 +106,7 @@ elasticsearch底层是基于**lucene**来实现的。
 
 
 
-### 为什么不是其他搜索技术？
+#### 为什么不是其他搜索技术？
 
 目前比较知名的搜索引擎技术排名：
 
@@ -118,7 +118,7 @@ elasticsearch底层是基于**lucene**来实现的。
 
 
 
-### 总结
+#### 总结
 
 什么是elasticsearch？
 
@@ -138,11 +138,11 @@ elasticsearch底层是基于**lucene**来实现的。
 
 
 
-## 倒排索引
+### 倒排索引
 
 倒排索引的概念是基于MySQL这样的正向索引而言的。
 
-### 正向索引
+#### 正向索引
 
 那么什么是正向索引呢？例如给下表（tb_goods）中的id创建索引：
 
@@ -170,7 +170,7 @@ elasticsearch底层是基于**lucene**来实现的。
 
 
 
-### 倒排索引
+#### 倒排索引
 
 倒排索引中有两个非常重要的概念：
 
@@ -213,7 +213,7 @@ elasticsearch底层是基于**lucene**来实现的。
 
 
 
-### 正向和倒排
+#### 正向和倒排
 
 那么为什么一个叫做正向索引，一个叫做倒排索引呢？
 
@@ -247,13 +247,13 @@ elasticsearch底层是基于**lucene**来实现的。
 
 
 
-## es的一些概念
+### es的一些概念
 
 elasticsearch中有很多独有的概念，与mysql中略有差别，但也有相似之处。
 
 
 
-### 文档和字段
+#### 文档和字段
 
 elasticsearch是面向**文档（Document）**存储的，可以是数据库中的一条商品数据，一个订单信息。文档数据会被序列化为json格式后存储在elasticsearch中：
 
@@ -265,7 +265,7 @@ elasticsearch是面向**文档（Document）**存储的，可以是数据库中�
 
 
 
-### 索引和映射
+#### 索引和映射
 
 **索引（Index）**，就是相同类型的文档的集合。
 
@@ -285,7 +285,7 @@ elasticsearch是面向**文档（Document）**存储的，可以是数据库中�
 
 
 
-### mysql与elasticsearch
+#### mysql与elasticsearch
 
 我们统一的把mysql与elasticsearch的概念做一下对比：
 
@@ -319,21 +319,11 @@ elasticsearch是面向**文档（Document）**存储的，可以是数据库中�
 
 
 
-## 安装es、kibana
+### 安装es、kibana
 
 
 
-### 安装
-
-参考课前资料：
-
-![image-20210720203805350](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2022/SpringCloud-5/202207081616967.png) 
-
-
-
-
-
-### 分词器
+#### 安装
 
 参考课前资料：
 
@@ -341,7 +331,17 @@ elasticsearch是面向**文档（Document）**存储的，可以是数据库中�
 
 
 
-### 总结
+
+
+#### 分词器
+
+参考课前资料：
+
+![image-20210720203805350](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2022/SpringCloud-5/202207081616967.png) 
+
+
+
+#### 总结
 
 分词器的作用是什么？
 
@@ -362,7 +362,7 @@ IK分词器如何拓展词条？如何停用词条？
 
 
 
-# 索引库操作
+## 索引库操作
 
 索引库就类似数据库表，mapping映射就类似表的结构。
 
@@ -370,7 +370,7 @@ IK分词器如何拓展词条？如何停用词条？
 
 
 
-## mapping映射属性
+### mapping映射属性
 
 mapping是对索引库中文档的约束，常见的mapping属性包括：
 
@@ -421,15 +421,15 @@ mapping是对索引库中文档的约束，常见的mapping属性包括：
 
 
 
-## 索引库的CRUD
+### 索引库的CRUD
 
 这里我们统一使用Kibana编写DSL的方式来演示。
 
 
 
-### 创建索引库和映射
+#### 创建索引库和映射
 
-#### 基本语法：
+##### 基本语法：
 
 - 请求方式：PUT
 - 请求路径：/索引库名，可以自定义
@@ -465,7 +465,7 @@ PUT /索引库名称
 
 
 
-#### 示例：
+##### 示例：
 
 ```sh
 PUT /heima
@@ -495,7 +495,7 @@ PUT /heima
 
 
 
-### 查询索引库
+#### 查询索引库
 
 **基本语法**：
 
@@ -519,7 +519,7 @@ GET /索引库名
 
 
 
-### 修改索引库
+#### 修改索引库
 
 倒排索引结构虽然不复杂，但是一旦数据结构改变（比如改变了分词器），就需要重新创建倒排索引，这简直是灾难。因此索引库**一旦创建，无法修改mapping**。
 
@@ -550,7 +550,7 @@ PUT /索引库名/_mapping
 
 
 
-### 删除索引库
+#### 删除索引库
 
 **语法：**
 
@@ -574,7 +574,7 @@ DELETE /索引库名
 
 
 
-### 总结
+#### 总结
 
 索引库操作有哪些？
 
@@ -585,9 +585,9 @@ DELETE /索引库名
 
 
 
-# 文档操作
+## 文档操作
 
-## 新增文档
+### 新增文档
 
 **语法：**
 
@@ -624,7 +624,7 @@ POST /heima/_doc/1
 
 
 
-## 查询文档
+### 查询文档
 
 根据rest风格，新增是post，查询应该是get，不过查询一般都需要条件，这里我们把文档id带上。
 
@@ -646,7 +646,7 @@ GET /heima/_doc/1
 
 
 
-## 删除文档
+### 删除文档
 
 删除使用DELETE请求，同样，需要根据id进行删除：
 
@@ -659,7 +659,7 @@ DELETE /{索引库名}/_doc/id值
 **示例：**
 
 ```json
-# 根据id删除数据
+## 根据id删除数据
 DELETE /heima/_doc/1
 ```
 
@@ -669,7 +669,7 @@ DELETE /heima/_doc/1
 
 
 
-## 修改文档
+### 修改文档
 
 修改有两种方式：
 
@@ -678,7 +678,7 @@ DELETE /heima/_doc/1
 
 
 
-### 全量修改
+#### 全量修改
 
 全量修改是覆盖原来的文档，其本质是：
 
@@ -719,7 +719,7 @@ PUT /heima/_doc/1
 
 
 
-### 增量修改
+#### 增量修改
 
 增量修改是只修改指定id匹配的文档中的部分字段。
 
@@ -749,7 +749,7 @@ POST /heima/_update/1
 
 
 
-## 总结
+### 总结
 
 文档操作有哪些？
 
@@ -762,7 +762,7 @@ POST /heima/_update/1
 
 
 
-# RestAPI
+## RestAPI
 
 ES官方提供了各种不同语言的客户端，用来操作ES。这些客户端的本质就是组装DSL语句，通过http请求发送给ES。官方文档地址：https://www.elastic.co/guide/en/elasticsearch/client/index.html
 
@@ -779,9 +779,9 @@ ES官方提供了各种不同语言的客户端，用来操作ES。这些客户�
 
 
 
-## 导入Demo工程
+### 导入Demo工程
 
-### 导入数据
+#### 导入数据
 
 首先导入课前资料提供的数据库数据：
 
@@ -809,7 +809,7 @@ CREATE TABLE `tb_hotel` (
 
 
 
-### 导入项目
+#### 导入项目
 
 然后导入课前资料提供的项目:
 
@@ -823,7 +823,7 @@ CREATE TABLE `tb_hotel` (
 
 
 
-### mapping映射分析
+#### mapping映射分析
 
 创建索引库，最关键的是mapping映射，而mapping映射要考虑的信息包括：
 
@@ -916,7 +916,7 @@ copy_to说明：
 
 
 
-### 初始化RestClient
+#### 初始化RestClient
 
 在elasticsearch提供的API中，与elasticsearch一切交互都封装在一个名为RestHighLevelClient的类中，必须先完成这个对象的初始化，建立与elasticsearch的连接。
 
@@ -990,9 +990,9 @@ public class HotelIndexTest {
 
 
 
-## 创建索引库
+### 创建索引库
 
-### 代码解读
+#### 代码解读
 
 创建索引库的API如下：
 
@@ -1006,7 +1006,7 @@ public class HotelIndexTest {
 
 
 
-### 完整示例
+#### 完整示例
 
 在hotel-demo的cn.itcast.hotel.constants包下，创建一个类，定义mapping映射的JSON字符串常量：
 
@@ -1084,7 +1084,7 @@ void createHotelIndex() throws IOException {
 
 
 
-## 删除索引库
+### 删除索引库
 
 删除索引库的DSL语句非常简单：
 
@@ -1118,7 +1118,7 @@ void testDeleteHotelIndex() throws IOException {
 
 
 
-## 判断索引库是否存在
+### 判断索引库是否存在
 
 判断索引库是否存在，本质就是查询，对应的DSL是：
 
@@ -1148,7 +1148,7 @@ void testExistsHotelIndex() throws IOException {
 
 
 
-## 总结
+### 总结
 
 JavaRestClient操作elasticsearch的流程基本类似。核心是client.indices()方法来获取索引库的操作对象。
 
@@ -1163,7 +1163,7 @@ JavaRestClient操作elasticsearch的流程基本类似。核心是client.indices
 
 
 
-# RestClient操作文档
+## RestClient操作文档
 
 为了与索引库操作分离，我们再次参加一个测试类，做两件事情：
 
@@ -1210,11 +1210,11 @@ public class HotelDocumentTest {
 
 
 
-## 新增文档
+### 新增文档
 
 我们要将数据库的酒店数据查询出来，写入elasticsearch中。
 
-### 索引库实体类
+#### 索引库实体类
 
 数据库查询后的结果是一个Hotel类型的对象。结构如下：
 
@@ -1284,7 +1284,7 @@ public class HotelDoc {
 
 
 
-### 语法说明
+#### 语法说明
 
 新增文档的DSL语句如下：
 
@@ -1312,7 +1312,7 @@ POST /{索引库名}/_doc/1
 
 
 
-### 完整代码
+#### 完整代码
 
 我们导入酒店数据，基本流程一致，但是需要考虑几点变化：
 
@@ -1354,9 +1354,9 @@ void testAddDocument() throws IOException {
 
 
 
-## 查询文档
+### 查询文档
 
-### 语法说明
+#### 语法说明
 
 查询的DSL语句如下：
 
@@ -1385,7 +1385,7 @@ GET /hotel/_doc/{id}
 
 
 
-### 完整代码
+#### 完整代码
 
 在hotel-demo的HotelDocumentTest测试类中，编写单元测试：
 
@@ -1408,7 +1408,7 @@ void testGetDocumentById() throws IOException {
 
 
 
-## 删除文档
+### 删除文档
 
 删除的DSL为是这样的：
 
@@ -1442,9 +1442,9 @@ void testDeleteDocument() throws IOException {
 
 
 
-## 修改文档
+### 修改文档
 
-### 语法说明
+#### 语法说明
 
 修改我们讲过两种方式：
 
@@ -1474,7 +1474,7 @@ void testDeleteDocument() throws IOException {
 
 
 
-### 完整代码
+#### 完整代码
 
 在hotel-demo的HotelDocumentTest测试类中，编写单元测试：
 
@@ -1497,7 +1497,7 @@ void testUpdateDocument() throws IOException {
 
 
 
-## 批量导入文档
+### 批量导入文档
 
 案例需求：利用BulkRequest批量将数据库数据导入到索引库中。
 
@@ -1511,7 +1511,7 @@ void testUpdateDocument() throws IOException {
 
 
 
-### 语法说明
+#### 语法说明
 
 批量处理BulkRequest，其本质就是将多个普通的CRUD请求组合在一起发送。
 
@@ -1541,7 +1541,7 @@ void testUpdateDocument() throws IOException {
 
 我们在导入酒店数据时，将上述代码改造成for循环处理即可。
 
-### 完整代码
+#### 完整代码
 
 在hotel-demo的HotelDocumentTest测试类中，编写单元测试：
 
@@ -1571,7 +1571,7 @@ void testBulkRequest() throws IOException {
 
 
 
-## 小结
+### 小结
 
 文档操作的基本步骤：
 

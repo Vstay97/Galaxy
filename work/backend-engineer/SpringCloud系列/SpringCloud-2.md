@@ -36,13 +36,13 @@ title: 微服务治理(2)
 
 <!-- more-->
 
-# Nacos配置管理
+## Nacos配置管理
 
 Nacos除了可以做注册中心，同样可以做配置管理来使用。
 
 
 
-## 统一配置管理
+### 统一配置管理
 
 当微服务部署的实例越来越多，达到数十、数百时，逐个修改微服务配置就会让人抓狂，而且很容易出错。我们需要一种统一配置管理方案，可以集中管理所有实例的配置。
 
@@ -54,7 +54,7 @@ Nacos一方面可以将配置集中管理，另一方可以在配置变更时，
 
 
 
-### 在nacos中添加配置文件
+#### 在nacos中添加配置文件
 
 如何在nacos中管理配置呢？
 
@@ -70,7 +70,7 @@ Nacos一方面可以将配置集中管理，另一方可以在配置变更时，
 
 
 
-### 从微服务拉取配置
+#### 从微服务拉取配置
 
 微服务要拉取nacos中管理的配置，并且与本地的application.yml配置合并，才能完成项目启动。
 
@@ -101,14 +101,14 @@ Nacos一方面可以将配置集中管理，另一方可以在配置变更时，
 ```yaml
 spring:
   application:
-    name: userservice # 服务名称
+    name: userservice ## 服务名称
   profiles:
     active: dev #开发环境，这里是dev 
   cloud:
     nacos:
-      server-addr: localhost:8848 # Nacos地址
+      server-addr: localhost:8848 ## Nacos地址
       config:
-        file-extension: yaml # 文件后缀名
+        file-extension: yaml ## 文件后缀名
 ```
 
 这里会根据spring.cloud.nacos.server-addr获取nacos地址，再根据
@@ -173,7 +173,7 @@ public class UserController {
 
 
 
-## 配置热更新
+### 配置热更新
 
 我们最终的目的，是修改nacos中的配置后，微服务中无需重启即可让配置生效，也就是**配置热更新**。
 
@@ -181,7 +181,7 @@ public class UserController {
 
 要实现配置热更新，可以使用两种方式：
 
-### 方式一
+#### 方式一
 
 在@Value注入的变量所在类上添加注解@RefreshScope：
 
@@ -189,7 +189,7 @@ public class UserController {
 
 
 
-### 方式二
+#### 方式二
 
 使用@ConfigurationProperties注解代替@Value注解。
 
@@ -260,7 +260,7 @@ public class UserController {
 
 
 
-## 配置共享
+### 配置共享
 
 其实微服务启动时，会去nacos读取多个配置文件，例如：
 
@@ -276,7 +276,7 @@ public class UserController {
 
 
 
-### 添加一个环境共享配置
+#### 添加一个环境共享配置
 
 我们在nacos中添加一个userservice.yaml文件：
 
@@ -284,7 +284,7 @@ public class UserController {
 
 
 
-### 在user-service中读取共享配置
+#### 在user-service中读取共享配置
 
 在user-service服务中，修改PatternProperties类，读取新添加的属性：
 
@@ -296,7 +296,7 @@ public class UserController {
 
 
 
-### 运行两个UserApplication，使用不同的profile
+#### 运行两个UserApplication，使用不同的profile
 
 修改UserApplication2这个启动项，改变其profile值：
 
@@ -326,7 +326,7 @@ public class UserController {
 
 
 
-### 配置共享的优先级
+#### 配置共享的优先级
 
 当nacos、服务本地同时出现相同属性时，优先级有高低之分：
 
@@ -336,7 +336,7 @@ public class UserController {
 
 
 
-## 搭建Nacos集群
+### 搭建Nacos集群
 
 Nacos生产环境下一定要部署为集群状态，部署方式参考之前的文档：
 
@@ -344,7 +344,7 @@ Nacos生产环境下一定要部署为集群状态，部署方式参考之前的
 
 
 
-# Feign远程调用
+## Feign远程调用
 
 
 
@@ -370,11 +370,11 @@ Feign是一个声明式的http客户端，官方地址：https://github.com/Open
 
 
 
-## Feign替代RestTemplate
+### Feign替代RestTemplate
 
 Fegin的使用步骤如下：
 
-### 引入依赖
+#### 引入依赖
 
 我们在order-service服务的pom文件中引入feign的依赖：
 
@@ -387,7 +387,7 @@ Fegin的使用步骤如下：
 
 
 
-### 添加注解
+#### 添加注解
 
 在order-service的启动类添加注解开启Feign的功能：
 
@@ -395,7 +395,7 @@ Fegin的使用步骤如下：
 
 
 
-### 编写Feign的客户端
+#### 编写Feign的客户端
 
 在order-service中新建一个接口，内容如下：
 
@@ -430,7 +430,7 @@ public interface UserClient {
 
 
 
-### 测试
+#### 测试
 
 修改order-service中的OrderService类中的queryOrderById方法，使用Feign客户端代替RestTemplate：
 
@@ -442,7 +442,7 @@ public interface UserClient {
 
 
 
-### 总结
+#### 总结
 
 使用Feign的步骤：
 
@@ -456,7 +456,7 @@ public interface UserClient {
 
 
 
-## 自定义配置
+### 自定义配置
 
 Feign可以支持很多的自定义配置，如下表所示：
 
@@ -474,7 +474,7 @@ Feign可以支持很多的自定义配置，如下表所示：
 
 下面以日志为例来演示如何自定义配置。
 
-### 配置文件方式
+#### 配置文件方式
 
 基于配置文件修改feign的日志级别可以针对单个服务：
 
@@ -482,8 +482,8 @@ Feign可以支持很多的自定义配置，如下表所示：
 feign:  
   client:
     config: 
-      userservice: # 针对某个微服务的配置
-        loggerLevel: FULL #  日志级别 
+      userservice: ## 针对某个微服务的配置
+        loggerLevel: FULL ##  日志级别 
 ```
 
 也可以针对所有服务：
@@ -492,8 +492,8 @@ feign:
 feign:  
   client:
     config: 
-      default: # 这里用default就是全局配置，如果是写服务名称，则是针对某个微服务的配置
-        loggerLevel: FULL #  日志级别 
+      default: ## 这里用default就是全局配置，如果是写服务名称，则是针对某个微服务的配置
+        loggerLevel: FULL ##  日志级别 
 ```
 
 
@@ -507,7 +507,7 @@ feign:
 
 
 
-### Java代码方式
+#### Java代码方式
 
 也可以基于Java代码来修改日志级别，先声明一个类，然后声明一个Logger.Level的对象：
 
@@ -542,7 +542,7 @@ public class DefaultFeignConfiguration  {
 
 
 
-## Feign使用优化
+### Feign使用优化
 
 Feign底层发起http请求，依赖于其它的框架。其底层客户端实现包括：
 
@@ -582,12 +582,12 @@ Feign底层发起http请求，依赖于其它的框架。其底层客户端实�
 feign:
   client:
     config:
-      default: # default全局的配置
-        loggerLevel: BASIC # 日志级别，BASIC就是基本的请求和响应信息
+      default: ## default全局的配置
+        loggerLevel: BASIC ## 日志级别，BASIC就是基本的请求和响应信息
   httpclient:
-    enabled: true # 开启feign对HttpClient的支持
-    max-connections: 200 # 最大的连接数
-    max-connections-per-route: 50 # 每个路径的最大连接数
+    enabled: true ## 开启feign对HttpClient的支持
+    max-connections: 200 ## 最大的连接数
+    max-connections-per-route: 50 ## 每个路径的最大连接数
 ```
 
 
@@ -618,7 +618,7 @@ Debug方式启动order-service服务，可以看到这里的client，底层就�
 
 
 
-## 最佳实践
+### 最佳实践
 
 所谓最近实践，就是使用过程中总结的经验，最好的一种使用方式。
 
@@ -640,7 +640,7 @@ UserController：
 
 
 
-### 继承方式
+#### 继承方式
 
 一样的代码可以通过继承来共享：
 
@@ -669,7 +669,7 @@ UserController：
 
 
 
-### 抽取方式
+#### 抽取方式
 
 将Feign的Client抽取为独立模块，并且把接口有关的POJO、默认的Feign配置都放到这个模块中，提供给所有消费者使用。
 
@@ -681,9 +681,9 @@ UserController：
 
 
 
-### 实现基于抽取的最佳实践
+#### 实现基于抽取的最佳实践
 
-#### 抽取
+##### 抽取
 
 首先创建一个module，命名为feign-api：
 
@@ -710,7 +710,7 @@ UserController：
 
 
 
-#### 在order-service中使用feign-api
+##### 在order-service中使用feign-api
 
 首先，删除order-service中的UserClient、User、DefaultFeignConfiguration等类或接口。
 
@@ -732,7 +732,7 @@ UserController：
 
 
 
-#### 重启测试
+##### 重启测试
 
 重启后，发现服务报错了：
 
@@ -746,7 +746,7 @@ UserController：
 
 
 
-#### 解决扫描包问题
+##### 解决扫描包问题
 
 方式一：
 
@@ -774,13 +774,13 @@ UserController：
 
 
 
-# Gateway服务网关
+## Gateway服务网关
 
 Spring Cloud Gateway 是 Spring Cloud 的一个全新项目，该项目是基于 Spring 5.0，Spring Boot 2.0 和 Project Reactor 等响应式编程和事件流技术开发的网关，它旨在为微服务架构提供一种简单有效的统一的 API 路由管理方式。
 
 
 
-## 为什么需要网关
+### 为什么需要网关
 
 Gateway网关是我们服务的守门神，所有微服务的统一入口。
 
@@ -815,7 +815,7 @@ Zuul是基于Servlet的实现，属于阻塞式编程。而SpringCloudGateway则
 
 
 
-## Gateway快速入门
+### Gateway快速入门
 
 下面，我们就演示下网关的基本路由功能。基本步骤如下：
 
@@ -826,7 +826,7 @@ Zuul是基于Servlet的实现，属于阻塞式编程。而SpringCloudGateway则
 
 
 
-### 创建Gateway服务，引入依赖
+#### 创建Gateway服务，引入依赖
 
 创建服务：
 
@@ -849,7 +849,7 @@ Zuul是基于Servlet的实现，属于阻塞式编程。而SpringCloudGateway则
 
 
 
-### 编写启动类
+#### 编写启动类
 
 ```java
 package cn.itcast.gateway;
@@ -868,26 +868,26 @@ public class GatewayApplication {
 
 
 
-### 编写基础配置和路由规则
+#### 编写基础配置和路由规则
 
 创建application.yml文件，内容如下：
 
 ```yaml
 server:
-  port: 10010 # 网关端口
+  port: 10010 ## 网关端口
 spring:
   application:
-    name: gateway # 服务名称
+    name: gateway ## 服务名称
   cloud:
     nacos:
-      server-addr: localhost:8848 # nacos地址
+      server-addr: localhost:8848 ## nacos地址
     gateway:
-      routes: # 网关路由配置
-        - id: user-service # 路由id，自定义，只要唯一即可
-          # uri: http://127.0.0.1:8081 # 路由的目标地址 http就是固定地址
-          uri: lb://userservice # 路由的目标地址 lb就是负载均衡，后面跟服务名称
-          predicates: # 路由断言，也就是判断请求是否符合路由规则的条件
-            - Path=/user/** # 这个是按照路径匹配，只要以/user/开头就符合要求
+      routes: ## 网关路由配置
+        - id: user-service ## 路由id，自定义，只要唯一即可
+          ## uri: http://127.0.0.1:8081 ## 路由的目标地址 http就是固定地址
+          uri: lb://userservice ## 路由的目标地址 lb就是负载均衡，后面跟服务名称
+          predicates: ## 路由断言，也就是判断请求是否符合路由规则的条件
+            - Path=/user/** ## 这个是按照路径匹配，只要以/user/开头就符合要求
 ```
 
 
@@ -898,7 +898,7 @@ spring:
 
 
 
-### 重启测试
+#### 重启测试
 
 重启网关，访问http://localhost:10010/user/1时，符合`/user/**`规则，请求转发到uri：http://userservice/user/1，得到了结果：
 
@@ -908,7 +908,7 @@ spring:
 
 
 
-### 网关路由的流程图
+#### 网关路由的流程图
 
 整个访问的流程如下：
 
@@ -946,7 +946,7 @@ spring:
 
 
 
-## .断言工厂
+### .断言工厂
 
 我们在配置文件中写的断言规则只是字符串，这些字符串会被Predicate Factory读取并处理，转变为路由判断的条件
 
@@ -976,7 +976,7 @@ spring:
 
 
 
-## 过滤器工厂
+### 过滤器工厂
 
 GatewayFilter是网关中提供的一种过滤器，可以对进入网关的请求和微服务返回的响应做处理：
 
@@ -984,7 +984,7 @@ GatewayFilter是网关中提供的一种过滤器，可以对进入网关的请�
 
 
 
-### 路由过滤器的种类
+#### 路由过滤器的种类
 
 Spring提供了31种不同的路由过滤器工厂。例如：
 
@@ -998,7 +998,7 @@ Spring提供了31种不同的路由过滤器工厂。例如：
 
 
 
-### 请求头过滤器
+#### 请求头过滤器
 
 下面我们以AddRequestHeader 为例来讲解。
 
@@ -1017,8 +1017,8 @@ spring:
         uri: lb://userservice 
         predicates: 
         - Path=/user/** 
-        filters: # 过滤器
-        - AddRequestHeader=Truth, Itcast is freaking awesome! # 添加请求头
+        filters: ## 过滤器
+        - AddRequestHeader=Truth, Itcast is freaking awesome! ## 添加请求头
 ```
 
 当前过滤器写在userservice路由下，因此仅仅对访问userservice的请求有效。
@@ -1027,7 +1027,7 @@ spring:
 
 
 
-### 默认过滤器
+#### 默认过滤器
 
 如果要对所有的路由都生效，则可以将过滤器工厂写到default下。格式如下：
 
@@ -1040,13 +1040,13 @@ spring:
         uri: lb://userservice 
         predicates: 
         - Path=/user/**
-      default-filters: # 默认过滤项
+      default-filters: ## 默认过滤项
       - AddRequestHeader=Truth, Itcast is freaking awesome! 
 ```
 
 
 
-### 总结
+#### 总结
 
 过滤器的作用是什么？
 
@@ -1060,11 +1060,11 @@ defaultFilters的作用是什么？
 
 
 
-## 全局过滤器
+### 全局过滤器
 
 上一节学习的过滤器，网关提供了31种，但每一种过滤器的作用都是固定的。如果我们希望拦截请求，做自己的业务逻辑则没办法实现。
 
-### 全局过滤器作用
+#### 全局过滤器作用
 
 全局过滤器的作用也是处理一切进入网关的请求和微服务响应，与GatewayFilter的作用一样。区别在于GatewayFilter通过配置定义，处理逻辑是固定的；而GlobalFilter的逻辑需要自己写代码实现。
 
@@ -1095,7 +1095,7 @@ public interface GlobalFilter {
 
 
 
-### 自定义全局过滤器
+#### 自定义全局过滤器
 
 需求：定义全局过滤器，拦截请求，判断请求的参数是否满足下面条件：
 
@@ -1149,7 +1149,7 @@ public class AuthorizeFilter implements GlobalFilter {
 
 
 
-### 过滤器执行顺序
+#### 过滤器执行顺序
 
 请求进入网关会碰到三类过滤器：当前路由的过滤器、DefaultFilter、GlobalFilter
 
@@ -1178,11 +1178,11 @@ public class AuthorizeFilter implements GlobalFilter {
 
 
 
-## 跨域问题
+### 跨域问题
 
 
 
-### 什么是跨域问题
+#### 什么是跨域问题
 
 跨域：域名不一致就是跨域，主要包括：
 
@@ -1198,7 +1198,7 @@ public class AuthorizeFilter implements GlobalFilter {
 
 
 
-### 模拟跨域问题
+#### 模拟跨域问题
 
 找到课前资料的页面文件：
 
@@ -1216,7 +1216,7 @@ public class AuthorizeFilter implements GlobalFilter {
 
 
 
-### 解决跨域问题
+#### 解决跨域问题
 
 在gateway服务的application.yml文件中，添加下面的配置：
 
@@ -1224,20 +1224,20 @@ public class AuthorizeFilter implements GlobalFilter {
 spring:
   cloud:
     gateway:
-      # 。。。
-      globalcors: # 全局的跨域处理
-        add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
+      ## 。。。
+      globalcors: ## 全局的跨域处理
+        add-to-simple-url-handler-mapping: true ## 解决options请求被拦截问题
         corsConfigurations:
           '[/**]':
-            allowedOrigins: # 允许哪些网站的跨域请求 
+            allowedOrigins: ## 允许哪些网站的跨域请求 
               - "http://localhost:8090"
-            allowedMethods: # 允许的跨域ajax的请求方式
+            allowedMethods: ## 允许的跨域ajax的请求方式
               - "GET"
               - "POST"
               - "DELETE"
               - "PUT"
               - "OPTIONS"
-            allowedHeaders: "*" # 允许在请求中携带的头信息
-            allowCredentials: true # 是否允许携带cookie
-            maxAge: 360000 # 这次跨域检测的有效期
+            allowedHeaders: "*" ## 允许在请求中携带的头信息
+            allowCredentials: true ## 是否允许携带cookie
+            maxAge: 360000 ## 这次跨域检测的有效期
 ```

@@ -1,7 +1,7 @@
 ---
 author: Vstay
 date: 2022-07-04 19:09:14
-description: 认识微服务、服务拆分及远程调用、Eureka注册中心、Ribbon负载均衡、Nacos注册中心
+description: 服务注册发现、远程调用
 last_update:
   author: Vstay
   date: 2022-07-04 19:09:14
@@ -11,7 +11,7 @@ tags:
 - Ribbon
 - Nacos
 - 微服务
-title: SpringCloud-1
+title: 微服务治理(1)
 ---
 
 - 认识微服务

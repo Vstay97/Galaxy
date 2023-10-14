@@ -11,7 +11,8 @@
   "userIgnoreFilters": [
     "src/",
     "static/",
-    "templates/"
+    "templates/",
+    "node_modules/"
   ],
   "newFileLocation": "current",
   "defaultViewMode": "source",

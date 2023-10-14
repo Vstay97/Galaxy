@@ -3,7 +3,7 @@
   "livePreview": true,
   "showLineNumber": true,
   "spellcheck": false,
-  "spellcheckLanguages": [],
+  "spellcheckLanguages": null,
   "trashOption": "system",
   "promptDelete": true,
   "communityPluginSortOrder": "download",
@@ -17,5 +17,13 @@
   "defaultViewMode": "source",
   "showFrontmatter": true,
   "vimMode": false,
-  "newLinkFormat": "absolute"
+  "newLinkFormat": "absolute",
+  "readableLineLength": true,
+  "propertiesInDocument": "source",
+  "foldHeading": true,
+  "foldIndent": true,
+  "rightToLeft": false,
+  "showIndentGuide": true,
+  "useTab": false,
+  "useMarkdownLinks": true
 }

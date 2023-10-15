@@ -191,42 +191,6 @@ const config = {
         breadcrumbs: false,
       },
     ],
-    // [
-    //   "@docusaurus/plugin-content-docs",
-    //   {
-    //     id: "org",
-    //     path: "group/organization",
-    //     routeBasePath: "org",
-    //     sidebarPath: require.resolve("./sidebars.js"),
-    //     showLastUpdateAuthor: true,
-    //     showLastUpdateTime: true,
-    //     breadcrumbs: false,
-    //   },
-    // ],
-    // [
-    //   "@docusaurus/plugin-content-docs",
-    //   {
-    //     id: "com",
-    //     path: "group/company",
-    //     routeBasePath: "com",
-    //     sidebarPath: require.resolve("./sidebars.js"),
-    //     showLastUpdateAuthor: true,
-    //     showLastUpdateTime: true,
-    //     breadcrumbs: false,
-    //   },
-    // ],
-    // [
-    //   "@docusaurus/plugin-content-docs",
-    //   {
-    //     id: "gov",
-    //     path: "group/government",
-    //     routeBasePath: "gov",
-    //     sidebarPath: require.resolve("./sidebars.js"),
-    //     showLastUpdateAuthor: true,
-    //     showLastUpdateTime: true,
-    //     breadcrumbs: false,
-    //   },
-    // ],
     [
       "@docusaurus/plugin-content-docs",
       {

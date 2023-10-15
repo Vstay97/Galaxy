@@ -53,11 +53,11 @@ title: 微服务治理(1)
 
 <!-- more-->
 
-# 认识微服务
+## 认识微服务
 
 随着互联网行业的发展，对服务的要求也越来越高，服务架构也从单体架构逐渐演变为现在流行的微服务架构。这些架构之间有怎样的差别呢？
 
-## 学习目标
+### 学习目标
 
 了解微服务架构的优缺点
 
@@ -65,7 +65,7 @@ title: 微服务治理(1)
 
 
 
-## 单体架构
+### 单体架构
 
 **单体架构**：将业务的所有功能集中在一个项目中开发，打成一个包部署。
 
@@ -84,7 +84,7 @@ title: 微服务治理(1)
 
 
 
-## 分布式架构
+### 分布式架构
 
 **分布式架构**：根据业务功能对系统做拆分，每个业务功能模块作为独立项目开发，称为一个服务。
 
@@ -115,7 +115,7 @@ title: 微服务治理(1)
 
 
 
-## 微服务
+### 微服务
 
 微服务的架构特征：
 
@@ -134,7 +134,7 @@ title: 微服务治理(1)
 
 其中在Java领域最引人注目的就是SpringCloud提供的方案了。
 
-## SpringCloud
+### SpringCloud
 
 SpringCloud是目前国内使用最广泛的微服务框架。官网地址：https://spring.io/projects/spring-cloud。
 
@@ -154,7 +154,7 @@ SpringCloud集成了各种微服务功能组件，并基于SpringBoot实现了�
 
 
 
-## 总结
+### 总结
 
 - 单体架构：简单方便，高度耦合，扩展性差，适合小型项目。例如：学生管理系统
 
@@ -172,11 +172,11 @@ SpringCloud集成了各种微服务功能组件，并基于SpringBoot实现了�
 
 
 
-# 服务拆分和远程调用
+## 服务拆分和远程调用
 
 任何分布式架构都离不开服务的拆分，微服务也是一样。
 
-## 服务拆分原则
+### 服务拆分原则
 
 这里我总结了微服务拆分时的几个原则：
 
@@ -188,7 +188,7 @@ SpringCloud集成了各种微服务功能组件，并基于SpringBoot实现了�
 
 
 
-## 服务拆分示例
+### 服务拆分示例
 
 以课前资料中的微服务cloud-demo为例，其结构如下：
 
@@ -207,7 +207,7 @@ cloud-demo：父工程，管理依赖
 
 
 
-### 导入Sql语句
+#### 导入Sql语句
 
 首先，将课前资料提供的`cloud-order.sql`和`cloud-user.sql`导入到mysql中：
 
@@ -229,7 +229,7 @@ cloud-order表中持有cloud-user表中的id字段。
 
 
 
-### 导入demo工程
+#### 导入demo工程
 
 用IDEA导入课前资料提供的Demo：
 
@@ -265,7 +265,7 @@ cloud-order表中持有cloud-user表中的id字段。
 
 
 
-## 实现远程调用案例
+### 实现远程调用案例
 
 
 
@@ -295,7 +295,7 @@ cloud-order表中持有cloud-user表中的id字段。
 
 
 
-### 案例需求：
+#### 案例需求：
 
 修改order-service中的根据id查询订单业务，要求在查询订单的同时，根据订单中包含的userId查询出用户信息，一起返回。
 
@@ -313,7 +313,7 @@ cloud-order表中持有cloud-user表中的id字段。
 
 
 
-### 注册RestTemplate
+#### 注册RestTemplate
 
 首先，我们在order-service服务中的OrderApplication启动类中，注册RestTemplate实例：
 
@@ -343,7 +343,7 @@ public class OrderApplication {
 
 
 
-### 实现远程调用
+#### 实现远程调用
 
 修改order-service服务中的cn.itcast.order.service包下的OrderService类中的queryOrderById方法：
 
@@ -355,7 +355,7 @@ public class OrderApplication {
 
 
 
-## 提供者与消费者
+### 提供者与消费者
 
 在服务调用关系中，会有两个不同的角色：
 
@@ -382,7 +382,7 @@ public class OrderApplication {
 
 
 
-# Eureka注册中心
+## Eureka注册中心
 
 
 
@@ -400,7 +400,7 @@ public class OrderApplication {
 
 
 
-## Eureka的结构和作用
+### Eureka的结构和作用
 
 这些问题都需要利用SpringCloud中的注册中心来解决，其中最广为人知的注册中心就是Eureka，其结构如下：
 
@@ -445,11 +445,11 @@ public class OrderApplication {
 
 
 
-## 搭建eureka-server
+### 搭建eureka-server
 
 首先大家注册中心服务端：eureka-server，这必须是一个独立的微服务
 
-### 创建eureka-server服务
+#### 创建eureka-server服务
 
 在cloud-demo父工程下，创建一个子模块：
 
@@ -467,7 +467,7 @@ public class OrderApplication {
 
 
 
-### 引入eureka依赖
+#### 引入eureka依赖
 
 引入SpringCloud为eureka提供的starter依赖：
 
@@ -480,7 +480,7 @@ public class OrderApplication {
 
 
 
-### 编写启动类
+#### 编写启动类
 
 给eureka-server服务编写一个启动类，一定要添加一个@EnableEurekaServer注解，开启eureka的注册中心功能：
 
@@ -502,7 +502,7 @@ public class EurekaApplication {
 
 
 
-### 编写配置文件
+#### 编写配置文件
 
 编写一个application.yml文件，内容如下：
 
@@ -520,7 +520,7 @@ eureka:
 
 
 
-### 启动服务
+#### 启动服务
 
 启动微服务，然后在浏览器访问：http://127.0.0.1:10086
 
@@ -534,11 +534,11 @@ eureka:
 
 
 
-## 服务注册
+### 服务注册
 
 下面，我们将user-service注册到eureka-server中去。
 
-### 引入依赖
+#### 引入依赖
 
 在user-service的pom文件中，引入下面的eureka-client依赖：
 
@@ -551,7 +551,7 @@ eureka:
 
 
 
-### 配置文件
+#### 配置文件
 
 在user-service中，修改application.yml文件，添加服务名称、eureka地址：
 
@@ -567,7 +567,7 @@ eureka:
 
 
 
-### 启动多个user-service实例
+#### 启动多个user-service实例
 
 为了演示一个服务有多个实例的场景，我们添加一个SpringBoot的启动配置，再启动一个user-service。
 
@@ -601,11 +601,11 @@ eureka:
 
 
 
-## 服务发现
+### 服务发现
 
 下面，我们将order-service的逻辑修改：向eureka-server拉取user-service的信息，实现服务发现。
 
-### 引入依赖
+#### 引入依赖
 
 之前说过，服务发现、服务注册统一都封装在eureka-client依赖，因此这一步与服务注册时一致。
 
@@ -620,7 +620,7 @@ eureka:
 
 
 
-### 配置文件
+#### 配置文件
 
 服务发现也需要知道eureka地址，因此第二步与服务注册一致，都是配置eureka信息：
 
@@ -638,7 +638,7 @@ eureka:
 
 
 
-### 服务拉取和负载均衡
+#### 服务拉取和负载均衡
 
 最后，我们要去eureka-server中拉取user-service服务的实例列表，并且实现负载均衡。
 
@@ -662,13 +662,13 @@ spring会自动帮助我们从eureka-server端，根据userservice这个服务�
 
 
 
-# Ribbon负载均衡
+## Ribbon负载均衡
 
 上一节中，我们添加了@LoadBalanced注解，即可实现负载均衡功能，这是什么原理呢？
 
 
 
-## 负载均衡原理
+### 负载均衡原理
 
 SpringCloud底层其实是利用了一个名为Ribbon的组件，来实现负载均衡功能的。
 
@@ -678,7 +678,7 @@ SpringCloud底层其实是利用了一个名为Ribbon的组件，来实现负载
 
 
 
-## 源码跟踪
+### 源码跟踪
 
 为什么我们只输入了service名称就可以访问了呢？之前还要获取ip和端口。
 
@@ -686,7 +686,7 @@ SpringCloud底层其实是利用了一个名为Ribbon的组件，来实现负载
 
 我们进行源码跟踪：
 
-### LoadBalancerIntercepor
+#### LoadBalancerIntercepor
 
 ![1525620483637](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2022/SpringCloud-1/1525620483637.png)
 
@@ -700,7 +700,7 @@ SpringCloud底层其实是利用了一个名为Ribbon的组件，来实现负载
 
 
 
-### LoadBalancerClient
+#### LoadBalancerClient
 
 继续跟入execute方法：
 
@@ -721,7 +721,7 @@ SpringCloud底层其实是利用了一个名为Ribbon的组件，来实现负载
 
 
 
-### 负载均衡策略IRule
+#### 负载均衡策略IRule
 
 在刚才的代码中，可以看到获取服务使通过一个`getServer`方法来做负载均衡:
 
@@ -749,7 +749,7 @@ SpringCloud底层其实是利用了一个名为Ribbon的组件，来实现负载
 
 
 
-### 总结
+#### 总结
 
 SpringCloudRibbon的底层采用了一个拦截器，拦截了RestTemplate发出的请求，对地址做了修改。用一幅图来总结一下：
 
@@ -768,11 +768,11 @@ SpringCloudRibbon的底层采用了一个拦截器，拦截了RestTemplate发出
 
 
 
-## 负载均衡策略
-
-
-
 ### 负载均衡策略
+
+
+
+#### 负载均衡策略
 
 负载均衡的规则都定义在IRule接口中，而IRule有很多不同的实现类：
 
@@ -796,7 +796,7 @@ SpringCloudRibbon的底层采用了一个拦截器，拦截了RestTemplate发出
 
 
 
-### 自定义负载均衡策略
+#### 自定义负载均衡策略
 
 通过定义IRule实现可以修改负载均衡规则，有两种方式：
 
@@ -814,9 +814,9 @@ public IRule randomRule(){
 2. 配置文件方式：在order-service的application.yml文件中，添加新的配置也可以修改规则：
 
 ```yaml
-userservice: # 给某个微服务配置负载均衡规则，这里是userservice服务
+userservice: ## 给某个微服务配置负载均衡规则，这里是userservice服务
   ribbon:
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule # 负载均衡规则 
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule ## 负载均衡规则 
 ```
 
 
@@ -825,7 +825,7 @@ userservice: # 给某个微服务配置负载均衡规则，这里是userservice
 
 
 
-## 饥饿加载
+### 饥饿加载
 
 Ribbon默认是采用懒加载，即第一次访问时才会去创建LoadBalanceClient，请求时间会很长。
 
@@ -840,11 +840,11 @@ ribbon:
 
 
 
-# Nacos注册中心
+## Nacos注册中心
 
 国内公司一般都推崇阿里巴巴的技术，比如注册中心，SpringCloudAlibaba也推出了一个名为Nacos的注册中心。
 
-## 认识和安装Nacos
+### 认识和安装Nacos
 
 [Nacos](https://nacos.io/)是阿里巴巴的产品，现在是[SpringCloud](https://spring.io/projects/spring-cloud)中的一个组件。相比[Eureka](https://github.com/Netflix/eureka)功能更加丰富，在国内受欢迎程度较高。
 
@@ -858,7 +858,7 @@ ribbon:
 
 
 
-## 服务注册到nacos
+### 服务注册到nacos
 
 Nacos是SpringCloudAlibaba的组件，而SpringCloudAlibaba也遵循SpringCloud中定义的服务注册、服务发现规范。因此使用Nacos和使用Eureka对于微服务来说，并没有太大区别。
 
@@ -869,7 +869,7 @@ Nacos是SpringCloudAlibaba的组件，而SpringCloudAlibaba也遵循SpringCloud�
 
 
 
-### 引入依赖
+#### 引入依赖
 
 在cloud-demo父工程的pom文件中的`<dependencyManagement>`中引入SpringCloudAlibaba的依赖：
 
@@ -898,7 +898,7 @@ Nacos是SpringCloudAlibaba的组件，而SpringCloudAlibaba也遵循SpringCloud�
 
 
 
-### 配置nacos地址
+#### 配置nacos地址
 
 在user-service和order-service的application.yml中添加nacos地址：
 
@@ -915,7 +915,7 @@ spring:
 
 
 
-### 重启
+#### 重启
 
 重启微服务后，登录nacos管理页面，可以看到微服务信息：
 
@@ -923,7 +923,7 @@ spring:
 
 
 
-## 服务分级存储模型
+### 服务分级存储模型
 
 一个**服务**可以有多个**实例**，例如我们的user-service，可以有:
 
@@ -955,7 +955,7 @@ Nacos就将同一机房内的实例 划分为一个**集群**。
 
 
 
-### 给user-service配置集群
+#### 给user-service配置集群
 
 
 
@@ -967,7 +967,7 @@ spring:
     nacos:
       server-addr: localhost:8848
       discovery:
-        cluster-name: HZ # 集群名称
+        cluster-name: HZ ## 集群名称
 ```
 
 重启两个user-service实例后，我们可以在nacos控制台看到下面结果：
@@ -994,7 +994,7 @@ spring:
 
 
 
-### 同集群优先的负载均衡
+#### 同集群优先的负载均衡
 
 默认的`ZoneAvoidanceRule`并不能实现根据同集群优先来实现负载均衡。
 
@@ -1010,7 +1010,7 @@ spring:
     nacos:
       server-addr: localhost:8848
       discovery:
-        cluster-name: HZ # 集群名称
+        cluster-name: HZ ## 集群名称
 ```
 
 
@@ -1022,12 +1022,12 @@ spring:
 ```yaml
 userservice:
   ribbon:
-    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule # 负载均衡规则 
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule ## 负载均衡规则 
 ```
 
 
 
-## 权重配置
+### 权重配置
 
 实际部署中会出现这样的场景：
 
@@ -1057,7 +1057,7 @@ userservice:
 
 
 
-## 环境隔离
+### 环境隔离
 
 Nacos提供了namespace来实现环境隔离功能。
 
@@ -1071,7 +1071,7 @@ Nacos提供了namespace来实现环境隔离功能。
 
 
 
-### 创建namespace
+#### 创建namespace
 
 默认情况下，所有service、data、group都在同一个namespace，名为public：
 
@@ -1095,7 +1095,7 @@ Nacos提供了namespace来实现环境隔离功能。
 
 
 
-### 给微服务配置namespace
+#### 给微服务配置namespace
 
 给微服务配置namespace只能通过修改配置来实现。
 
@@ -1108,7 +1108,7 @@ spring:
       server-addr: localhost:8848
       discovery:
         cluster-name: HZ
-        namespace: 492a7d5d-237b-46a1-a99a-fa8e98e4b0f9 # 命名空间，填ID
+        namespace: 492a7d5d-237b-46a1-a99a-fa8e98e4b0f9 ## 命名空间，填ID
 ```
 
 
@@ -1127,7 +1127,7 @@ spring:
 
 
 
-## Nacos与Eureka的区别
+### Nacos与Eureka的区别
 
 Nacos的服务实例分为两种l类型：
 
@@ -1144,7 +1144,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        ephemeral: false # 设置为非临时实例
+        ephemeral: false ## 设置为非临时实例
 ```
 
 

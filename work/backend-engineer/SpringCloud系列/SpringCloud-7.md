@@ -33,7 +33,7 @@ title: 分布式搜索引擎 ——Elasticsearch (3)
 
 <!-- more-->
 
-# 数据聚合
+## 数据聚合
 
 **[聚合（](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html)[aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html)[）](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html)**可以让我们极其方便的实现对数据的统计、分析、运算。例如：
 
@@ -43,7 +43,7 @@ title: 分布式搜索引擎 ——Elasticsearch (3)
 
 实现这些统计功能的比数据库的sql要方便的多，而且查询速度非常快，可以实现近实时搜索效果。
 
-## 聚合的种类
+### 聚合的种类
 
 聚合常见的有三类：
 
@@ -66,11 +66,11 @@ title: 分布式搜索引擎 ——Elasticsearch (3)
 
 
 
-## DSL实现聚合
+### DSL实现聚合
 
 现在，我们要统计所有数据中的酒店品牌有几种，其实就是按照品牌对数据分组。此时可以根据酒店品牌的名称做聚合，也就是Bucket聚合。
 
-### Bucket聚合语法
+#### Bucket聚合语法
 
 语法如下：
 
@@ -95,7 +95,7 @@ GET /hotel/_search
 
 
 
-### 聚合结果排序
+#### 聚合结果排序
 
 默认情况下，Bucket聚合会统计Bucket内的文档数量，记为_count，并且按照_count降序排序。
 
@@ -121,7 +121,7 @@ GET /hotel/_search
 
 
 
-### 限定聚合范围
+#### 限定聚合范围
 
 默认情况下，Bucket聚合是对索引库的所有文档做聚合，但真实场景下，用户会输入搜索条件，因此聚合必须是对搜索结果聚合。那么聚合必须添加限定条件。
 
@@ -157,7 +157,7 @@ GET /hotel/_search
 
 
 
-### Metric聚合语法
+#### Metric聚合语法
 
 上节课，我们对酒店按照品牌分组，形成了一个个桶。现在我们需要对桶内的酒店做运算，获取每个品牌的用户评分的min、max、avg等值。
 
@@ -201,7 +201,7 @@ GET /hotel/_search
 
 
 
-### 小结
+#### 小结
 
 aggs代表聚合，与query同级，此时query的作用是？
 
@@ -221,9 +221,9 @@ aggs代表聚合，与query同级，此时query的作用是？
 
 
 
-## RestAPI实现聚合
+### RestAPI实现聚合
 
-### API语法
+#### API语法
 
 聚合条件与query条件同级别，因此需要使用request.source()来指定聚合条件。
 
@@ -239,7 +239,7 @@ aggs代表聚合，与query同级，此时query的作用是？
 
 
 
-### 业务需求
+#### 业务需求
 
 需求：搜索页面的品牌、城市等信息不应该是在页面写死，而是通过聚合索引库中的酒店数据得来的：
 
@@ -286,7 +286,7 @@ aggs代表聚合，与query同级，此时query的作用是？
 
 
 
-### 业务实现
+#### 业务实现
 
 在`cn.itcast.hotel.web`包的`HotelController`中添加一个方法，遵循下面的要求：
 
@@ -392,7 +392,7 @@ private List<String> getAggByName(Aggregations aggregations, String aggName) {
 
 
 
-# 自动补全
+## 自动补全
 
 当用户在搜索框输入字符时，我们应该提示出与该字符有关的搜索项，如图：
 
@@ -406,7 +406,7 @@ private List<String> getAggByName(Aggregations aggregations, String aggName) {
 
 
 
-## 拼音分词器
+### 拼音分词器
 
 
 
@@ -460,7 +460,7 @@ POST /_analyze
 
 
 
-## 自定义分词器
+### 自定义分词器
 
 默认的拼音分词器会将每个汉字单独分为拼音，而我们希望的是每个词条形成一组拼音，需要对拼音分词器做个性化定制，形成自定义分词器。
 
@@ -554,7 +554,7 @@ PUT /test
 
 
 
-## 自动补全查询
+### 自动补全查询
 
 elasticsearch提供了[Completion Suggester](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/search-suggesters.html)查询来实现自动补全功能。这个查询会匹配以用户输入内容开头的词条并返回。为了提高补全查询的效率，对于文档中字段的类型有一些约束：
 
@@ -623,7 +623,7 @@ GET /test/_search
 
 
 
-## 实现酒店搜索框自动补全
+### 实现酒店搜索框自动补全
 
 现在，我们的hotel索引库还没有设置拼音分词器，需要修改索引库中的配置。但是我们知道索引库是无法修改的，只能删除然后重新创建。
 
@@ -645,7 +645,7 @@ GET /test/_search
 
 
 
-### 修改酒店映射结构
+#### 修改酒店映射结构
 
 代码如下：
 
@@ -736,7 +736,7 @@ PUT /hotel
 
 
 
-### 修改HotelDoc实体
+#### 修改HotelDoc实体
 
 HotelDoc中要添加一个字段，用来做自动补全，内容可以是酒店品牌、城市、商圈等信息。按照自动补全字段的要求，最好是这些字段的数组。
 
@@ -802,7 +802,7 @@ public class HotelDoc {
 
 
 
-### 重新导入
+#### 重新导入
 
 重新执行之前编写的导入数据功能，可以看到新的酒店数据中包含了suggestion：
 
@@ -812,7 +812,7 @@ public class HotelDoc {
 
 
 
-### 自动补全查询的JavaAPI
+#### 自动补全查询的JavaAPI
 
 之前我们学习了自动补全查询的DSL，而没有学习对应的JavaAPI，这里给出一个示例：
 
@@ -826,7 +826,7 @@ public class HotelDoc {
 
 
 
-### 实现搜索框自动补全
+#### 实现搜索框自动补全
 
 查看前端页面，可以发现当我们在输入框键入时，前端会发起ajax请求：
 
@@ -896,7 +896,7 @@ public List<String> getSuggestions(String prefix) {
 
 
 
-# 数据同步
+## 数据同步
 
 elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生改变时，elasticsearch也必须跟着改变，这个就是elasticsearch与mysql之间的**数据同步**。
 
@@ -908,7 +908,7 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 
 
 
-## 思路分析
+### 思路分析
 
 常见的数据同步方案有三种：
 
@@ -918,7 +918,7 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 
 
 
-### 同步调用
+#### 同步调用
 
 方案一：同步调用
 
@@ -931,7 +931,7 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 
 
 
-### 异步通知
+#### 异步通知
 
 方案二：异步通知
 
@@ -948,7 +948,7 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 
 
 
-### 监听binlog
+#### 监听binlog
 
 方案三：监听binlog
 
@@ -962,7 +962,7 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 
 
 
-### 选择
+#### 选择
 
 方式一：同步调用
 
@@ -981,11 +981,11 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 
 
 
-## 实现数据同步
+### 实现数据同步
 
 
 
-### 思路
+#### 思路
 
 利用课前资料提供的hotel-admin项目作为酒店管理的微服务。当酒店数据发生增、删、改时，要求对elasticsearch中数据也要完成相同操作。
 
@@ -1009,7 +1009,7 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 
 
 
-### 导入demo
+#### 导入demo
 
 导入课前资料提供的hotel-admin项目：
 
@@ -1027,7 +1027,7 @@ elasticsearch中的酒店数据来自于mysql数据库，因此mysql数据发生
 
 
 
-### 声明交换机、队列
+#### 声明交换机、队列
 
 MQ结构如图：
 
@@ -1035,7 +1035,7 @@ MQ结构如图：
 
 
 
-#### 引入依赖
+##### 引入依赖
 
 在hotel-admin、hotel-demo中引入rabbitmq的依赖：
 
@@ -1049,7 +1049,7 @@ MQ结构如图：
 
 
 
-#### 声明队列交换机名称
+##### 声明队列交换机名称
 
 在hotel-admin和hotel-demo中的`cn.itcast.hotel.constatnts`包下新建一个类`MqConstants`：
 
@@ -1082,7 +1082,7 @@ package cn.itcast.hotel.constatnts;
 
 
 
-#### 声明队列交换机
+##### 声明队列交换机
 
 在hotel-demo中，定义配置类，声明队列、交换机：
 
@@ -1128,7 +1128,7 @@ public class MqConfig {
 
 
 
-### 发送MQ消息
+#### 发送MQ消息
 
 在hotel-admin中的增、删、改业务中分别发送MQ消息：
 
@@ -1136,7 +1136,7 @@ public class MqConfig {
 
 
 
-### 接收MQ消息
+#### 接收MQ消息
 
 hotel-demo接收到MQ消息要做的事情包括：
 
@@ -1235,7 +1235,7 @@ public class HotelListener {
 
 
 
-# 集群
+## 集群
 
 单机的elasticsearch做数据存储，必然面临两个问题：海量数据存储问题、单点故障问题。
 
@@ -1283,7 +1283,7 @@ public class HotelListener {
 
 
 
-## 搭建ES集群
+### 搭建ES集群
 
 参考课前资料的文档：
 
@@ -1301,11 +1301,11 @@ public class HotelListener {
 
 
 
-## 集群脑裂问题
+### 集群脑裂问题
 
 
 
-### 集群职责划分
+#### 集群职责划分
 
 elasticsearch中集群节点有不同的职责划分：
 
@@ -1331,7 +1331,7 @@ elasticsearch中集群节点有不同的职责划分：
 
 
 
-### 脑裂问题
+#### 脑裂问题
 
 脑裂是因为集群中的节点失联导致的。
 
@@ -1359,7 +1359,7 @@ elasticsearch中集群节点有不同的职责划分：
 
 
 
-### 小结
+#### 小结
 
 master eligible节点的作用是什么？
 
@@ -1380,13 +1380,13 @@ coordinator节点的作用是什么？
 
 
 
-## 集群分布式存储
+### 集群分布式存储
 
 当新增文档时，应该保存到不同分片，保证数据均衡，那么coordinating node如何确定数据该存储到哪个分片呢？
 
 
 
-### 分片存储测试
+#### 分片存储测试
 
 插入三条数据：
 
@@ -1412,7 +1412,7 @@ coordinator节点的作用是什么？
 
 
 
-### 分片存储原理
+#### 分片存储原理
 
 
 
@@ -1448,7 +1448,7 @@ elasticsearch会通过hash算法来计算文档应该存储到哪个分片：
 
 
 
-## 集群分布式查询
+### 集群分布式查询
 
 elasticsearch的查询分成两个阶段：
 
@@ -1468,7 +1468,7 @@ elasticsearch的查询分成两个阶段：
 
 
 
-## 集群故障转移
+### 集群故障转移
 
 集群的master节点会监控集群中的节点状态，如果发现有节点宕机，会立即将宕机节点的分片数据迁移到其它节点，确保数据安全，这个叫做故障转移。
 

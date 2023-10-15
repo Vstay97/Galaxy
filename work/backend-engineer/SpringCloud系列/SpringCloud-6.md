@@ -40,11 +40,11 @@ title: 分布式搜索引擎 ——Elasticsearch (2)
 
 <!-- more-->
 
-# DSL查询文档
+## DSL查询文档
 
 elasticsearch的查询依然是基于JSON风格的DSL来实现的。
 
-## DSL查询分类
+### DSL查询分类
 
 Elasticsearch提供了基于JSON的DSL（[Domain Specific Language](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html)）来定义查询。常见的查询类型包括：
 
@@ -99,11 +99,11 @@ GET /indexName/_search
 
 
 
-## 全文检索查询
+### 全文检索查询
 
 
 
-### 使用场景
+#### 使用场景
 
 全文检索查询的基本流程如下：
 
@@ -126,7 +126,7 @@ GET /indexName/_search
 
 
 
-### 基本语法
+#### 基本语法
 
 常见的全文检索查询包括：
 
@@ -162,7 +162,7 @@ GET /indexName/_search
 
 
 
-### 示例
+#### 示例
 
 match查询示例：
 
@@ -184,7 +184,7 @@ multi_match查询示例：
 
 
 
-### 总结
+#### 总结
 
 match和multi_match的区别是什么？
 
@@ -193,7 +193,7 @@ match和multi_match的区别是什么？
 
 
 
-## 精准查询
+### 精准查询
 
 精确查询一般是查找keyword、数值、日期、boolean等类型字段。所以**不会**对搜索条件分词。常见的有：
 
@@ -202,7 +202,7 @@ match和multi_match的区别是什么？
 
 
 
-### term查询
+#### term查询
 
 因为精确查询的字段搜是不分词的字段，因此查询的条件也必须是**不分词**的词条。查询时，用户输入的内容跟自动值完全匹配时才认为符合条件。如果用户输入的内容过多，反而搜索不到数据。
 
@@ -240,7 +240,7 @@ GET /indexName/_search
 
 
 
-### range查询
+#### range查询
 
 范围查询，一般应用在对数值类型做范围过滤的时候。比如做价格范围过滤。
 
@@ -273,7 +273,7 @@ GET /indexName/_search
 
 
 
-### 总结
+#### 总结
 
 精确查询常见的有哪些？
 
@@ -282,7 +282,7 @@ GET /indexName/_search
 
 
 
-## 地理坐标查询
+### 地理坐标查询
 
 所谓的地理坐标查询，其实就是根据经纬度查询，官方文档：https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-queries.html
 
@@ -304,7 +304,7 @@ GET /indexName/_search
 
 
 
-### 矩形范围查询
+#### 矩形范围查询
 
 矩形范围查询，也就是geo_bounding_box查询，查询坐标落在某个矩形范围的所有文档：
 
@@ -343,7 +343,7 @@ GET /indexName/_search
 
 
 
-### 附近查询
+#### 附近查询
 
 附近查询，也叫做距离查询（geo_distance）：查询到指定中心点小于某个距离值的所有文档。
 
@@ -388,7 +388,7 @@ GET /indexName/_search
 
 
 
-## 复合查询
+### 复合查询
 
 复合（compound）查询：复合查询可以将其它简单查询组合起来，实现更复杂的搜索逻辑。常见的有两种：
 
@@ -397,7 +397,7 @@ GET /indexName/_search
 
 
 
-### 相关性算分
+#### 相关性算分
 
 当我们利用match查询时，文档结果会根据与搜索词条的关联度打分（_score），返回结果时按照分值降序排列。
 
@@ -455,7 +455,7 @@ TF-IDF算法有一各缺陷，就是词条频率越高，文档得分也会越�
 
 
 
-### 算分函数查询
+#### 算分函数查询
 
 根据相关度打分是比较合理的需求，但**合理的不一定是产品经理需要**的。
 
@@ -469,7 +469,7 @@ TF-IDF算法有一各缺陷，就是词条频率越高，文档得分也会越�
 
 
 
-#### 语法说明
+##### 语法说明
 
 ![image-20210721191544750](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2022/SpringCloud-6/202207111959071.png)
 
@@ -508,7 +508,7 @@ function score的运行流程如下：
 
 
 
-#### 示例
+##### 示例
 
 需求：给“如家”这个品牌的酒店排名靠前一些
 
@@ -555,7 +555,7 @@ GET /hotel/_search
 
 
 
-#### 小结
+##### 小结
 
 function score query定义的三要素是什么？
 
@@ -565,7 +565,7 @@ function score query定义的三要素是什么？
 
 
 
-### 布尔查询
+#### 布尔查询
 
 布尔查询是一个或多个查询子句的组合，每一个子句就是一个**子查询**。子查询的组合方式有：
 
@@ -591,7 +591,7 @@ function score query定义的三要素是什么？
 
 
 
-#### 语法示例：
+##### 语法示例：
 
 ```json
 GET /hotel/_search
@@ -618,7 +618,7 @@ GET /hotel/_search
 
 
 
-#### 示例
+##### 示例
 
 需求：搜索名字包含“如家”，价格不高于400，在坐标31.21,121.5周围10km范围内的酒店。
 
@@ -636,7 +636,7 @@ GET /hotel/_search
 
 
 
-#### 小结
+##### 小结
 
 bool查询有几种逻辑关系？
 
@@ -647,15 +647,15 @@ bool查询有几种逻辑关系？
 
 
 
-# 搜索结果处理
+## 搜索结果处理
 
 搜索的结果可以按照用户指定的方式去处理或展示。
 
-## 排序
+### 排序
 
 elasticsearch默认是根据相关度算分（_score）来排序，但是也支持自定义方式对搜索[结果排序](https://www.elastic.co/guide/en/elasticsearch/reference/current/sort-search-results.html)。可以排序字段类型有：keyword类型、数值类型、地理坐标类型、日期类型等。
 
-### 普通字段排序
+#### 普通字段排序
 
 keyword、数值、日期类型排序的语法基本一致。
 
@@ -687,7 +687,7 @@ GET /indexName/_search
 
 
 
-### 地理坐标排序
+#### 地理坐标排序
 
 地理坐标排序略有不同。
 
@@ -735,7 +735,7 @@ GET /indexName/_search
 
 
 
-## 分页
+### 分页
 
 elasticsearch 默认情况下只返回top10的数据。而如果要查询更多数据就需要修改分页参数了。elasticsearch中通过修改from、size参数来控制要返回的分页结果：
 
@@ -744,7 +744,7 @@ elasticsearch 默认情况下只返回top10的数据。而如果要查询更多�
 
 类似于mysql中的`limit ?, ?`
 
-### 基本的分页
+#### 基本的分页
 
 分页的基本语法如下：
 
@@ -766,7 +766,7 @@ GET /hotel/_search
 
 
 
-### 深度分页问题
+#### 深度分页问题
 
 现在，我要查询990~1000的数据，查询逻辑要这么写：
 
@@ -819,7 +819,7 @@ GET /hotel/_search
 
 
 
-### 小结
+#### 小结
 
 分页查询的常见实现方案以及优缺点：
 
@@ -841,9 +841,9 @@ GET /hotel/_search
 
 
 
-## 高亮
+### 高亮
 
-### 高亮原理
+#### 高亮原理
 
 什么是高亮显示呢？
 
@@ -858,7 +858,7 @@ GET /hotel/_search
 
 
 
-### 实现高亮
+#### 实现高亮
 
 **高亮的语法**：
 
@@ -899,7 +899,7 @@ GET /hotel/_search
 
 
 
-## 总结
+### 总结
 
 查询的DSL是一个大的JSON对象，包含下列属性：
 
@@ -920,7 +920,7 @@ GET /hotel/_search
 
 
 
-# RestClient查询文档
+## RestClient查询文档
 
 文档的查询同样适用昨天学习的 RestHighLevelClient对象，基本步骤包括：
 
@@ -931,11 +931,11 @@ GET /hotel/_search
 
 
 
-## 快速入门
+### 快速入门
 
 我们以match_all查询为例
 
-### 发起查询请求
+#### 发起查询请求
 
 ![image-20210721203950559](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2022/SpringCloud-6/202207111959083.png)
 
@@ -959,7 +959,7 @@ GET /hotel/_search
 
 
 
-### 解析响应
+#### 解析响应
 
 响应结果的解析：
 
@@ -984,7 +984,7 @@ elasticsearch返回的结果是一个JSON字符串，结构包含：
 
 
 
-### 完整代码
+#### 完整代码
 
 完整代码如下：
 
@@ -1024,7 +1024,7 @@ private void handleResponse(SearchResponse response) {
 
 
 
-### 小结
+#### 小结
 
 查询的基本步骤是：
 
@@ -1044,7 +1044,7 @@ private void handleResponse(SearchResponse response) {
 
 
 
-## match查询
+### match查询
 
 全文检索的match和multi_match查询与match_all的API基本一致。差别是查询条件，也就是query的部分。
 
@@ -1082,7 +1082,7 @@ void testMatch() throws IOException {
 
 
 
-## 精确查询
+### 精确查询
 
 精确查询主要是两者：
 
@@ -1099,7 +1099,7 @@ void testMatch() throws IOException {
 
 
 
-## 布尔查询
+### 布尔查询
 
 布尔查询是用must、must_not、filter等方式组合其它查询，代码示例如下：
 
@@ -1137,7 +1137,7 @@ void testBool() throws IOException {
 
 
 
-## 排序、分页
+### 排序、分页
 
 搜索结果的排序和分页是与query同级的参数，因此同样是使用request.source()来设置。
 
@@ -1174,14 +1174,14 @@ void testPageAndSort() throws IOException {
 
 
 
-## 高亮
+### 高亮
 
 高亮的代码与之前代码差异较大，有两点：
 
 - 查询的DSL：其中除了查询条件，还需要添加高亮条件，同样是与query同级。
 - 结果解析：结果除了要解析_source文档数据，还要解析高亮结果
 
-### 高亮请求构建
+#### 高亮请求构建
 
 高亮请求的构建API如下：
 
@@ -1211,7 +1211,7 @@ void testHighlight() throws IOException {
 
 
 
-### 高亮结果解析
+#### 高亮结果解析
 
 高亮的结果与查询的文档结果默认是分离的，并不在一起。
 
@@ -1267,7 +1267,7 @@ private void handleResponse(SearchResponse response) {
 
 
 
-# 黑马旅游案例
+## 黑马旅游案例
 
 下面，我们通过黑马旅游的案例来实战演练下之前学习的知识。
 
@@ -1288,11 +1288,11 @@ private void handleResponse(SearchResponse response) {
 
 
 
-## 酒店搜索和分页
+### 酒店搜索和分页
 
 案例需求：实现黑马旅游的酒店搜索功能，完成关键字搜索和分页
 
-### 需求分析
+#### 需求分析
 
 在项目的首页，有一个大大的搜索框，还有分页按钮：
 
@@ -1331,7 +1331,7 @@ private void handleResponse(SearchResponse response) {
 
 
 
-### 定义实体类
+#### 定义实体类
 
 实体类有两个，一个是前端的请求参数实体，一个是服务端应该返回的响应结果实体。
 
@@ -1399,7 +1399,7 @@ public class PageResult {
 
 
 
-### 定义controller
+#### 定义controller
 
 定义一个HotelController，声明查询接口，满足下列要求：
 
@@ -1431,7 +1431,7 @@ public class HotelController {
 
 
 
-### 实现搜索业务
+#### 实现搜索业务
 
 我们在controller调用了IHotelService，并没有实现该方法，因此下面我们就在IHotelService中定义方法，并且去实现业务逻辑。
 
@@ -1521,11 +1521,11 @@ private PageResult handleResponse(SearchResponse response) {
 
 
 
-## 酒店结果过滤
+### 酒店结果过滤
 
 需求：添加品牌、城市、星级、价格等过滤功能
 
-### 需求分析
+#### 需求分析
 
 在页面搜索框下面，会有一些过滤项：
 
@@ -1549,7 +1549,7 @@ private PageResult handleResponse(SearchResponse response) {
 
 
 
-### 修改实体类
+#### 修改实体类
 
 修改在`cn.itcast.hotel.pojo`包下的实体类RequestParams：
 
@@ -1571,7 +1571,7 @@ public class RequestParams {
 
 
 
-### 修改搜索业务
+#### 修改搜索业务
 
 在HotelService的search方法中，只有一个地方需要修改：requet.source().query( ... )其中的查询条件。
 
@@ -1637,11 +1637,11 @@ private void buildBasicQuery(RequestParams params, SearchRequest request) {
 
 
 
-## 我周边的酒店
+### 我周边的酒店
 
 需求：我附近的酒店
 
-### 需求分析
+#### 需求分析
 
 在酒店列表页的右侧，有一个小地图，点击地图的定位按钮，地图会找到你所在的位置：
 
@@ -1660,7 +1660,7 @@ private void buildBasicQuery(RequestParams params, SearchRequest request) {
 
 
 
-### 修改实体类
+#### 修改实体类
 
 修改在`cn.itcast.hotel.pojo`包下的实体类RequestParams：
 
@@ -1688,7 +1688,7 @@ public class RequestParams {
 
 
 
-### 距离排序API
+#### 距离排序API
 
 我们以前学习过排序功能，包括两种：
 
@@ -1726,7 +1726,7 @@ GET /indexName/_search
 
 
 
-### 添加距离排序
+#### 添加距离排序
 
 在`cn.itcast.hotel.service.impl`的`HotelService`的`search`方法中，添加一个排序功能：
 
@@ -1773,7 +1773,7 @@ public PageResult search(RequestParams params) {
 
 
 
-### 排序距离显示
+#### 排序距离显示
 
 重启服务后，测试我的酒店功能：
 
@@ -1857,11 +1857,11 @@ public class HotelDoc {
 
 
 
-## 酒店竞价排名
+### 酒店竞价排名
 
 需求：让指定的酒店在搜索结果中排名置顶
 
-### 需求分析
+#### 需求分析
 
 要让指定酒店在搜索结果中排名置顶，效果如图：
 
@@ -1908,7 +1908,7 @@ public class HotelDoc {
 
 
 
-### 修改HotelDoc实体
+#### 修改HotelDoc实体
 
 给`cn.itcast.hotel.pojo`包下的HotelDoc类添加isAD字段：
 
@@ -1916,7 +1916,7 @@ public class HotelDoc {
 
 
 
-### 添加广告标记
+#### 添加广告标记
 
 接下来，我们挑几个酒店，添加isAD字段，设置为true：
 
@@ -1949,7 +1949,7 @@ POST /hotel/_update/2056105938
 
 
 
-### 添加算分函数查询
+#### 添加算分函数查询
 
 接下来我们就要修改查询条件了。之前是用的boolean 查询，现在要改成function_socre查询。
 

@@ -1,8 +1,8 @@
 [
   "calendar",
-  "templater-obsidian",
   "periodic-notes",
   "obsidian-minimal-settings",
   "obsidian-weread-plugin",
-  "table-editor-obsidian"
+  "table-editor-obsidian",
+  "templater-obsidian"
 ]

@@ -39,9 +39,9 @@ title: Docker使用及部署
 
 <!-- more-->
 
-# 初识Docker
+## 初识Docker
 
-## 什么是Docker
+### 什么是Docker
 
 微服务虽然具备各种各样的优势，但服务的拆分通用给部署带来了很大的麻烦。
 
@@ -52,7 +52,7 @@ title: Docker使用及部署
 
 
 
-### 应用部署的环境问题
+#### 应用部署的环境问题
 
 大型项目组件较多，运行环境也较为复杂，部署时会碰到一些问题：
 
@@ -70,7 +70,7 @@ title: Docker使用及部署
 
 
 
-### Docker解决依赖兼容问题
+#### Docker解决依赖兼容问题
 
 而Docker确巧妙的解决了这些问题，Docker是如何实现的呢？
 
@@ -92,7 +92,7 @@ Docker为了解决依赖的兼容问题的，采用了两个手段：
 
 
 
-### Docker解决操作系统环境差异
+#### Docker解决操作系统环境差异
 
 要解决不同操作系统环境差异问题，必须先了解操作系统结构。以一个Ubuntu操作系统为例，结构如下：
 
@@ -141,7 +141,7 @@ Docker如何解决不同系统环境的问题？
 
 
 
-### 小结
+#### 小结
 
 Docker如何解决大型项目依赖关系复杂，不同组件依赖的兼容性问题？
 
@@ -164,7 +164,7 @@ Docker是一个快速交付应用、运行应用的技术，具备下列优势�
 
 
 
-## Docker和虚拟机的区别
+### Docker和虚拟机的区别
 
 Docker可以让一个应用在任何操作系统中非常方便的运行。而以前我们接触的虚拟机，也能在一个操作系统中，运行另外一个操作系统，保护系统中的任何应用。
 
@@ -200,11 +200,11 @@ Docker和虚拟机的差异：
 
 
 
-## Docker架构
+### Docker架构
 
 
 
-### 镜像和容器
+#### 镜像和容器
 
 Docker中有几个重要的概念：
 
@@ -232,7 +232,7 @@ Docker中有几个重要的概念：
 
 
 
-### DockerHub
+#### DockerHub
 
 开源应用程序非常多，打包这些应用往往是重复的劳动。为了避免这些重复劳动，人们就会将自己打包的应用镜像，例如Redis、MySQL镜像放到网络上，共享使用，就像GitHub的代码共享一样。
 
@@ -248,7 +248,7 @@ Docker中有几个重要的概念：
 
 
 
-### Docker架构
+#### Docker架构
 
 我们要使用Docker来操作镜像、容器，就必须要安装Docker。
 
@@ -266,7 +266,7 @@ Docker是一个CS架构的程序，由两部分组成：
 
 
 
-### 小结
+#### 小结
 
 
 
@@ -290,7 +290,7 @@ DockerHub：
 
 
 
-## 安装Docker
+### 安装Docker
 
 企业部署一般都是采用Linux操作系统，而其中又数CentOS发行版占比最多，因此我们在CentOS下安装Docker。参考课前资料中的文档：
 
@@ -300,13 +300,13 @@ DockerHub：
 
 
 
-# Docker的基本操作
+## Docker的基本操作
 
-## 镜像操作
+### 镜像操作
 
 
 
-### 镜像名称
+#### 镜像名称
 
 首先来看下镜像的名称组成：
 
@@ -321,7 +321,7 @@ DockerHub：
 
 
 
-### 镜像命令
+#### 镜像命令
 
 常见的镜像操作命令如图：
 
@@ -329,7 +329,7 @@ DockerHub：
 
 
 
-### 案例1-拉取、查看镜像
+#### 案例1-拉取、查看镜像
 
 需求：从DockerHub中拉取一个nginx镜像并查看
 
@@ -347,7 +347,7 @@ DockerHub：
 
 
 
-### 案例2-保存、导入镜像
+#### 案例2-保存、导入镜像
 
 需求：利用docker save将nginx镜像导出磁盘，然后再通过load加载回来
 
@@ -411,7 +411,7 @@ docker load -i nginx.tar
 
 
 
-### 练习
+#### 练习
 
 需求：去DockerHub搜索并拉取一个Redis镜像
 
@@ -431,9 +431,9 @@ docker load -i nginx.tar
 
 
 
-## 容器操作
+### 容器操作
 
-### 容器相关命令
+#### 容器相关命令
 
 容器操作的命令如图：
 
@@ -459,7 +459,7 @@ docker load -i nginx.tar
 
 
 
-### 案例-创建并运行一个容器
+#### 案例-创建并运行一个容器
 
 创建并运行nginx容器的命令：
 
@@ -487,7 +487,7 @@ docker run --name containerName -p 80:80 -d nginx
 
 
 
-### 案例-进入容器，修改文件
+#### 案例-进入容器，修改文件
 
 **需求**：进入Nginx容器，修改HTML文件内容，添加“传智教育欢迎您”
 
@@ -555,7 +555,7 @@ sed -i -e 's#Welcome to nginx#传智教育欢迎您#g' -e 's#<head>#<head><meta 
 
 
 
-### 小结
+#### 小结
 
 
 
@@ -583,7 +583,7 @@ docker run命令的常见参数有哪些？
 
 
 
-## 数据卷（容器数据管理）
+### 数据卷（容器数据管理）
 
 在之前的nginx案例中，修改nginx的html页面时，需要进入nginx内部。并且因为没有编辑器，修改文件也很麻烦。
 
@@ -595,7 +595,7 @@ docker run命令的常见参数有哪些？
 
 
 
-### 什么是数据卷
+#### 什么是数据卷
 
 **数据卷（volume）**是一个虚拟目录，指向宿主机文件系统中的某个目录。
 
@@ -609,7 +609,7 @@ docker run命令的常见参数有哪些？
 
 
 
-### 数据集操作命令
+#### 数据集操作命令
 
 
 
@@ -629,7 +629,7 @@ docker volume命令是数据卷操作，根据命令后跟随的command来确定
 
 
 
-### 创建和查看数据卷
+#### 创建和查看数据卷
 
 **需求**：创建一个数据卷，并查看数据卷在宿主机的目录位置
 
@@ -689,7 +689,7 @@ docker volume inspect html
 
 
 
-### 挂载数据卷
+#### 挂载数据卷
 
 我们在创建容器时，可以通过 -v 参数来挂载一个数据卷到某个容器内目录，命令格式如下：
 
@@ -707,7 +707,7 @@ docker run \
 
 
 
-### 案例-给nginx挂载数据卷
+#### 案例-给nginx挂载数据卷
 
 **需求**：创建一个nginx容器，修改容器内的html目录内的index.html内容
 
@@ -730,17 +730,17 @@ docker run --name mn -v html:/usr/share/nginx/html -p 80:80 -d nginx
 ② 进入html数据卷所在位置，并修改HTML内容
 
 ```sh
-# 查看html数据卷的位置
+## 查看html数据卷的位置
 docker volume inspect html
-# 进入该目录
+## 进入该目录
 cd /var/lib/docker/volumes/html/_data
-# 修改文件
+## 修改文件
 vi index.html
 ```
 
 
 
-### 案例-给MySQL挂载本地目录
+#### 案例-给MySQL挂载本地目录
 
 容器不仅仅可以挂载数据卷，也可以直接挂载到宿主机目录上。关联关系如下：
 
@@ -784,7 +784,7 @@ vi index.html
 
 
 
-### 小结
+#### 小结
 
 docker run的命令中通过 -v 参数挂载文件或目录到容器中：
 
@@ -803,13 +803,13 @@ docker run的命令中通过 -v 参数挂载文件或目录到容器中：
 
 
 
-# Dockerfile自定义镜像
+## Dockerfile自定义镜像
 
 常见的镜像在DockerHub就能找到，但是我们自己写的项目就必须自己构建镜像了。
 
 而要自定义镜像，就必须先了解镜像的结构才行。
 
-## 镜像结构
+### 镜像结构
 
 镜像是将应用程序及其需要的系统函数库、环境、配置、依赖打包而成。
 
@@ -827,7 +827,7 @@ docker run的命令中通过 -v 参数挂载文件或目录到容器中：
 
 
 
-## Dockerfile语法
+### Dockerfile语法
 
 构建自定义的镜像时，并不需要一个个文件去拷贝，打包。
 
@@ -853,11 +853,11 @@ docker run的命令中通过 -v 参数挂载文件或目录到容器中：
 
 
 
-## 构建Java项目
+### 构建Java项目
 
 
 
-### 基于Ubuntu构建Java项目
+#### 基于Ubuntu构建Java项目
 
 需求：基于Ubuntu镜像构建一个新镜像，运行一个java项目
 
@@ -880,27 +880,27 @@ docker run的命令中通过 -v 参数挂载文件或目录到容器中：
   其中的内容如下：
 
   ```dockerfile
-  # 指定基础镜像
+  ## 指定基础镜像
   FROM ubuntu:16.04
-  # 配置环境变量，JDK的安装目录
+  ## 配置环境变量，JDK的安装目录
   ENV JAVA_DIR=/usr/local
   
-  # 拷贝jdk和java项目的包
+  ## 拷贝jdk和java项目的包
   COPY ./jdk8.tar.gz $JAVA_DIR/
   COPY ./docker-demo.jar /tmp/app.jar
   
-  # 安装JDK
+  ## 安装JDK
   RUN cd $JAVA_DIR \
    && tar -xf ./jdk8.tar.gz \
    && mv ./jdk1.8.0_144 ./java8
   
-  # 配置环境变量
+  ## 配置环境变量
   ENV JAVA_HOME=$JAVA_DIR/java8
   ENV PATH=$PATH:$JAVA_HOME/bin
   
-  # 暴露端口
+  ## 暴露端口
   EXPOSE 8090
-  # 入口，java项目的启动命令
+  ## 入口，java项目的启动命令
   ENTRYPOINT java -jar /tmp/app.jar
   ```
 
@@ -922,7 +922,7 @@ docker run的命令中通过 -v 参数挂载文件或目录到容器中：
 
 
 
-### 基于java8构建Java项目
+#### 基于java8构建Java项目
 
 虽然我们可以基于Ubuntu基础镜像，添加任意自己需要的安装包，构建镜像，但是却比较麻烦。所以大多数情况下，我们都可以在一些安装了部分软件的基础镜像上做改造。
 
@@ -965,7 +965,7 @@ docker run的命令中通过 -v 参数挂载文件或目录到容器中：
 
 
 
-## 小结
+### 小结
 
 小结：
 
@@ -977,13 +977,13 @@ docker run的命令中通过 -v 参数挂载文件或目录到容器中：
 
 
 
-# Docker-Compose
+## Docker-Compose
 
 Docker Compose可以基于Compose文件帮我们快速的部署分布式应用，而无需手动一个个创建和运行容器！
 
 ![image-20210731180921742](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2022/SpringCloud-3/202207061009785.png)
 
-## 初识DockerCompose
+### 初识DockerCompose
 
 Compose文件是一个文本文件，通过指令定义集群中的每个容器如何运行。格式如下：
 
@@ -1019,13 +1019,13 @@ DockerCompose的详细语法参考官网：https://docs.docker.com/compose/compo
 
 
 
-## 安装DockerCompose
+### 安装DockerCompose
 
 参考课前资料
 
 
 
-## 部署微服务集群
+### 部署微服务集群
 
 **需求**：将之前学习的cloud-demo微服务集群利用DockerCompose部署
 
@@ -1045,7 +1045,7 @@ DockerCompose的详细语法参考官网：https://docs.docker.com/compose/compo
 
 
 
-### compose文件
+#### compose文件
 
 查看课前资料提供的cloud-demo文件夹，里面已经编写好了docker-compose文件，而且每个微服务都准备了一个独立的目录：
 
@@ -1116,7 +1116,7 @@ ENTRYPOINT java -jar /tmp/app.jar
 
 
 
-### 修改微服务配置
+#### 修改微服务配置
 
 因为微服务将来要部署为docker容器，而容器之间互联不是通过IP地址，而是通过容器名。这里我们将order-service、user-service、gateway服务的mysql、nacos地址都修改为基于容器名的访问。
 
@@ -1133,12 +1133,12 @@ spring:
     name: orderservice
   cloud:
     nacos:
-      server-addr: nacos:8848 # nacos服务地址
+      server-addr: nacos:8848 ## nacos服务地址
 ```
 
 
 
-### 打包
+#### 打包
 
 接下来需要将我们的每个微服务都打包。因为之前查看到Dockerfile中的jar包名称都是app.jar，因此我们的每个微服务都需要用这个名称。
 
@@ -1161,7 +1161,7 @@ spring:
 
 ![image-20210801095951030](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2022/SpringCloud-3/202207061009789.png)
 
-### 拷贝jar包到部署目录
+#### 拷贝jar包到部署目录
 
 编译打包好的app.jar文件，需要放到Dockerfile的同级目录中。注意：每个微服务的app.jar放到与服务名称对应的目录，别搞错了。
 
@@ -1177,7 +1177,7 @@ gateway：
 
 ![image-20210801100308102](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2022/SpringCloud-3/202207061009792.png)
 
-### 部署
+#### 部署
 
 最后，我们需要将文件整个cloud-demo文件夹上传到虚拟机中，理由DockerCompose部署。
 
@@ -1199,17 +1199,17 @@ docker-compose up -d
 
 
 
-# Docker镜像仓库 
+## Docker镜像仓库 
 
 
 
-## 搭建私有镜像仓库
+### 搭建私有镜像仓库
 
 参考课前资料《CentOS7安装Docker.md》
 
 
 
-## 推送、拉取镜像
+### 推送、拉取镜像
 
 推送镜像到私有镜像服务必须先tag，步骤如下：
 

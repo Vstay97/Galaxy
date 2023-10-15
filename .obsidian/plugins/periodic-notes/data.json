@@ -3,13 +3,13 @@
   "hasMigratedDailyNoteSettings": false,
   "hasMigratedWeeklyNoteSettings": false,
   "daily": {
-    "format": "YYYY/[W]W/YYYY-MM-DD",
+    "format": "YYYY/MM/YYYY-MM-DD",
     "template": "Templates/日志 - 日记模板.md",
     "folder": "journal",
     "enabled": true
   },
   "weekly": {
-    "format": "YYYY/[W]W/YYYY-[W]W",
+    "format": "YYYY/MM/YYYY-[W]W",
     "template": "Templates/日志 - 周记模板.md",
     "folder": "journal",
     "enabled": true
@@ -17,7 +17,8 @@
   "monthly": {
     "format": "",
     "template": "",
-    "folder": ""
+    "folder": "",
+    "enabled": false
   },
   "quarterly": {
     "format": "YYYY/YYYY-[Q]Q",

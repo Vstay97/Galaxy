@@ -23,8 +23,20 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "",
-      "template": ""
+      "folder": "blog",
+      "template": "templates/博客 - 快速模板.md"
+    },
+    {
+      "folder": "engineering",
+      "template": "templates/文档 - 快速模板.md"
+    },
+    {
+      "folder": "wiki",
+      "template": "templates/文档 - 快速模板.md"
+    },
+    {
+      "folder": "work",
+      "template": "templates/文档 - 快速模板.md"
     }
   ],
   "syntax_highlighting": true,

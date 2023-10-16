@@ -168,7 +168,7 @@ tmux switch -t <session-name>
 tmux rename-session -t 0 <new-name>
 ```
 
-上面命令将0号会话重命名。
+上面命令将0号会话重命名。对应快捷键为`Ctrl+b $`。
 
 ### 3.7 会话快捷键
 
@@ -205,6 +205,8 @@ tmux split-window
 tmux split-window -h 
 ```
 
+对应快捷键为`Ctrl+b "` 和 `Ctrl+b %`
+
 ![](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/Tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/202310162056611.jpeg)
 
 ### 5.2 移动光标
@@ -224,6 +226,8 @@ tmux select-pane -L
 # 光标切换到右边窗格
 tmux select-pane -R 
 ```
+
+对应快捷键为 `Ctrl+b ↑`、 `Ctrl+b ↓`、 `Ctrl+b ←`、 `Ctrl+b →`。
 
 ### 5.3 交换窗格位置
 

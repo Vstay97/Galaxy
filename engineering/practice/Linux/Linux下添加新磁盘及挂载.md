@@ -5,7 +5,7 @@ description: Linux下添加新磁盘及挂载
 last_update:
   author: Vstay
   date: 2022-04-25 02:05:44
-sidebar_position: 1
+sidebar_position: 2
 tags:
 - Linux
 - Ubuntu

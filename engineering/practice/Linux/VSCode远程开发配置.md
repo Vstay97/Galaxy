@@ -5,7 +5,7 @@ description: VSCode远程开发配置
 last_update:
   author: Vstay
   date: 2022-10-14 17:13:40
-sidebar_position: 2
+sidebar_position: 3
 tags:
 - VSCode
 - IDE

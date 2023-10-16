@@ -5,7 +5,7 @@ description: 使用rm,但是丢到trash
 last_update:
   author: Vstay
   date: 2022-11-01 11:26:21
-sidebar_position: 1
+sidebar_position: 5
 tags:
 - linux
 title: 使用rm,但是丢到trash

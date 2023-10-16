@@ -5,7 +5,7 @@ description: Linux环境变量配置全攻略
 last_update:
   author: Vstay
   date: 2022-10-18 14:27:15
-sidebar_position: 1
+sidebar_position: 4
 tags:
 - Linux
 - 环境变量

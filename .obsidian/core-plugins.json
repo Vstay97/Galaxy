@@ -1,8 +1,7 @@
 [
   "file-explorer",
   "global-search",
-  "canvas",
-  "tag-pane",
+  "properties",
   "page-preview",
   "templates",
   "command-palette",

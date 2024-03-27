@@ -46,11 +46,11 @@ title: VSCode远程开发配置
 
 （1）在terminal中输入ssh ，出现如下信息表明安装成功
 
-![img](https://pic4.zhimg.com/v2-ba7c856e6cbd9bbad18f955858874737_b.jpg)
+![img](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2024/VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/v2-ba7c856e6cbd9bbad18f955858874737_b.jpg)
 
 （2）或者输入ssh -V，出现已安装的ssh版本，代表安装成功
 
-![img](https://pic4.zhimg.com/v2-806046c13951659faa315e9e7031e5d3_b.jpg)
+![img](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2024/VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/v2-806046c13951659faa315e9e7031e5d3_b.jpg)
 
 
 
@@ -60,15 +60,15 @@ title: VSCode远程开发配置
 
 （1）点击： Extensions （vscode界面左侧）
 
-![img](https://pic2.zhimg.com/v2-6bff36a799659bd9173553914f5b7f0d_b.jpg)
+![img](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2024/VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/v2-6bff36a799659bd9173553914f5b7f0d_b.jpg)
 
 （2）在搜索框中搜索，点击安装
 
-![img](https://pic3.zhimg.com/v2-ee01b8dbc44664ca90e7279135aacb8e_b.jpg)
+![img](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2024/VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/v2-ee01b8dbc44664ca90e7279135aacb8e_b.jpg)
 
 （3）Enable 该插件
 
-![img](https://pic3.zhimg.com/v2-6150802ccdcce5c759d2725c3429ebbe_b.jpg)
+![img](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2024/VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/v2-6150802ccdcce5c759d2725c3429ebbe_b.jpg)
 
 
 
@@ -80,11 +80,11 @@ title: VSCode远程开发配置
 
 - id_rsa.pub是公钥，id_rsa是私钥。
 
-![img](https://pic2.zhimg.com/v2-3eaa79dff5e3e568b4944457d5f72bb1_b.jpg)
+![img](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2024/VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/v2-3eaa79dff5e3e568b4944457d5f72bb1_b.jpg)
 
 - 如果多平台都要使用ssh，则需要修改密钥文件名，避免冲突：
 
-![img](https://pic4.zhimg.com/v2-3d1d0aa68bdc29117a46c55db4daa673_b.jpg)
+![img](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2024/VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/v2-3d1d0aa68bdc29117a46c55db4daa673_b.jpg)
 
 
 
@@ -99,7 +99,7 @@ title: VSCode远程开发配置
 
 - 生成完之后输入【ls】可看到当前路径多了一个authorized_keys文件。
 
-![img](https://pic1.zhimg.com/v2-a45d59506c3d9956ec3db1be46128388_b.jpg)
+![img](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2024/VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/v2-a45d59506c3d9956ec3db1be46128388_b.jpg)
 
 
 
@@ -107,15 +107,15 @@ title: VSCode远程开发配置
 
 ① 打开.ssh/config文件
 
-![img](https://pic3.zhimg.com/v2-c59f3fd2682ffc4a22ba6c422f5f4bd2_b.jpg)
+![img](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2024/VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/v2-c59f3fd2682ffc4a22ba6c422f5f4bd2_b.jpg)
 
-![img](https://pic3.zhimg.com/v2-9af4fa46dc08b2e247abfc796925d50a_b.jpg)
+![img](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2024/VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/v2-9af4fa46dc08b2e247abfc796925d50a_b.jpg)
 
 
 
 ② 修改.ssh/config文件：加入IdentityFile的路径（也就是私钥在本机的所在位置）
 
-![img](https://pic2.zhimg.com/v2-5abda2cf882caa20ee0e2d7a332c763d_b.jpg)
+![img](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2024/VSCode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/v2-5abda2cf882caa20ee0e2d7a332c763d_b.jpg)
 
 这时候再用vscode登录server就不用输入密码了！
 

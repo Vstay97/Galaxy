@@ -8,7 +8,7 @@ keywords:
 tags:
 - 协作规范
 sidebar_position: 7
-author: 7Wate
+author: Vstay
 date: 2023-06-26
 ---
 

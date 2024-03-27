@@ -7,13 +7,11 @@ keywords:
 tags: 
 - 博客
 authors:
-- 7Wate
+- Vstay
 date: 2022-07-27
 ---
 
 Docusaurus 是一款**静态站点生成器**。 可以搭建带有快速客户端导航的**单页应用**，充分利用了 **React**，让你的网站具有交互能力。 它提供了开箱即用的**文档功能**，不过也可用于搭建**各种网站**：个人网站、产品、博客、营销主页等等。
-
-当下个人知识的整理归纳已经及其重要了，废话不多说。可以先体验一下我的个人 wiki：[https://wiki.7wate.com/](https://wiki.7wate.com/) ，相信我你一定会爱上它！
 
 ## 安装
 
@@ -257,8 +255,6 @@ docker run -it --env-file=.env -e "CONFIG=$(cat docsearch.json | jq -r tostring)
 ## 总结
 
 如果想要稳定运行项目，请务必一定**仔细阅读官方文档**。官方文档维护的相当好，主要就是 algolia 搜索哪里，刚开始很容易无从下手……
-
-因为被 Docusaurus 官方 Showcase 收录了，所以产出一篇文章推广一下 ~
 
 更多优秀 Docusaurus 站点请访问：[展示站点](https://docusaurus.io/showcase?tags=personal)
 

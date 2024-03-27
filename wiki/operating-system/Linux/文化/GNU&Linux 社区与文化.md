@@ -9,7 +9,7 @@ keywords:
 tags:
 - Linux
 sidebar_position: 2
-author: 7Wate
+author: Vstay
 date: 2023-06-21
 ---
 

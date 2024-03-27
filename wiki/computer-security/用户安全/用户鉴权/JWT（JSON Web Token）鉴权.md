@@ -8,7 +8,7 @@ keywords:
 tags:
 - 权限
 sidebar_position: 4
-author: 7Wate
+author: Vstay
 date: 2022-08-31
 ---
 ## JWT（JSON Web Token）鉴权

@@ -7,7 +7,7 @@ keywords:
 tags:
 - Vim
 sidebar_position: 2
-author: 7Wate
+author: Vstay
 date: 2022-11-16
 ---
 

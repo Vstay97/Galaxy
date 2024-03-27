@@ -6,7 +6,7 @@ keywords:
 - SSH
 tags:
 - Windows
-author: 7Wate
+author: Vstay
 date: 2022-09-23
 ---
 

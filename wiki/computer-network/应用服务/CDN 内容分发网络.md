@@ -7,7 +7,7 @@ keywords:
 tags:
 - CDN
 sidebar_position: 1
-author: 7Wate
+author: Vstay
 date: 2023-06-27
 ---
 

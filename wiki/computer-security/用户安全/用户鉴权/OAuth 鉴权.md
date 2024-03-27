@@ -7,7 +7,7 @@ keywords:
 tags:
 - 权限
 sidebar_position: 6
-author: 7Wate
+author: Vstay
 date: 2022-08-31
 ---
 ## OAuth 2.0

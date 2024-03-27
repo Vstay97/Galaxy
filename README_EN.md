@@ -1,4 +1,4 @@
-# 7Wate Knowledge Base
+# Vstay Knowledge Base
 
 > Always For Freedom. A guy who likes to think outside the box 💨
 

@@ -7,7 +7,7 @@ keywords:
 tags:
 - SQL
 sidebar_position: 2
-author: 7Wate
+author: Vstay
 date: 2022-08-31
 ---
 ## SQL

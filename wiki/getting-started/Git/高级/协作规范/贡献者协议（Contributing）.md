@@ -8,7 +8,7 @@ keywords:
 tags:
 - 协作规范
 sidebar_position: 6
-author: 7Wate
+author: Vstay
 date: 2023-06-26
 ---
 开源项目的成功在很大程度上取决于社区的参与和贡献。然而，这种参与经常涉及到一些复杂的法律问题，尤其是与知识产权有关的问题。为了解决这些问题，开源社区引入了两种主要的贡献者协议：CLA (Contributor License Agreement) 和 DCO (Developer Certificate of Origin)。这两种协议在法律义务和责任方面有着显著的不同。

@@ -7,7 +7,7 @@ keywords:
 tags:
 - Shell
 sidebar_position: 1
-author: 7Wate
+author: Vstay
 date: 2022-11-16
 ---
 

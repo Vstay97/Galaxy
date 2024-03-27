@@ -7,7 +7,7 @@ keywords:
 tags:
 - 权限
 sidebar_position: 10
-author: 7Wate
+author: Vstay
 date: 2022-08-31
 ---
 ## 一键登录（适用于原生APP）

@@ -8,7 +8,7 @@ keywords:
 tags:
 - Python
 sidebar_position: 5
-author: 7Wate
+author: Vstay
 date: 2023-01-18
 ---
 

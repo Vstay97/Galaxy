@@ -7,7 +7,7 @@ keywords:
 tags:
 - DuckDuckGo
 sidebar_position: 2
-author: 7Wate
+author: Vstay
 date: 2022-11-21
 ---
 

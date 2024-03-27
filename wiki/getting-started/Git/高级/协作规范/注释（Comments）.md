@@ -8,7 +8,7 @@ keywords:
 tags:
 - Git
 sidebar_position: 1.5
-author: 7Wate
+author: Vstay
 date: 2023-06-26
 ---
 

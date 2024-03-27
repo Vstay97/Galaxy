@@ -26,7 +26,7 @@ last_update:
 `nvidia-smi`
 
 ![](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2024/Ali%E4%BC%81%E4%B8%9A%E7%89%88%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85Nvidia%E9%A9%B1%E5%8A%A8/202403271954269.png)
-# GPU显卡驱动
+## GPU显卡驱动
 
 **nvidia驱动为例，官网下载驱动**
 
@@ -67,7 +67,7 @@ https://support.huawei.com/enterprise/zh/doc/EDOC1100128448/3f25d09f
 
 ---------------------------------------------------------------------------
 
-Linux系统nouveau驱动禁用方式：
+## Linux系统nouveau驱动禁用方式：
 
 RHEL/CentOS
 

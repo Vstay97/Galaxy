@@ -26,7 +26,7 @@ pip install conda-pack
 
 先用`conda info -e` 查看一下环境名称
 
-![](Pasted%20image%2020240301135452.png)
+![](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2024/Python%E7%8E%AF%E5%A2%83%E6%89%93%E5%8C%85/202403272012339.png)
 
 然后开始打包 `conda pack -n codeshell_env`
 

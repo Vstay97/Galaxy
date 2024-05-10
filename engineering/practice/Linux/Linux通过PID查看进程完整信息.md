@@ -1,6 +1,6 @@
 ---
-title: # Linux通过PID查看进程完整信息
-description: # Linux通过PID查看进程完整信息
+title: Linux通过PID查看进程完整信息
+description: Linux通过PID查看进程完整信息
 keywords:
 - Linux
 tags:

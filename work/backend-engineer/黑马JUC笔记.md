@@ -145,7 +145,7 @@ logback.xml 配置如下：
 
 ## 2.3 应用 
 
-### $\textcolor{Green}{*应用之异步调用（案例1）} $
+### <font color='green'>* 应用之异步调用（案例1）</font>
 
 #### 需要等待结果 
 
@@ -441,7 +441,7 @@ private static void test3() throws IOException {
 -  tomcat 的异步 servlet 也是类似的目的，让用户线程处理耗时较长的操作，避免阻塞 tomcat 的工作线程
 - ui 程序中，开线程进行其他操作，避免阻塞 ui 线程
 
-###  $\textcolor{Green}{*应用之提高效率（案例1） }$
+###  <font color='green'>* 应用之提高效率（案例1）</font>
 
 充分利用多核 cpu 的优势，提高运行效率。想象下面的场景，执行 3 个计算，最后将计算结果汇总。
 
@@ -811,7 +811,7 @@ jconsole 远程监控配置
 
 
 
-## $\textcolor{Blue}{3.4 * 原理之线程运行} $
+## <font color='blue'>3.4 * 原理之线程运行</font>
 
 ### 栈与栈帧 
 
@@ -1068,7 +1068,7 @@ public class TestYield {
 
 
 
-###  $\textcolor{Green}{* 应用之限制（案例1） } $
+###  <font color='green'>* 应用之限制（案例1）</font>
 
 #### sleep 实现 
 
@@ -1168,7 +1168,7 @@ private static void test1() throws InterruptedException {
 
 
 
-### $\textcolor{green}{* 应用之同步（案例1）}$
+### <font color='green'>* 应用之同步（案例1）</font>
 
 以调用方角度来讲，如果
 
@@ -1639,7 +1639,7 @@ log.debug("运行结束...");
   - 而图一相当于启动了 4 个线程，有点浪费 
 - 用 sleep(n) 模拟洗茶壶、洗水壶等耗费的时间
 
-### $\textcolor{green}{* 应用之统筹（烧水泡茶）}$
+### <font color='green'>* 应用之统筹（烧水泡茶）</font>
 
 #### 解法1：join
 
@@ -1938,7 +1938,7 @@ static void decrement()
 
 ## 4.2 synchronized 解决方案
 
-##### **$\textcolor{green}{*应用之互斥}$**
+##### <font color='green'>* 应用之互斥</font>
 
 为了避免临界区的竞态条件发生，有多种手段可以达到目的。 
 
@@ -4105,7 +4105,7 @@ synchronized(lock) {
 
 
 
-#### $\textcolor{orange}{*模式之保护性暂停}$
+#### <font color='orange'>* 模式之保护性暂停</font>
 
 ##### **1.定义** 
 
@@ -4292,7 +4292,7 @@ List<String> lines = v2.get(1500);
 
 
 
-##### $\textcolor{blue}{* 原理之 join}$
+##### <font color='blue'>* 原理之 join</font>
 
 是调用者轮询检查线程 alive 状态
 
@@ -4502,7 +4502,7 @@ public static void main(String[] args) throws InterruptedException {
 
 
 
-#### $\textcolor{orange}{* 模式之生产者消费者}$
+#### <font color='orange'>* 模式之生产者消费者</font>
 
 ##### 1.定义 
 
@@ -4701,7 +4701,7 @@ LockSupport.unpark(t1);
 
 
 
-##### $\textcolor{blue}{* 原理之park和unpark}$
+##### <font color='blue'>* 原理之park和unpark</font>
 
 每个线程都有自己的一个 Parker 对象(由C++编写，java中不可见)，由三部分组成 `_counter `， `_cond `和 `_mutex` 打个比喻 
 

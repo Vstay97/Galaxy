@@ -11,7 +11,14 @@ tags:
 title: Maven快速入门笔记
 ---
 
-
+| 依赖范围（Scope） | 编译时有效 | 测试时有效 | 运行时有效 | 打包时是否包含 | 典型例子        |
+| ----------- | ----- | ----- | ----- | ------- | ----------- |
+| compile（默认） | ✓     | ✓     | ✓     | ✓       | spring-core |
+| provided    | ✓     | ✓     | ×     | ×       | servlet-api |
+| runtime     | ×     | ✓     | ✓     | ✓       | JDBC驱动      |
+| test        | ×     | ✓     | ×     | ×       | JUnit       |
+| system      | ✓     | ✓     | ✓     | ×       | 本地jar包      |
+| import      | ×     | ×     | ×     | ×       | 仅用于依赖管理     |
 
 ## 什么是Maven
 

@@ -239,28 +239,26 @@ Seata基于上述架构提供了四种不同的分布式事务解决方案：
 
 首先，在order-service中引入依赖：
 
- <!--seata-->  
- <dependency>  
-     <groupId>com.alibaba.cloud</groupId>  
-     <artifactId>spring-cloud-starter-alibaba-seata</artifactId>  
-     <exclusions>  
-         <!--版本较低，1.3.0，因此排除-->   
-         <exclusion>  
-             <artifactId>seata-spring-boot-starter</artifactId>  
-             <groupId>io.seata</groupId>  
-         </exclusion>  
-     </exclusions>  
- </dependency>  
- <dependency>  
-     <groupId>io.seata</groupId>  
-     <artifactId>seata-spring-boot-starter</artifactId>  
-     <!--seata starter 采用1.4.2版本-->  
-     <version>${seata.version}</version>  
- </dependency>
-
-#### 3.3.2.配置TC地址
-
-在order-service中的application.yml中，配置TC服务信息，通过注册中心nacos，结合服务名称获取TC地址：
+```xml
+<!--seata-->
+<dependency>
+    <groupId>com.alibaba.cloud</groupId>
+    <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+    <exclusions>
+        <!--版本较低，1.3.0，因此排除-->
+        <exclusion>
+            <artifactId>seata-spring-boot-starter</artifactId>
+            <groupId>io.seata</groupId>
+        </exclusion>
+    </exclusions>
+</dependency>
+<dependency>
+    <groupId>io.seata</groupId>
+    <artifactId>seata-spring-boot-starter</artifactId>
+    <!--seata starter 采用1.4.2版本-->
+    <version>${seata.version}</version>
+</dependency>
+```
 
  seata:  
    registry: ## TC服务注册中心的配置，微服务根据这些信息去注册中心获取tc服务地址  
@@ -457,10 +455,11 @@ AT模式下，当前分支事务执行流程如下：
 3）分支事务准备执行业务SQL
 
 4）RM拦截业务SQL，根据where条件查询原始数据，形成快照。
-
+```json
  {  
      "id": 1, "money": 100  
  }
+```
 
 5）RM执行业务SQL，提交本地事务，释放数据库锁。此时 `money = 90`
 
@@ -696,6 +695,8 @@ TCC的Try、Confirm、Cancel方法都需要在接口中基于注解来声明，
 
 我们在account-service项目中的`cn.itcast.account.service`包中新建一个接口，声明TCC三个接口：
 
+```java
+
  package cn.itcast.account.service;  
  ​  
  import io.seata.rm.tcc.api.BusinessActionContext;  
@@ -714,10 +715,13 @@ TCC的Try、Confirm、Cancel方法都需要在接口中基于注解来声明，
  ​  
      boolean cancel(BusinessActionContext ctx);  
  }
+```
 
 ##### 3）编写实现类
 
 在account-service服务中的`cn.itcast.account.service.impl`包下新建一个类，实现TCC业务：
+
+```java
 
  package cn.itcast.account.service.impl;  
  ​  
@@ -781,6 +785,8 @@ TCC的Try、Confirm、Cancel方法都需要在接口中基于注解来声明，
          return count == 1;  
      }  
  }
+
+```
 
 ### 4.4.SAGA模式
 

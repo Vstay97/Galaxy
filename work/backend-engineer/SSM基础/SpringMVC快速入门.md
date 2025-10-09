@@ -1472,12 +1472,13 @@ public String listParam(@RequestParam List<String> likes){
 
 ### 知识点1:@RequestParam
 
-| 名称     | @RequestParam                                          |
-| -------- | ------------------------------------------------------ |
-| 类型     | 形参注解                                               |
-| 位置     | SpringMVC控制器方法形参定义前面                        |
-| 作用     | 绑定请求参数与处理器方法形参间的关系                   |
-| 相关参数 | required：是否为必传参数 <br/>defaultValue：参数默认值 |
+- **名称**: `@RequestParam`
+- **类型**: 形参注解
+- **位置**: SpringMVC控制器方法形参定义前面
+- **作用**: 绑定请求参数与处理器方法形参间的关系
+- **相关参数**:
+    - `required`: 是否为必传参数
+    - `defaultValue`: 参数默认值
 
 ### JSON数据传输参数
 
@@ -1485,9 +1486,9 @@ public String listParam(@RequestParam List<String> likes){
 
 对于JSON数据类型，我们常见的有三种:
 
-- json普通数组（["value1","value2","value3",...]）
-- json对象（{key1:value1,key2:value2,...}）
-- json对象数组（[{key1:value1,...},{key2:value2,...}]）
+- json普通数组（`["value1","value2","value3",...]`）
+- json对象（`{key1:value1,key2:value2,...}`）
+- json对象数组（`[{key1:value1,...},{key2:value2,...}]`）
 
 对于上述数据，前端如何发送，后端如何接收?
 
@@ -2545,19 +2546,20 @@ public class UserController {
 
 RESTful入门案例，我们需要学习的内容如下:
 
+```java
 (1)设定Http请求动作(动词)
 
-@RequestMapping(value="",==method== = RequestMethod.==POST|GET|PUT|DELETE==)
+@RequestMapping(value="",method = RequestMethod.POST|GET|PUT|DELETE)
 
 (2)设定请求参数(路径变量)
 
-@RequestMapping(value="/users/=={id}==",method = RequestMethod.DELETE)
+@RequestMapping(value="/users/{id}",method = RequestMethod.DELETE)
 
-@ReponseBody
-
-public String delete(==@PathVariable== Integer ==id==){
+@ResponseBody
+public String delete(@PathVariable Integer id){
 
 }
+```
 
 #### 知识点1：@PathVariable
 
@@ -2572,7 +2574,7 @@ public String delete(==@PathVariable== Integer ==id==){
 * 区别
   * @RequestParam用于接收url地址传参或表单传参
   * @RequestBody用于接收json数据
-  * @PathVariable用于接收路径参数，使用{参数名称}描述路径参数
+  * @PathVariable用于接收路径参数，使用`{参数名称}`描述路径参数
 * 应用
   * 后期开发中，发送请求参数超过1个时，以json格式为主，@RequestBody应用较广
   * 如果发送非json格式数据，选用@RequestParam接收请求参数

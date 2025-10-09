@@ -700,7 +700,7 @@ Java 提供了线程优先级的机制，优先级会提示（hint）调度器�
 
 * NEW → RUNNABLE：当调用 t.start() 方法时，由 NEW → RUNNABLE
 
-* RUNNABLE <--> WAITING：
+* RUNNABLE ↔ WAITING：
 
   * 调用 obj.wait() 方法时
 
@@ -713,9 +713,9 @@ Java 提供了线程优先级的机制，优先级会提示（hint）调度器�
 
   * 当前线程调用 LockSupport.park() 方法
 
-* RUNNABLE <--> TIMED_WAITING：调用 obj.wait(long n) 方法、当前线程调用 t.join(long n) 方法、当前线程调用 Thread.sleep(long n)
+* RUNNABLE ↔ TIMED_WAITING：调用 obj.wait(long n) 方法、当前线程调用 t.join(long n) 方法、当前线程调用 Thread.sleep(long n)
 
-* RUNNABLE <--> BLOCKED：t 线程用 synchronized(obj) 获取了对象锁时竞争失败
+* RUNNABLE ↔ BLOCKED：t 线程用 synchronized(obj) 获取了对象锁时竞争失败
 
 
 

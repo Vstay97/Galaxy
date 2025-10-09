@@ -1381,7 +1381,7 @@ lesson: "Spring\tboot\nlesson"
 
 **总结**
 
-1. 在配置文件中可以使用${属性名}方式引用属性值
+1. 在配置文件中可以使用`${属性名}`方式引用属性值
 2. 如果属性中出现特殊字符，可以使用双引号包裹起来作为字符解析
 
 到这里有关yaml文件的基础使用就先告一段落，实用篇中再继续研究更深入的内容。
@@ -5128,9 +5128,9 @@ public class BookCase {
 
 <img src="https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/SpringBoot%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/image-20220223135454862-165420051932115.png" alt="image-20220223135454862" style={{zoom:'80%'}} />
 
-- ${random.int}表示随机整数
-- ${random.int(10)}表示10以内的随机数
-- ${random.int(10,20)}表示10到20的随机数
+- `${random.int}`表示随机整数
+- `${random.int(10)}`表示10以内的随机数
+- `${random.int(10,20)}`表示10到20的随机数
 - 其中()可以是任意字符，例如[]，!!均可
 
 **总结**
@@ -7204,13 +7204,13 @@ cacheType如果不进行配置，默认值是REMOTE，即仅使用远程缓存�
 | --------------------------------------------------------- | ------ | -------------------------------------------------------------- |
 | jetcache.statIntervalMinutes                              | 0      | 统计间隔，0表示不统计                                          |
 | jetcache.hiddenPackages                                   | 无     | 自动生成name时，隐藏指定的包名前缀                             |
-| jetcache.[local\|remote].${area}.type                     | 无     | 缓存类型，本地支持linkedhashmap、caffeine，远程支持redis、tair |
-| jetcache.[local\|remote].${area}.keyConvertor             | 无     | key转换器，当前仅支持fastjson                                  |
-| jetcache.[local\|remote].${area}.valueEncoder             | java   | 仅remote类型的缓存需要指定，可选java和kryo                     |
-| jetcache.[local\|remote].${area}.valueDecoder             | java   | 仅remote类型的缓存需要指定，可选java和kryo                     |
-| jetcache.[local\|remote].${area}.limit                    | 100    | 仅local类型的缓存需要指定，缓存实例最大元素数                  |
-| jetcache.[local\|remote].${area}.expireAfterWriteInMillis | 无穷大 | 默认过期时间，毫秒单位                                         |
-| jetcache.local.${area}.expireAfterAccessInMillis          | 0      | 仅local类型的缓存有效，毫秒单位，最大不活动间隔                |
+| jetcache.[local\|remote].`${area}`.type                     | 无     | 缓存类型，本地支持linkedhashmap、caffeine，远程支持redis、tair |
+| jetcache.[local\|remote].`${area}`.keyConvertor             | 无     | key转换器，当前仅支持fastjson                                  |
+| jetcache.[local\|remote].`${area}`.valueEncoder             | java   | 仅remote类型的缓存需要指定，可选java和kryo                     |
+| jetcache.[local\|remote].`${area}`.valueDecoder             | java   | 仅remote类型的缓存需要指定，可选java和kryo                     |
+| jetcache.[local\|remote].`${area}`.limit                    | 100    | 仅local类型的缓存需要指定，缓存实例最大元素数                  |
+| jetcache.[local\|remote].`${area}`.expireAfterWriteInMillis | 无穷大 | 默认过期时间，毫秒单位                                         |
+| jetcache.local.`${area}`.expireAfterAccessInMillis          | 0      | 仅local类型的缓存有效，毫秒单位，最大不活动间隔                |
 
 以上方案仅支持手工控制缓存，但是springcache方案中的方法缓存特别好用，给一个方法添加一个注解，方法就会自动使用缓存。jetcache也提供了对应的功能，即方法缓存。
 

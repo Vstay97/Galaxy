@@ -825,7 +825,7 @@ class Mybatisplus02DqlApplicationTests {
 }
 ```
 
-* lt: 小于(<) ,最终的sql语句为
+* lt: 小于（&lt;），最终的sql语句为
 
   ```sql
   SELECT id,name,password,age,tel FROM user WHERE (age < ?)
@@ -956,8 +956,8 @@ class Mybatisplus02DqlApplicationTests {
 * 我们在做条件查询的时候，一般会有很多条件可以供用户进行选择查询。
 * 这些条件用户可以选择使用也可以选择不使用，比如我要查询价格在8000以上的手机
 * 在输入条件的时候，价格有一个区间范围，按照需求只需要在第一个价格输入框中输入8000
-* 后台在做价格查询的时候，一般会让 price>值1 and price <值2
-* 因为前端没有输入值2，所以如果不处理的话，就会出现 price>8000 and price < null问题
+* 后台在做价格查询的时候，一般会让 price&gt;值1 and price &lt;值2
+* 因为前端没有输入值2，所以如果不处理的话，就会出现 price&gt;8000 and price &lt; null问题
 * 这个时候查询的结果就会出问题，具体该如何解决?
 
 ![1631024145264](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2022/MyBatisPlus%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8/1631024145264.png)
@@ -1273,10 +1273,10 @@ class Mybatisplus02DqlApplicationTests {
 }
 ```
 
-* gt():大于(>)
-* ge():大于等于(>=)
-* lt():小于(<)
-* lte():小于等于(<=)
+* gt():大于(&gt;)
+* ge():大于等于(&gt;=)
+* lt():小于(&lt;)
+* lte():小于等于(&lt;=)
 * between():between ? and ?
 
 #### 模糊查询

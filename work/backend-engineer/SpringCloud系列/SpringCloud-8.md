@@ -279,7 +279,7 @@ spring:
 
 
 
-例如，我们刚才访问的order-service中的OrderController中的端点：/order/{orderId}
+例如，我们刚才访问的order-service中的OrderController中的端点：`/order/\{orderId\}`
 
 ![image-20210715191757319](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/SpringCloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4/202311191241306.png)
 
@@ -302,7 +302,7 @@ spring:
 
 #### 2.1.1.示例
 
-点击资源/order/{orderId}后面的流控按钮，就可以弹出表单。
+点击资源`/order/\{orderId\}`后面的流控按钮，就可以弹出表单。
 
 ![image-20210715191757319](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/SpringCloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4/202311191241306.png)
 
@@ -310,13 +310,13 @@ spring:
 
 ![image-20210715192010657](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/SpringCloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4/202311191241307.png)
 
-其含义是限制 /order/{orderId}这个资源的单机QPS为1，即每秒只允许1次请求，超出的请求会被拦截并报错。
+其含义是限制 `/order/\{orderId\}`这个资源的单机QPS为1，即每秒只允许1次请求，超出的请求会被拦截并报错。
 
 
 
 #### 2.1.2.练习：
 
-需求：给 /order/{orderId}这个资源设置流控规则，QPS不能超过 5，然后测试。
+需求：给` /order/\{orderId\}`这个资源设置流控规则，QPS不能超过 5，然后测试。
 
 
 
@@ -672,7 +672,7 @@ warm up也叫**预热模式**，是应对服务冷启动的一种方案。请求
 
 **案例**
 
-需求：给/order/{orderId}这个资源设置限流，最大QPS为10，利用warm up效果，预热时长为5秒
+需求：给`/order/\{orderId\}`这个资源设置限流，最大QPS为10，利用warm up效果，预热时长为5秒
 
 
 
@@ -747,7 +747,7 @@ QPS为10.
 
 **案例**
 
-需求：给/order/{orderId}这个资源设置限流，最大QPS为10，利用排队的流控效果，超时时长设置为5s
+需求：给/order/\{orderId\}这个资源设置限流，最大QPS为10，利用排队的流控效果，超时时长设置为5s
 
 
 
@@ -811,7 +811,7 @@ QPS非常平滑，一致保持在10，但是超出的请求没有被拒绝，而
 
 ![image-20210716115014663](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/SpringCloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4/202311191241346.png)
 
-访问/goods/{id}的请求中，id参数值会有变化，热点参数限流会根据参数值分别统计QPS，统计结果：
+访问/goods/\{id\}的请求中，id参数值会有变化，热点参数限流会根据参数值分别统计QPS，统计结果：
 
 ![image-20210716115131463](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/SpringCloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4/202311191241348.png)
 
@@ -845,7 +845,7 @@ QPS非常平滑，一致保持在10，但是超出的请求没有被拒绝，而
 
 #### 2.4.4.案例
 
-**案例需求**：给/order/{orderId}这个资源添加热点参数限流，规则如下：
+**案例需求**：给`/order/\{orderId\}`这个资源添加热点参数限流，规则如下：
 
 •默认的热点参数规则是每1秒请求量不超过2
 
@@ -861,7 +861,7 @@ QPS非常平滑，一致保持在10，但是超出的请求没有被拒绝，而
 
 ##### 1）标记资源
 
-给order-service中的OrderController中的/order/{orderId}资源添加注解：
+给order-service中的OrderController中的`/order/\{orderId\}`资源添加注解：
 
 ![image-20210716120033572](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/SpringCloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4/202311191241351.png)
 
@@ -1040,7 +1040,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(value = "userservice", fallbackFactory = UserClientFallbackFactory.class)
 public interface UserClient {
 
-    @GetMapping("/user/{id}")
+    @GetMapping("/user/\{id\}")
     User findById(@PathVariable("id") Long id);
 }
 ```
@@ -1138,7 +1138,7 @@ Feign整合Sentinel的步骤：
 
 ##### 2）Jmeter测试
 
-选择《阈值类型-线程数<2》：
+选择《阈值类型-线程数&lt;2》：
 
 ![image-20210716124229894](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/SpringCloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4/202311191241369.png)
 
@@ -1218,17 +1218,17 @@ Feign整合Sentinel的步骤：
 
 ##### 1）设置慢调用
 
-修改user-service中的/user/{id}这个接口的业务。通过休眠模拟一个延迟时间：
+修改user-service中的/user/\{id\}这个接口的业务。通过休眠模拟一个延迟时间：
 
 ![image-20210716150234787](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/SpringCloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4/202311191241373.png)
 
 
 
-此时，orderId=101的订单，关联的是id为1的用户，调用时长为60ms：
+此时，orderId = 101的订单，关联的是id为1的用户，调用时长为60ms：
 
 ![image-20210716150510956](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/SpringCloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4/202311191241374.png)
 
-orderId=102的订单，关联的是id为2的用户，调用时长为非常短；
+orderId = 102的订单，关联的是id为2的用户，调用时长为非常短；
 
 ![image-20210716150605208](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/SpringCloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4/202311191241375.png)
 
@@ -1292,7 +1292,7 @@ orderId=102的订单，关联的是id为2的用户，调用时长为非常短；
 
 ##### 1）设置异常请求
 
-首先，修改user-service中的/user/{id}这个接口的业务。手动抛出异常，以触发异常比例的熔断：
+首先，修改user-service中的/user/\{id\}这个接口的业务。手动抛出异常，以触发异常比例的熔断：
 
 ![image-20210716151348183](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/SpringCloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4/202311191241382.png)
 
@@ -1348,7 +1348,7 @@ orderId=102的订单，关联的是id为2的用户，调用时长为非常短；
 
 ![image-20210716152010750](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/SpringCloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4/202311191241386.png)
 
-- 资源名：就是受保护的资源，例如/order/{orderId}
+- 资源名：就是受保护的资源，例如`/order/\{orderId\}`
 
 - 流控应用：是来源者的名单，
   - 如果是勾选白名单，则名单中的来源被许可访问。

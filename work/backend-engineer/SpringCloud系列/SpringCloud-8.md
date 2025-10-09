@@ -205,7 +205,7 @@ java -Dserver.port=8090 -jar sentinel-dashboard-1.8.1.jar
 
 3）访问
 
-访问http://localhost:8080页面，就可以看到sentinel的控制台了：
+访问 http://localhost:8080 页面，就可以看到sentinel的控制台了：
 
 ![image-20210715190827846](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/SpringCloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4/202311191241303.png)
 

@@ -5906,7 +5906,7 @@ windows版安装包下载地址：[https://](https://www.elastic.co/cn/downloads
 elasticsearch.bat
 ```
 
-双击elasticsearch.bat文件即可启动ES服务器，默认服务端口9200。通过浏览器访问http://localhost:9200看到如下信息视为ES服务器正常启动
+双击elasticsearch.bat文件即可启动ES服务器，默认服务端口9200。通过浏览器访问 http://localhost:9200 看到如下信息视为ES服务器正常启动
 
 ```CMD
 {

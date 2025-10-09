@@ -202,7 +202,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 
 
-打开浏览器，访问nacos地址：http://localhost:8848，然后进入服务列表页面，可以看到seata-tc-server的信息：
+打开浏览器，访问nacos地址： http://localhost:8848 ，然后进入服务列表页面，可以看到seata-tc-server的信息：
 
 ![image-20210622205901450](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@master/blog/2023/Seata%E7%9A%84%E9%83%A8%E7%BD%B2%E5%92%8C%E9%9B%86%E6%88%90/202311191252221.png)
 

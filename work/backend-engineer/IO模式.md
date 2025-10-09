@@ -1415,7 +1415,7 @@ Java NIO 系统的核心在于：通道和缓冲区，通道表示打开的 IO �
 
 * 标记（mark）与重置（reset）：标记是一个索引，通过 Buffer 中的 mark() 方法指定 Buffer 中一个特定的位置，可以通过调用 reset() 方法恢复到这个 position
 
-* 位置、限制、容量遵守以下不变式： **0 <= position <= limit <= capacity**
+* 位置、限制、容量遵守以下不变式： **0 ≤ position ≤ limit ≤ capacity**
 
   ![NIO-Buffer操作](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2024/JUC%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/202410121126174.png)
 

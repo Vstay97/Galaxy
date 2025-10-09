@@ -420,7 +420,7 @@ public interface UserClient {
 
 - 服务名称：userservice
 - 请求方式：GET
-- 请求路径：/user/{id}
+- 请求路径：`/user/{id}`
 - 请求参数：Long id
 - 返回值类型：User
 
@@ -965,7 +965,7 @@ spring:
 | Header     | 请求必须包含某些header         | - Header=X-Request-Id, \d+                                   |
 | Host       | 请求必须是访问某个host（域名） | -  Host=**.somehost.org,**.anotherhost.org                   |
 | Method     | 请求方式必须是指定方式         | - Method=GET,POST                                            |
-| Path       | 请求路径必须符合指定规则       | - Path=/red/{segment},/blue/**                               |
+| Path       | 请求路径必须符合指定规则       | - Path=`/red/{segment}`, `/blue/**`                               |
 | Query      | 请求参数必须包含指定参数       | - Query=name, Jack或者-  Query=name                          |
 | RemoteAddr | 请求者的ip必须是指定范围       | - RemoteAddr=192.168.1.1/24                                  |
 | Weight     | 权重处理                       |                                                              |

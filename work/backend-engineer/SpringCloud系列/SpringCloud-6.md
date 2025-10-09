@@ -1280,7 +1280,7 @@ private void handleResponse(SearchResponse response) {
 
 
 
-启动我们提供的hotel-demo项目，其默认端口是8089，访问http://localhost:8090，就能看到项目页面了：
+启动我们提供的hotel-demo项目，其默认端口是8089，访问 http://localhost:8090 ，就能看到项目页面了：
 
 ![image-20210721223159598](https://cdn.jsdelivr.net/gh/Vstay97/Img_storage@main/blog/2022/SpringCloud-6/202207111959094.png)
 

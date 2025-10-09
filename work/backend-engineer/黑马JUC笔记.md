@@ -10367,7 +10367,7 @@ pool.scheduleWithFixedDelay(()-> {
 }, 1, 1, TimeUnit.SECONDS);
 ```
 
-输出分析：一开始，延时 1s，scheduleWithFixedDelay 的间隔是 上一个任务结束 <-> 延时 <-> 下一个任务开始 所 以间隔都是 3s
+输出分析：一开始，延时 1s，scheduleWithFixedDelay 的间隔是 上一个任务结束 &lt;-&gt; 延时 &lt;-&gt; 下一个任务开始 所以间隔都是 3s
 
 ```sh
 21:40:55.078 c.TestTimer [main] - start... 

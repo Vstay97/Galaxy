@@ -318,6 +318,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 6,

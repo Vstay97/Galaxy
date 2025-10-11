@@ -318,6 +318,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 6,
@@ -445,7 +450,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         defaultLanguage: "markdown",
-        additionalLanguages: ["java", "git", "nginx", "http"],
+        additionalLanguages: ["java", "git", "nginx", "http","bash","sql"],
       },
       mermaid: {
         theme: { light: 'neutral', dark: 'forest' },

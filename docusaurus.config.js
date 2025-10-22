@@ -312,8 +312,22 @@ const config = {
         breadcrumbs: false,
       },
     ],
-    // TODO: 这里搜索功能和统计功能需要换成自己的
-    // "docusaurus-plugin-umami",
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        language: ["en", "zh"],
+        indexDocs: true,
+        indexBlog: true,
+        indexPages: true,
+        docsRouteBasePath: ["docs", "getting-started", "programming-language", "structures-algorithms", "computer-composition", "computer-network", "operating-system", "database-system", "computer-security", "software-engineering", "compilation-principle", "practice", "theories", "architecture", "project-development", "roadmap", "backend-engineer", "data-engineer", "life", "journal"],
+        blogRouteBasePath: "/blog",
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 8,
+        searchResultContextMaxLength: 50,
+        explicitSearchResultPath: true,
+      },
+    ],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -430,16 +444,6 @@ const config = {
       },
       /* 
       TODO: 这里搜索功能和统计功能需要换成自己的
-
-      algolia: {
-        apiKey: "5d5a02bdf02df700355c8ccd84b78d13",
-        appId: "8W3YJXJGF2",
-        indexName: "wiki",
-      },
-      umami: {
-        websiteid: "7efcd733-c232-43db-9f17-10a00c53b152",
-        src: "https://umami.7wate.org/script.js",
-      },
       
       */
       footer: {

@@ -39,6 +39,16 @@ html {
 }
 
 /* 小空调自定义样式 */
+.text-red { color: #D93025; }
+.text-blue { color: #1A73E8; }
+.text-green { color: #1E8E3E; }
+.text-orange { color: #F57C00; }
+.text-purple { color: #8E24AA; }
+.text-red-bold { color: #e53935; font-weight: 700; }
+.text-blue-bold { color: #1A73E8; font-weight: 700; }
+.text-green-bold { color: #1E8E3E; font-weight: 700; }
+.text-orange-bold { color: #F57C00; font-weight: 700; }
+.text-purple-bold { color: #8E24AA; font-weight: 700; }
 /* #airConditioning {
   padding-left: 30px;
   border-left: 0.5px solid var(--ifm-color-emphasis-300);

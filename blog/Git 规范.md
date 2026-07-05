@@ -14,6 +14,8 @@ date: 2021-08-24
 
 统一团队的 Git 工作流，包括分支工作流、Git commit 日志、tag 规范、README 模板、issue 模板，便于后续代码 review，版本发布以及日志自动化生成等等。
 
+<!-- truncate -->
+
 ## 分支工作流
 
 ![Git 分支工作流.png](https://static.7wate.com/img/2021/08/24/c5a50e99dde5f.png)

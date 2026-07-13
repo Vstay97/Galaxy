@@ -194,3 +194,155 @@ div[class^='announcementBar_'] {
   letter-spacing: 0.1rem;
   width: 49vw!important;
 }
+
+/* ========== Mermaid Lightbox ========== */
+
+/* Mermaid 容器悬停时显示光标和提示 */
+.docusaurus-mermaid-container {
+  cursor: zoom-in;
+}
+
+/* 「点击放大」悬停提示标签 */
+.mermaid-zoom-hint {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.docusaurus-mermaid-container:hover .mermaid-zoom-hint {
+  opacity: 0.85;
+}
+
+/* Lightbox 遮罩层 */
+.mermaid-lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.mermaid-lightbox-overlay--visible {
+  opacity: 1;
+}
+
+/* Lightbox 视口（react-zoom-pan-pinch 交互区域） */
+.mermaid-lightbox-viewport {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 强制 react-zoom-pan-pinch wrapper 填满视口 */
+.mermaid-lightbox-viewport .react-transform-wrapper,
+.mermaid-lightbox-viewport [class*="transform-component-module_wrapper"] {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+/* SVG 内容包裹层 - 强制白底，宽度足够大 */
+.mermaid-lightbox-svg-wrapper {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 1500px;
+  max-width: 95vw;
+}
+
+.mermaid-lightbox-svg-wrapper svg {
+  max-width: none !important;
+  width: 100% !important;
+  background: #fff;
+}
+
+/* 缩放控制按钮组 */
+.mermaid-lightbox-controls {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 10001;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mermaid-lightbox-controls button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.mermaid-lightbox-controls button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* 操作提示条 */
+.mermaid-lightbox-tips {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10001;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 6px 16px;
+  border-radius: 20px;
+  pointer-events: none;
+  animation: lightbox-tips-fade 4s ease forwards;
+}
+
+@keyframes lightbox-tips-fade {
+  0%, 70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* 关闭按钮 */
+.mermaid-lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  z-index: 10000;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.mermaid-lightbox-close:hover {
+  opacity: 1;
+}

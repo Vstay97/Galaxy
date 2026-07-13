@@ -5,6 +5,9 @@ const {themes} = require('prism-react-renderer');
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 
+const remarkMath = require('remark-math').default;
+const rehypeKatex = require('rehype-katex').default;
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Galaxy",
@@ -28,6 +31,15 @@ const config = {
     locales: ["zh-Hans"],
   },
 
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/[email protected]/dist/katex.min.css',
+      type: 'text/css',
+      integrity: 'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
+
   // 全局默认密码的 SHA-256 hash（用于 frontmatter 中标记 `protect: true` 的文章）
   // 修改密码：echo -n "你的密码" | shasum -a 256
   customFields: {
@@ -44,6 +56,8 @@ const config = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           breadcrumbs: false,
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           blogTitle: "Blog",
@@ -304,6 +318,8 @@ const config = {
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: false,
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
       },
     ],
     [
@@ -470,6 +486,7 @@ const config = {
     mermaid: true,
   },
   themes: ['@docusaurus/theme-mermaid'],
+  clientModules: [require.resolve('./src/theme/mermaid-lightbox.js')],
 };
 
 module.exports = config;

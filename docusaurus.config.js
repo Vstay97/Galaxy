@@ -31,7 +31,7 @@ const config = {
   // 全局默认密码的 SHA-256 hash（用于 frontmatter 中标记 `protect: true` 的文章）
   // 修改密码：echo -n "你的密码" | shasum -a 256
   customFields: {
-    globalPasswordHash: "057ba03d6c44104863dc7361fe4578965d1887360f90a0895882e58a6248fc86",
+    globalPasswordHash: "3a8e3f34f9bceca12fd873d52ddac3edb52cf1e9393e458e602bf82b7037c133",
   },
 
   presets: [

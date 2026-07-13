@@ -12,37 +12,48 @@ tags:
 title: Docusaurus 文章密码保护功能实现
 ---
 
-## 背景
 
-Galaxy 是一个基于 Docusaurus 3.10.1 的个人 Wiki/博客站点，部署在 Cloudflare Pages 上，纯静态站点，无后端服务。部分 Docs 文章需要密码保护——输入密码才能查看正文内容。
+## 替代方案对比
 
-需求：
-- 全局默认密码（配置在 `docusaurus.config.js`）+ 文章 frontmatter 可选覆盖
-- 作用范围仅 Docs，不含 Blog
-- 密码持久化用 sessionStorage（会话内有效，关闭浏览器失效）
+在动手实现之前，先了解有哪些可选方案，选择最适合你的：
 
-## 安全模型说明
+| 方案 | 安全性 | 实现复杂度 | 是否依赖平台 | 适用场景 |
+|------|--------|-----------|-------------|---------|
+| **本文方案（客户端 hash）** | ★☆☆☆☆（防君子） | 低 | 否 | 个人站点、非敏感内容 |
+| Cloudflare Access / Vercel Password | ★★★☆☆ | 低 | 是 | 已使用对应平台、需要账号级保护 |
+| 构建时 AES 加密（remark 插件） | ★★★★☆ | 高 | 否 | 需要真保护、可接受额外复杂度 |
+| `docusaurus-plugin-password-protect` | ★★☆☆☆ | 低 | 否 | 不想手写、需求与插件匹配 |
 
-这是纯静态站点，所有 HTML/JS 都会发送到浏览器。本文实现的是**软保护**（客户端条件渲染）——构建产物中仍包含完整内容，懂技术的人查看源码可以绕过。
 
-这是个人站点"防君子不防小人"的定位，够用。如果需要真正的保护，需要在构建时加密内容（remark 插件 + AES），实现复杂度高得多。
 
 ## 实现思路
 
 ### 密码校验流程
 
-1. 文章 frontmatter 中标记 `protect: true` 或 `password: <sha256-hash>`
-2. Docusaurus 构建时将 frontmatter 传递给 DocItem 组件
-3. 运行时 swizzled DocItem/Content 组件读取 frontmatter，判断是否需要密码
-4. 用户输入密码 → 前端 SHA-256 → 比对 hash → 通过则渲染正文
+```mermaid
+graph TB
+    A[用户访问文章] --> B{frontmatter 有 protect 或 password?}
+    B -->|否| C[正常渲染正文]
+    B -->|是| D{确定目标 hash}
+    D -->|frontmatter.password| E[使用文章独立 hash]
+    D -->|protect: true| F[使用全局默认 hash]
+    E --> G{sessionStorage 已解锁?}
+    F --> G
+    G -->|是| C
+    G -->|否| H[显示密码输入框]
+    H --> I[用户输入密码 → SHA-256]
+    I --> J{hash 匹配?}
+    J -->|是| K[存入 sessionStorage → 渲染正文]
+    J -->|否| L[显示错误提示]
+```
 
 ### 为什么存 hash 不存明文
 
-密码会打进客户端 JS bundle 和 git 仓库。存 SHA-256 hash 避免密码直接暴露。
+密码会打进客户端 JS bundle 和 git 仓库。存 SHA-256 hash 避免密码直接暴露。不过 hash 仅防止"一眼看到密码"，不能防 hash 碰撞或彩虹表攻击——这个场景下够用。
 
 ### sessionStorage 解锁粒度
 
-以 hash 为 key 存解锁状态。同一会话内，相同 hash 的文章解锁一次即可，不重复输入。
+以 hash 为 key 存解锁状态。同一会话内，相同 hash 的文章解锁一次即可，不重复输入。关闭浏览器标签页后解锁状态自动清除。
 
 ## 实现步骤
 
@@ -84,7 +95,59 @@ npx docusaurus swizzle @docusaurus/theme-classic DocItem/Content --eject
 ```jsx title="src/components/PasswordProtect.js"
 import React, {useState, useCallback} from 'react';
 
-// SHA-256 hash 计算
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: '200px',
+    padding: '2rem',
+    textAlign: 'center',
+  },
+  title: {
+    fontSize: '1.5rem',
+    fontWeight: 600,
+    marginBottom: '0.5rem',
+  },
+  hint: {
+    fontSize: '0.9rem',
+    opacity: 0.7,
+    marginBottom: '1.5rem',
+  },
+  inputRow: {
+    display: 'flex',
+    gap: '0.5rem',
+    width: '100%',
+    maxWidth: '360px',
+  },
+  input: {
+    flex: 1,
+    padding: '0.5rem 0.75rem',
+    fontSize: '1rem',
+    border: '1px solid var(--ifm-color-emphasis-300)',
+    borderRadius: '4px',
+    background: 'var(--ifm-background-color)',
+    color: 'var(--ifm-font-color-base)',
+    outline: 'none',
+  },
+  button: {
+    padding: '0.5rem 1.25rem',
+    fontSize: '1rem',
+    border: 'none',
+    borderRadius: '4px',
+    background: 'var(--ifm-color-primary)',
+    color: '#fff',
+    cursor: 'pointer',
+    whiteSpace: 'nowrap',
+  },
+  error: {
+    color: 'var(--ifm-color-danger)',
+    fontSize: '0.85rem',
+    marginTop: '0.75rem',
+  },
+};
+
 async function sha256(text) {
   const encoder = new TextEncoder();
   const data = encoder.encode(text);
@@ -93,7 +156,6 @@ async function sha256(text) {
   return hashArray.map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
-// sessionStorage 解锁状态管理
 function getUnlockedHash(hash) {
   try {
     return sessionStorage.getItem(`galaxy-unlocked-${hash}`) === '1';
@@ -105,7 +167,9 @@ function getUnlockedHash(hash) {
 function setUnlockedHash(hash) {
   try {
     sessionStorage.setItem(`galaxy-unlocked-${hash}`, '1');
-  } catch {}
+  } catch {
+    // sessionStorage 不可用时静默失败
+  }
 }
 
 export default function PasswordProtect({passwordHash, children}) {
@@ -113,33 +177,43 @@ export default function PasswordProtect({passwordHash, children}) {
   const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState('');
 
-  const handleUnlock = useCallback(async (e) => {
-    e.preventDefault();
-    const inputHash = await sha256(inputValue);
-    if (inputHash === passwordHash) {
-      setUnlockedHash(passwordHash);
-      setUnlocked(true);
-      setError('');
-    } else {
-      setError('密码错误，请重试');
-    }
-  }, [inputValue, passwordHash]);
+  const handleUnlock = useCallback(
+    async (e) => {
+      e.preventDefault();
+      const inputHash = await sha256(inputValue);
+      if (inputHash === passwordHash) {
+        setUnlockedHash(passwordHash);
+        setUnlocked(true);
+        setError('');
+      } else {
+        setError('密码错误，请重试');
+      }
+    },
+    [inputValue, passwordHash],
+  );
 
   if (unlocked) {
     return <>{children}</>;
   }
 
   return (
-    <div style={{/* 居中布局样式 */}}>
-      <p>🔒 此文章需要密码访问</p>
-      <p>请输入密码以查看正文内容</p>
-      <form onSubmit={handleUnlock}>
-        <input type="password" value={inputValue}
+    <div style={styles.container}>
+      <p style={styles.title}>🔒 此文章需要密码访问</p>
+      <p style={styles.hint}>请输入密码以查看正文内容</p>
+      <form onSubmit={handleUnlock} style={styles.inputRow}>
+        <input
+          type="password"
+          value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          placeholder="请输入密码" autoFocus />
-        <button type="submit">解锁</button>
+          placeholder="请输入密码"
+          style={styles.input}
+          autoFocus
+        />
+        <button type="submit" style={styles.button}>
+          解锁
+        </button>
       </form>
-      {error && <p style={{color: 'var(--ifm-color-danger)'}}>{error}</p>}
+      {error && <p style={styles.error}>{error}</p>}
     </div>
   );
 }
@@ -147,38 +221,68 @@ export default function PasswordProtect({passwordHash, children}) {
 
 ### 4. 修改 DocItem/Content 集成密码保护
 
-在 swizzled `src/theme/DocItem/Content/index.js` 中，读取 frontmatter 判断是否需要保护：
+在 swizzled `src/theme/DocItem/Content/index.js` 中，读取 frontmatter 判断是否需要保护，并在需要时将正文包裹在 `PasswordProtect` 组件内。完整代码如下：
 
 ```jsx title="src/theme/DocItem/Content/index.js"
+import React from 'react';
+import clsx from 'clsx';
+import {ThemeClassNames} from '@docusaurus/theme-common';
+import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Heading from '@theme/Heading';
+import MDXContent from '@theme/MDXContent';
 import PasswordProtect from '@site/src/components/PasswordProtect';
+
+function useSyntheticTitle() {
+  const {metadata, frontMatter, contentTitle} = useDoc();
+  const shouldRender =
+    !frontMatter.hide_title && typeof contentTitle === 'undefined';
+  if (!shouldRender) {
+    return null;
+  }
+  return metadata.title;
+}
 
 function usePasswordHash() {
   const {frontMatter} = useDoc();
   const {siteConfig} = useDocusaurusContext();
 
-  // 文章级独立密码
+  // 文章级独立密码（SHA-256 hash）
   if (frontMatter.password) {
     return frontMatter.password;
   }
+
   // 使用全局默认密码
   if (frontMatter.protect === true) {
     return siteConfig.customFields?.globalPasswordHash ?? null;
   }
+
   return null;
 }
 
 export default function DocItemContent({children}) {
+  const syntheticTitle = useSyntheticTitle();
   const passwordHash = usePasswordHash();
+
   const content = (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
-      {/* ...原有标题和 MDXContent 渲染逻辑... */}
+      {syntheticTitle && (
+        <header>
+          <Heading as="h1">{syntheticTitle}</Heading>
+        </header>
+      )}
+      <MDXContent>{children}</MDXContent>
     </div>
   );
 
   if (passwordHash) {
-    return <PasswordProtect passwordHash={passwordHash}>{content}</PasswordProtect>;
+    return (
+      <PasswordProtect passwordHash={passwordHash}>
+        {content}
+      </PasswordProtect>
+    );
   }
+
   return content;
 }
 ```
@@ -218,6 +322,24 @@ echo -n "test123" | shasum -a 256
 # 输出: ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae
 ```
 
+## 边缘情况与注意事项
+
+### sessionStorage 不可用
+
+部分浏览器隐私模式或特殊环境下 `sessionStorage` 可能不可用。代码中已用 `try-catch` 包裹，不可用时用户每次访问都需要重新输入密码，不会报错。
+
+### crypto.subtle 兼容性
+
+`crypto.subtle.digest` 是 Web Crypto API，主流浏览器均支持，但仅在 HTTPS 或 localhost 环境下可用。Galaxy 部署在 Cloudflare Pages（自带 HTTPS），无需额外处理。
+
+### 密码修改后旧会话的状态
+
+修改 hash 后，老用户 sessionStorage 里存的仍是旧 hash，不会自动失效。如需强制重新验证，可以在 hash key 末尾加版本号（如 `galaxy-unlocked-${hash}-v2`），或者通知用户清除浏览器缓存。
+
+### SSG HTML 包含完整内容
+
+纯静态站点在构建时生成完整 HTML（包含正文），客户端 React hydration 后才隐藏内容。这意味着搜索引擎爬虫和查看源码的用户能看到正文。这是软保护方案的固有限制，个人站点可接受。如需真保护，请参考上文的[替代方案对比](#替代方案对比)。
+
 ## 踩坑记录
 
 ### 文件名以 _ 开头会被 Docusaurus 忽略
@@ -227,10 +349,6 @@ echo -n "test123" | shasum -a 256
 ### swizzle 交互式命令在非 tty 环境失败
 
 `npx docusaurus swizzle` 需要交互式选择语言（JavaScript/TypeScript）和确认危险操作。在非 tty 环境（如 CI 或管道输入）下会卡住。解决方式是直接手动创建文件到 `src/theme/DocItem/Content/index.js`，效果与 swizzle eject 相同。
-
-### SSG HTML 包含完整内容
-
-纯静态站点在构建时生成完整 HTML（包含正文），客户端 React hydration 后才隐藏内容。这意味着搜索引擎爬虫和查看源码的用户能看到正文。这是软保护方案的固有限制，个人站点可接受。如需真保护，需构建时加密。
 
 ## 验证结果
 
